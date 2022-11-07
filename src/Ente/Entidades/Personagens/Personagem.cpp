@@ -20,4 +20,9 @@ const sf::RectangleShape Personagem::getCorpo()
     return corpo;
 }
 
+void Personagem::setVelocidade(sf::Vector2f vel) {
+    velocidade = vel;
+}
+
+
 

@@ -3,14 +3,13 @@
 
 #include <iostream>
 Jogo::Jogo():
-jogador1(sf::Vector2f(0.2, 0.2))
+gerenciador_grafico(Gerenciadores::Gerenciador_Grafico::getInstancia())
 {
+    jogador1.setVelocidade(sf::Vector2f(0.2, 0.2));
     inimigo1.setJogador(&jogador1);
     inimigo1.setRaio(sf::Vector2f(200.f, 200.f));
-
-
-    window.create(sf::VideoMode(1920, 1080), "Choco");
-    gerenciador_grafico = Gerenciadores::Gerenciador_Grafico::getInstancia();
+    personagens.inserirEntidade(static_cast <Entidades::Entidade*> (&jogador1));
+    personagens.inserirEntidade(static_cast <Entidades::Entidade*> (&inimigo1));
 }
 
 Jogo::~Jogo()
@@ -20,21 +19,22 @@ Jogo::~Jogo()
 
 void Jogo::executar()
 {
-    while (window.isOpen())
+
+    while (gerenciador_grafico->verificaJanelaAberta())
     {
-        sf::Event event;
-        while (window.pollEvent(event))
+        sf::Event evento;
+        if (gerenciador_grafico->getWindow()->pollEvent(evento))
         {
-            if (event.type == sf::Event::Closed)
-                window.close();
+            if (evento.type == sf::Event::Closed)
+                gerenciador_grafico->fecharJanela();
 
         }
-        window.clear();
+        gerenciador_grafico->limpaJanela();
         jogador1.mover_se();
         inimigo1.mover_se();
-        window.draw(inimigo1.getCorpo());
-        window.draw(jogador1.getCorpo());
-        window.display();
+        gerenciador_grafico->desenhaElemento(jogador1.getCorpo());
+        gerenciador_grafico->desenhaElemento(inimigo1.getCorpo());
+        gerenciador_grafico->mostrarConteudo();
 
     }
 

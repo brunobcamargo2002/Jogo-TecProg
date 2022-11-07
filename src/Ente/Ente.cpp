@@ -4,7 +4,8 @@
 /**static**/
 unsigned int Ente::geraId=0;
 
-Ente::Ente()
+Ente::Ente():
+gerenciador_grafico(Gerenciadores::Gerenciador_Grafico::getInstancia())
 {
     id = geraId;
     geraId++;
@@ -20,7 +21,6 @@ void Ente::executar()
 
 }
 
-void Ente::imprimir_se()
-{
-
+void Ente::imprimir_se() {
 }
+

@@ -7,15 +7,22 @@
 namespace Listas {
 
     class ListaEntidades {
+    private:
+        Lista<Entidades::Entidade> LEntidades;
     public:
         ListaEntidades();
-
         virtual ~ListaEntidades();
+
+
+        void inserirEntidade(Entidades::Entidade* entidade);
+        void imprimirEntidades();
+
+
+
 
     protected:
 
-    private:
-        Lista<Entidades::Entidade> LEs;
+
     };
 
 }

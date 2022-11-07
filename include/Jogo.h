@@ -5,6 +5,7 @@
 
 #include "Ente/Entidades/Personagens/Jogador.h"
 #include "Ente/Entidades/Personagens/Inimigo.h"
+#include "Listas/ListaEntidades.h"
 
 #include "Gerenciadores/Gerenciador_Grafico.h"
 class Jogo
@@ -12,8 +13,9 @@ class Jogo
     private:
         Entidades::Jogador jogador1;
         Entidades::Inimigo inimigo1;
+        Listas::ListaEntidades personagens;
 
-        sf::RenderWindow window;
+
         Gerenciadores::Gerenciador_Grafico* gerenciador_grafico;
     public:
         Jogo();

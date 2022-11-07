@@ -45,15 +45,6 @@ namespace Listas {
         Elemento<TL> *pUltimo;
 
     public:
-        void push_front(TL *conteudo);
-
-        void push_back(TL *conteudo);
-
-        TL *pop_front();
-
-        TL *pop_back();
-
-    public:
         Lista() {
             pPrimeiro = NULL;
             pUltimo = NULL;
@@ -69,6 +60,44 @@ namespace Listas {
             pPrimeiro = NULL;
             pUltimo = NULL;
         }
+
+    public:
+        Elemento<TL>* getPrimeiro(){
+            return pPrimeiro;
+        }
+        void push_front(TL *conteudo);
+        void push_back(TL *conteudo);
+        TL *pop_front();
+        TL *pop_back();
+        bool empty();
+
+        class Iterador{
+        private:
+            Elemento<TL>* elemento;
+        public:
+            bool fim()
+            {
+                if(elemento == NULL)
+                    return true;
+                else
+                    return false;
+            }
+            TL* getConteudo()
+            {
+                return elemento->getInfo();
+            }
+            void operator = (Elemento<TL>* El)
+            {
+                elemento = El;
+            }
+            void operator ++()
+            {
+                elemento->getProx()->getInfo();
+            }
+        };
+
+
+
     };
 
     template<class TL>
@@ -135,6 +164,15 @@ namespace Listas {
             pUltimo = ant;
             return conteudo;
         }
+        return NULL;
+    }
+
+    template<class TL>
+    bool Lista<TL>::empty() {
+        if(pPrimeiro==NULL)
+            return true;
+        else
+            return false;
     }
 
 }
