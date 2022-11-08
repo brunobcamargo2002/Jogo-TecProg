@@ -7,26 +7,15 @@
 namespace Entidades {
 
     class Entidade : public Ente {
+    protected:
+        sf::Vector2f posicao;
+        sf::RectangleShape corpo;
     public:
         Entidade();
+        ~Entidade();
+        void imprimir_se();
+        virtual void executar()=0;
 
-        virtual ~Entidade();
-
-        int Getx() { return x; }
-
-        void Setx(int val) { x = val; }
-
-        int Gety() { return y; }
-
-        void Sety(int val) { y = val; }
-
-        virtual void executar();
-
-    protected:
-        int x;
-        int y;
-
-    private:
     };
 
 }

@@ -30,10 +30,7 @@ void Jogo::executar()
 
         }
         gerenciador_grafico->limpaJanela();
-        jogador1.mover_se();
-        inimigo1.mover_se();
-        gerenciador_grafico->desenhaElemento(jogador1.getCorpo());
-        gerenciador_grafico->desenhaElemento(inimigo1.getCorpo());
+        personagens.executarEntidades();
         gerenciador_grafico->mostrarConteudo();
 
     }

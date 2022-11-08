@@ -15,7 +15,7 @@ namespace Listas {
 
 
         void inserirEntidade(Entidades::Entidade* entidade);
-        void imprimirEntidades();
+        void executarEntidades();
 
 
 

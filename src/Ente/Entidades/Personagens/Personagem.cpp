@@ -23,6 +23,10 @@ const sf::RectangleShape Personagem::getCorpo()
 void Personagem::setVelocidade(sf::Vector2f vel) {
     velocidade = vel;
 }
+void Personagem::executar(){
+    mover_se();
+    imprimir_se();
+}
 
 
 

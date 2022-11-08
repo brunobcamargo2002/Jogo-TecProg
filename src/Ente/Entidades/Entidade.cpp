@@ -12,7 +12,7 @@ Entidade::~Entidade()
     //dtor
 }
 
-void Entidade::executar()
-{
-
+void Entidade::imprimir_se() {
+    gerenciador_grafico->desenhaElemento(corpo);
 }
+

@@ -23,3 +23,4 @@ void Jogador::mover_se()
     else if(sf::Keyboard::isKeyPressed(sf::Keyboard::Down))
         corpo.move(0, velocidade.y);
 }
+

@@ -5,17 +5,18 @@
 class Ente
 {
     private:
-        Gerenciadores::Gerenciador_Grafico* gerenciador_grafico;
         static unsigned int geraId;
+        unsigned int id;
 
 
     protected:
-            unsigned int id;
+            Gerenciadores::Gerenciador_Grafico* gerenciador_grafico;
+
     public:
         Ente();
         virtual ~Ente();
         virtual void executar();
-        void imprimir_se();
+        virtual void imprimir_se()=0;
 };
 
 

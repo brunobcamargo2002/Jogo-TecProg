@@ -2,6 +2,8 @@
 
 using namespace Listas;
 
+#include <iostream>
+
 ListaEntidades::ListaEntidades()
 {
     //ctor
@@ -16,12 +18,13 @@ void ListaEntidades::inserirEntidade(Entidades::Entidade *entidade) {
     LEntidades.push_front(entidade);
 }
 
-void ListaEntidades::imprimirEntidades() {
+void ListaEntidades::executarEntidades() {
     Lista<Entidades::Entidade>::Iterador iterador;
     iterador = LEntidades.getPrimeiro();
     while(!iterador.fim())
     {
-        iterador.getConteudo()->imprimir_se();
+        iterador.getConteudo()->executar();
+        ++iterador;
     }
 }
 

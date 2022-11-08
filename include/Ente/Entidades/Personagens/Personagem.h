@@ -11,7 +11,6 @@ namespace Entidades {
 
     class Personagem : public Entidade {
     protected:
-        sf::RectangleShape corpo;
         sf::Vector2f velocidade;
         int num_vidas;
 
@@ -22,6 +21,7 @@ namespace Entidades {
         virtual void mover_se() = 0;
         const sf::RectangleShape getCorpo();
         void setVelocidade(sf::Vector2f vel);
+        void executar();
 
 
     private:

@@ -82,17 +82,23 @@ namespace Listas {
                 else
                     return false;
             }
+            Elemento<TL>* getElemento()
+            {
+                return elemento;
+            }
             TL* getConteudo()
             {
                 return elemento->getInfo();
             }
+
+
             void operator = (Elemento<TL>* El)
             {
                 elemento = El;
             }
             void operator ++()
             {
-                elemento->getProx()->getInfo();
+                elemento = elemento->getProx();
             }
         };
 
