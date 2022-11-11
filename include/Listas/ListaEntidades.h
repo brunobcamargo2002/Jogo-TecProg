@@ -3,6 +3,7 @@
 #include "../Ente/Entidades/Entidade.h"
 
 #include "Lista.h"
+#include "../Ente/Entidades/Personagens/Personagem.h"
 
 namespace Listas {
 
@@ -15,7 +16,10 @@ namespace Listas {
 
 
         void inserirEntidade(Entidades::Entidade* entidade);
+        void removerEntidade(Entidades::Entidade* entidade);
         void executarEntidades();
+        unsigned int getTamanho();
+        Entidades::Entidade * operator[] (int pos);
 
 
 

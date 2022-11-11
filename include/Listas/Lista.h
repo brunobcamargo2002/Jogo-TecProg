@@ -17,25 +17,20 @@ namespace Listas {
 
         public:
             Elemento() : pProx(NULL), pInfo(NULL) {}
-
             ~Elemento() {
                 pProx = NULL;
                 pInfo = NULL;
             }
 
-        public:
             void setInfo(TE *info) {
                 pInfo = info;
             }
-
             TE *getInfo() {
                 return pInfo;
             }
-
             void setProx(Elemento<TE> *prox) {
                 pProx = prox;
             }
-
             Elemento<TE> *getProx() {
                 return pProx;
             }
@@ -43,9 +38,11 @@ namespace Listas {
 
         Elemento<TL> *pPrimeiro;
         Elemento<TL> *pUltimo;
+        unsigned int tam;
 
     public:
         Lista() {
+            tam = 0;
             pPrimeiro = NULL;
             pUltimo = NULL;
         }
@@ -61,7 +58,6 @@ namespace Listas {
             pUltimo = NULL;
         }
 
-    public:
         Elemento<TL>* getPrimeiro(){
             return pPrimeiro;
         }
@@ -69,7 +65,12 @@ namespace Listas {
         void push_back(TL *conteudo);
         TL *pop_front();
         TL *pop_back();
+        bool remover(TL* alvo);
         bool empty();
+        unsigned int getTamanho(){
+            return tam;
+        }
+        TL* operator[](int pos);
 
         class Iterador{
         private:
@@ -82,7 +83,7 @@ namespace Listas {
                 else
                     return false;
             }
-            Elemento<TL>* getElemento()
+            Elemento<TL*> getElemento()
             {
                 return elemento;
             }
@@ -116,6 +117,7 @@ namespace Listas {
             pPrimeiro = elemento;
             if (pUltimo == NULL)
                 pUltimo = elemento;
+            tam++;
         } else
             std::cerr << "O elemento não foi criado" << std::endl;
 
@@ -132,6 +134,7 @@ namespace Listas {
             else
                 pPrimeiro = elemento;
             pUltimo = elemento;
+            tam++;
         } else
             std::cerr << "O elemento não foi criado" << std::endl;
     }
@@ -144,6 +147,7 @@ namespace Listas {
             delete pPrimeiro;
             pPrimeiro = proximo;
             return info;
+            tam--;
         } else
             return NULL;
     }
@@ -169,6 +173,7 @@ namespace Listas {
             delete pUltimo;
             pUltimo = ant;
             return conteudo;
+            tam--;
         }
         return NULL;
     }
@@ -179,6 +184,48 @@ namespace Listas {
             return true;
         else
             return false;
+    }
+
+    template<class TL>
+    TL *Lista<TL>::operator[](int pos) {
+        if(pos >= (int)tam || pos < 0){
+            std::cout << "ERROR::Lista pos eh maior que o tamanho da lista" << std::endl;
+            exit(1);
+        }
+        Elemento<TL>* aux = pPrimeiro;
+        for(int i = 0; i < pos; i++){
+            aux = aux->getProx();
+        }
+        return aux->getInfo();
+    }
+
+    template<class TL>
+    bool Lista<TL>::remover(TL * alvo) {
+        Elemento<TL>* aux1 = pPrimeiro, *aux2 = NULL;
+
+        if(aux1!=NULL){
+            if(aux1->getInfo()==alvo){
+                pPrimeiro=pPrimeiro->getProx();
+                delete aux1;
+                tam--;
+                return true;
+            }
+        }
+
+        while(aux1!=NULL){
+            aux2= aux1->getProx();
+            if(aux2!=NULL){
+                if(aux2->getInfo() == alvo){
+                    Elemento<TL>* aux3 = aux2->getProx();
+                    delete aux2;
+                    aux1->setProx(aux3);
+                    tam--;
+                    return true;
+                }
+            }
+            aux1 = aux2;
+        }
+        return false;
     }
 
 }

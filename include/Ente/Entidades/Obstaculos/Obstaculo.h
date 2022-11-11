@@ -10,10 +10,9 @@ class Obstaculo : public Entidade
     public:
         Obstaculo();
         virtual ~Obstaculo();
+        void executar();
+        void colisao(sf::Vector2f deslocamento, Entidades::Entidade* entidade){};
 
-    protected:
-
-    private:
 };
 }
 

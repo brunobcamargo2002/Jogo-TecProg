@@ -4,19 +4,15 @@
 #include "../Gerenciadores/Gerenciador_Grafico.h"
 class Ente
 {
-    private:
-        static unsigned int geraId;
-        unsigned int id;
-
-
     protected:
+            unsigned int id;
             Gerenciadores::Gerenciador_Grafico* gerenciador_grafico;
 
     public:
         Ente();
         virtual ~Ente();
         virtual void executar();
-        virtual void imprimir_se()=0;
+        virtual void imprimir_se();
 };
 
 

@@ -1,4 +1,5 @@
 #include "../../include/Listas/ListaEntidades.h"
+#include "../../include/Ente/Entidades/Personagens/Personagem.h"
 
 using namespace Listas;
 
@@ -6,7 +7,7 @@ using namespace Listas;
 
 ListaEntidades::ListaEntidades()
 {
-    //ctor
+
 }
 
 ListaEntidades::~ListaEntidades()
@@ -27,5 +28,21 @@ void ListaEntidades::executarEntidades() {
         ++iterador;
     }
 }
+
+Entidades::Entidade * ListaEntidades::operator[](int pos) {
+    return LEntidades.operator[](pos);
+}
+
+unsigned int ListaEntidades::getTamanho() {
+    return LEntidades.getTamanho();
+}
+
+void ListaEntidades::removerEntidade(Entidades::Entidade *entidade) {
+    LEntidades.remover(entidade);
+
+}
+
+
+
 
 

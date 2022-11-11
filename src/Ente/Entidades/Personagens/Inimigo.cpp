@@ -50,11 +50,14 @@ void Inimigo::mover_se()
         else
             corpo.move(-velocidade.x, 0);
 
+        /*
         if(shapeJogador1.getPosition().y-corpo.getPosition().y>0)
             corpo.move(0, velocidade.y);
         else
-            corpo.move(0, -velocidade.y);
+            corpo.move(0, 0);*/
     }
 
 
 }
+
+

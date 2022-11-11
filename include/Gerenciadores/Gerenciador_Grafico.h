@@ -27,7 +27,6 @@ namespace Gerenciadores {
         void fecharJanela();
         void mostrarConteudo() const;
         const bool verificaJanelaAberta();
-        const bool verificaEvento(sf::Event evento);
 
 
 

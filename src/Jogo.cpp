@@ -3,11 +3,14 @@
 
 #include <iostream>
 Jogo::Jogo():
-gerenciador_grafico(Gerenciadores::Gerenciador_Grafico::getInstancia())
+gerenciador_grafico(Gerenciadores::Gerenciador_Grafico::getInstancia()),
+personagens(),
+gerenciador_colisoes(&personagens, &obstaculos)
 {
-    jogador1.setVelocidade(sf::Vector2f(0.2, 0.2));
+    jogador1.setVelocidade(sf::Vector2f(0.2, 0));
     inimigo1.setJogador(&jogador1);
     inimigo1.setRaio(sf::Vector2f(200.f, 200.f));
+    obstaculos.inserirEntidade(static_cast <Entidades::Entidade*> (&obstaculo));
     personagens.inserirEntidade(static_cast <Entidades::Entidade*> (&jogador1));
     personagens.inserirEntidade(static_cast <Entidades::Entidade*> (&inimigo1));
 }
@@ -31,6 +34,8 @@ void Jogo::executar()
         }
         gerenciador_grafico->limpaJanela();
         personagens.executarEntidades();
+        obstaculos.executarEntidades();
+        gerenciador_colisoes.executar();
         gerenciador_grafico->mostrarConteudo();
 
     }

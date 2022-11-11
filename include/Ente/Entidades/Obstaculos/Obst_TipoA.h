@@ -8,7 +8,6 @@ namespace Entidades {
     class Obst_TipoA : public Obstaculo {
     public:
         Obst_TipoA();
-
         virtual ~Obst_TipoA();
 
     protected:
