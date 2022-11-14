@@ -2,7 +2,7 @@
 #define INIM_TIPOA_H
 
 #include "Inimigo.h"
-
+/*
 namespace Entidades {
 
     class Inim_TipoA : public Inimigo {
@@ -16,6 +16,6 @@ namespace Entidades {
     private:
     };
 
-}
+}*/
 
 #endif // INIM_TIPOA_H

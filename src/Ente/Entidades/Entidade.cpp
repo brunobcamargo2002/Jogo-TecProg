@@ -2,8 +2,13 @@
 
 using namespace Entidades;
 
-Entidade::Entidade()
-{
+
+
+Entidade::Entidade(sf::Vector2f posicao, sf::Vector2f tamanho) {
+    corpo.setPosition(posicao);
+    corpo.setSize(tamanho);
+    corpo.setOrigin(tamanho/2.f);
+
 }
 
 Entidade::~Entidade()
@@ -22,4 +27,6 @@ sf::Vector2f Entidade::getPosicao() {
 sf::Vector2f Entidade::getTamanho() {
     return corpo.getSize();
 }
+
+
 

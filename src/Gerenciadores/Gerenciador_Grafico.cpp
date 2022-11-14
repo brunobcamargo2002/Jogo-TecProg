@@ -51,3 +51,24 @@ const bool Gerenciador_Grafico::verificaJanelaAberta() {
 void Gerenciador_Grafico::mostrarConteudo() const {
     janela->display();
 }
+
+sf::Texture *Gerenciador_Grafico::carregarTextura(const char* caminho) {
+    std::map<const char*, sf::Texture*>::iterator it = texturas.begin();
+    while (it != texturas.end()) {
+        if (!strcmp(it->first, caminho))
+            return it->second;
+        it++;
+    }
+
+    /* If not found, must load it. */
+    sf::Texture* tex = new sf::Texture();
+
+    if (!tex->loadFromFile(caminho)) {
+        std::cerr << "Erro ao carregar a textura. " << caminho << std::endl;
+        exit(1);
+    }
+
+    texturas.insert(std::pair<const char*, sf::Texture*>(caminho, tex));
+
+    return tex;
+}

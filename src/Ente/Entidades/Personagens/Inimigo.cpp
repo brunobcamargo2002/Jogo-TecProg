@@ -2,12 +2,11 @@
 
 using namespace Entidades;
 
-Inimigo::Inimigo(sf::Vector2f speed, Jogador* player, sf::Vector2f range, sf::Vector2f body):
-Personagem(speed, body)
+Inimigo::Inimigo(sf::Vector2f posicao, sf::Vector2f tamanho, sf::Vector2f speed, Jogador *player,sf::Vector2f range):
+Personagem(posicao, tamanho, speed)
 {
     setJogador(player);
     setRaio(range);
-    corpo.setFillColor(sf::Color::Red);
 }
 
 Inimigo::~Inimigo()
@@ -59,5 +58,7 @@ void Inimigo::mover_se()
 
 
 }
+
+
 
 

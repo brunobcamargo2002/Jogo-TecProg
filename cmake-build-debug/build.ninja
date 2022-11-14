@@ -201,9 +201,9 @@ build CMakeFiles/Jogo.dir/src/Ente/Entidades/Obstaculos/Obstaculo.cpp.obj: CXX_C
   OBJECT_DIR = CMakeFiles\Jogo.dir
   OBJECT_FILE_DIR = CMakeFiles\Jogo.dir\src\Ente\Entidades\Obstaculos
 
-build CMakeFiles/Jogo.dir/src/Ente/Entidades/Obstaculos/Obst_TipoA.cpp.obj: CXX_COMPILER__Jogo_Debug C$:/Users/bruno/CLionProjects/Jogo/src/Ente/Entidades/Obstaculos/Obst_TipoA.cpp || cmake_object_order_depends_target_Jogo
+build CMakeFiles/Jogo.dir/src/Ente/Entidades/Obstaculos/Plataforma.cpp.obj: CXX_COMPILER__Jogo_Debug C$:/Users/bruno/CLionProjects/Jogo/src/Ente/Entidades/Obstaculos/Plataforma.cpp || cmake_object_order_depends_target_Jogo
   DEFINES = -DSFML_STATIC
-  DEP_FILE = CMakeFiles\Jogo.dir\src\Ente\Entidades\Obstaculos\Obst_TipoA.cpp.obj.d
+  DEP_FILE = CMakeFiles\Jogo.dir\src\Ente\Entidades\Obstaculos\Plataforma.cpp.obj.d
   FLAGS = -g -std=gnu++14
   INCLUDES = -Ic:/SFML/include -isystem C:/SFML/include
   OBJECT_DIR = CMakeFiles\Jogo.dir
@@ -217,6 +217,22 @@ build CMakeFiles/Jogo.dir/src/Ente/Entidades/Obstaculos/Obst_TipoB.cpp.obj: CXX_
   OBJECT_DIR = CMakeFiles\Jogo.dir
   OBJECT_FILE_DIR = CMakeFiles\Jogo.dir\src\Ente\Entidades\Obstaculos
 
+build CMakeFiles/Jogo.dir/include/Animacao/Animacao.cpp.obj: CXX_COMPILER__Jogo_Debug C$:/Users/bruno/CLionProjects/Jogo/include/Animacao/Animacao.cpp || cmake_object_order_depends_target_Jogo
+  DEFINES = -DSFML_STATIC
+  DEP_FILE = CMakeFiles\Jogo.dir\include\Animacao\Animacao.cpp.obj.d
+  FLAGS = -g -std=gnu++14
+  INCLUDES = -Ic:/SFML/include -isystem C:/SFML/include
+  OBJECT_DIR = CMakeFiles\Jogo.dir
+  OBJECT_FILE_DIR = CMakeFiles\Jogo.dir\include\Animacao
+
+build CMakeFiles/Jogo.dir/include/Animacao/Imagem.cpp.obj: CXX_COMPILER__Jogo_Debug C$:/Users/bruno/CLionProjects/Jogo/include/Animacao/Imagem.cpp || cmake_object_order_depends_target_Jogo
+  DEFINES = -DSFML_STATIC
+  DEP_FILE = CMakeFiles\Jogo.dir\include\Animacao\Imagem.cpp.obj.d
+  FLAGS = -g -std=gnu++14
+  INCLUDES = -Ic:/SFML/include -isystem C:/SFML/include
+  OBJECT_DIR = CMakeFiles\Jogo.dir
+  OBJECT_FILE_DIR = CMakeFiles\Jogo.dir\include\Animacao
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target Jogo
@@ -225,7 +241,7 @@ build CMakeFiles/Jogo.dir/src/Ente/Entidades/Obstaculos/Obst_TipoB.cpp.obj: CXX_
 #############################################
 # Link the executable Jogo.exe
 
-build Jogo.exe: CXX_EXECUTABLE_LINKER__Jogo_Debug CMakeFiles/Jogo.dir/main.cpp.obj CMakeFiles/Jogo.dir/src/Jogo.cpp.obj CMakeFiles/Jogo.dir/src/Menu.cpp.obj CMakeFiles/Jogo.dir/src/Listas/ListaEntidades.cpp.obj CMakeFiles/Jogo.dir/src/Gerenciadores/Gerenciador_Grafico.cpp.obj CMakeFiles/Jogo.dir/src/Gerenciadores/Gerenciador_Colisoes.cpp.obj CMakeFiles/Jogo.dir/src/Ente/Ente.cpp.obj CMakeFiles/Jogo.dir/src/Ente/Menus/Main_Menu.cpp.obj CMakeFiles/Jogo.dir/src/Ente/Fases/Fase.cpp.obj CMakeFiles/Jogo.dir/src/Ente/Fases/Primeira_Fase.cpp.obj CMakeFiles/Jogo.dir/src/Ente/Fases/Segunda_Fase.cpp.obj CMakeFiles/Jogo.dir/src/Ente/Entidades/Projetil.cpp.obj CMakeFiles/Jogo.dir/src/Ente/Entidades/Entidade.cpp.obj CMakeFiles/Jogo.dir/src/Ente/Entidades/Personagens/Personagem.cpp.obj CMakeFiles/Jogo.dir/src/Ente/Entidades/Personagens/Jogador.cpp.obj CMakeFiles/Jogo.dir/src/Ente/Entidades/Personagens/Inimigo.cpp.obj CMakeFiles/Jogo.dir/src/Ente/Entidades/Personagens/Inim_TipoA.cpp.obj CMakeFiles/Jogo.dir/src/Ente/Entidades/Personagens/Inim_TipoB.cpp.obj CMakeFiles/Jogo.dir/src/Ente/Entidades/Obstaculos/Obstaculo.cpp.obj CMakeFiles/Jogo.dir/src/Ente/Entidades/Obstaculos/Obst_TipoA.cpp.obj CMakeFiles/Jogo.dir/src/Ente/Entidades/Obstaculos/Obst_TipoB.cpp.obj | C$:/SFML/lib/libsfml-system-s-d.a C$:/SFML/lib/libsfml-window-s-d.a C$:/SFML/lib/libsfml-graphics-s-d.a C$:/SFML/lib/libsfml-audio-s-d.a C$:/SFML/lib/libsfml-window-s-d.a C$:/SFML/lib/libfreetype.a C$:/SFML/lib/libsfml-system-s-d.a C$:/SFML/lib/libopenal32.a C$:/SFML/lib/libvorbisfile.a C$:/SFML/lib/libvorbisenc.a C$:/SFML/lib/libvorbis.a C$:/SFML/lib/libogg.a C$:/SFML/lib/libFLAC.a
+build Jogo.exe: CXX_EXECUTABLE_LINKER__Jogo_Debug CMakeFiles/Jogo.dir/main.cpp.obj CMakeFiles/Jogo.dir/src/Jogo.cpp.obj CMakeFiles/Jogo.dir/src/Menu.cpp.obj CMakeFiles/Jogo.dir/src/Listas/ListaEntidades.cpp.obj CMakeFiles/Jogo.dir/src/Gerenciadores/Gerenciador_Grafico.cpp.obj CMakeFiles/Jogo.dir/src/Gerenciadores/Gerenciador_Colisoes.cpp.obj CMakeFiles/Jogo.dir/src/Ente/Ente.cpp.obj CMakeFiles/Jogo.dir/src/Ente/Menus/Main_Menu.cpp.obj CMakeFiles/Jogo.dir/src/Ente/Fases/Fase.cpp.obj CMakeFiles/Jogo.dir/src/Ente/Fases/Primeira_Fase.cpp.obj CMakeFiles/Jogo.dir/src/Ente/Fases/Segunda_Fase.cpp.obj CMakeFiles/Jogo.dir/src/Ente/Entidades/Projetil.cpp.obj CMakeFiles/Jogo.dir/src/Ente/Entidades/Entidade.cpp.obj CMakeFiles/Jogo.dir/src/Ente/Entidades/Personagens/Personagem.cpp.obj CMakeFiles/Jogo.dir/src/Ente/Entidades/Personagens/Jogador.cpp.obj CMakeFiles/Jogo.dir/src/Ente/Entidades/Personagens/Inimigo.cpp.obj CMakeFiles/Jogo.dir/src/Ente/Entidades/Personagens/Inim_TipoA.cpp.obj CMakeFiles/Jogo.dir/src/Ente/Entidades/Personagens/Inim_TipoB.cpp.obj CMakeFiles/Jogo.dir/src/Ente/Entidades/Obstaculos/Obstaculo.cpp.obj CMakeFiles/Jogo.dir/src/Ente/Entidades/Obstaculos/Plataforma.cpp.obj CMakeFiles/Jogo.dir/src/Ente/Entidades/Obstaculos/Obst_TipoB.cpp.obj CMakeFiles/Jogo.dir/include/Animacao/Animacao.cpp.obj CMakeFiles/Jogo.dir/include/Animacao/Imagem.cpp.obj | C$:/SFML/lib/libsfml-system-s-d.a C$:/SFML/lib/libsfml-window-s-d.a C$:/SFML/lib/libsfml-graphics-s-d.a C$:/SFML/lib/libsfml-audio-s-d.a C$:/SFML/lib/libsfml-window-s-d.a C$:/SFML/lib/libfreetype.a C$:/SFML/lib/libsfml-system-s-d.a C$:/SFML/lib/libopenal32.a C$:/SFML/lib/libvorbisfile.a C$:/SFML/lib/libvorbisenc.a C$:/SFML/lib/libvorbis.a C$:/SFML/lib/libogg.a C$:/SFML/lib/libFLAC.a
   FLAGS = -g
   LINK_LIBRARIES = C:/SFML/lib/libsfml-system-s-d.a  C:/SFML/lib/libsfml-window-s-d.a  C:/SFML/lib/libsfml-graphics-s-d.a  C:/SFML/lib/libsfml-audio-s-d.a  C:/SFML/lib/libsfml-window-s-d.a  -lgdi32  -lOpenGL32  C:/SFML/lib/libfreetype.a  C:/SFML/lib/libsfml-system-s-d.a  -lwinmm  C:/SFML/lib/libopenal32.a  C:/SFML/lib/libvorbisfile.a  C:/SFML/lib/libvorbisenc.a  C:/SFML/lib/libvorbis.a  C:/SFML/lib/libogg.a  C:/SFML/lib/libFLAC.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Jogo.dir
