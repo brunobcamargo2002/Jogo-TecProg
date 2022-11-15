@@ -14,7 +14,7 @@ Gerenciador_Grafico* Gerenciador_Grafico::getInstancia()
 
 
 Gerenciador_Grafico::Gerenciador_Grafico():
-janela(new sf::RenderWindow(sf::VideoMode(800.f, 600.f), "Jogo"))
+janela(new sf::RenderWindow(sf::VideoMode(1280.f, 720.f), "Jogo"))
 {
     if(janela == NULL)
     {

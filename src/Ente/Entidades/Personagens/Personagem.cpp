@@ -3,10 +3,13 @@
 using namespace Entidades;
 
 
-Personagem::Personagem(sf::Vector2f posicao, sf::Vector2f tamanho, sf::Vector2f speed) :
+Personagem::Personagem(sf::Vector2f posicao, sf::Vector2f tamanho, sf::Vector2f velocidadeTerminal) :
 animacao(&corpo),
 Entidade(tamanho, posicao),
-velocidade(speed)
+velocidadeTerminal(velocidadeTerminal),
+velocidade(0.f, 0.f),
+atacando(false),
+podeAndar(true)
 {
 }
 
@@ -51,7 +54,7 @@ void Personagem::gravidade() {
         noChao = false;
         podeAndar = false;
     }
-    velocidade.y+=0.0006;
+    velocidade.y+=0.0001;
     corpo.move(0.f, velocidade.y);
 }
 

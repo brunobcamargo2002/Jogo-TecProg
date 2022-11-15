@@ -15,6 +15,7 @@ youtube: https://www.youtube.com/channel/UCUa8BOx2F3hlxgPcpZmnBnQ
 namespace Entidades {
     class Personagem : public Entidade {
     protected:
+        const sf::Vector2f velocidadeTerminal;
         sf::Vector2f velocidade;
         int num_vidas;
         Animacao animacao;
@@ -27,7 +28,7 @@ namespace Entidades {
 
 
     public:
-        Personagem(sf::Vector2f posicao, sf::Vector2f tamanho,sf::Vector2f speed = sf::Vector2f(0.1, 0.1));
+        Personagem(sf::Vector2f posicao, sf::Vector2f tamanho,sf::Vector2f velocidadeTerminal = sf::Vector2f(0.1, 0.1));
         virtual ~Personagem();
         virtual void mover_se() = 0;
         virtual void atualizarAnimacao()=0;

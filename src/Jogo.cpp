@@ -7,7 +7,7 @@ gerenciador_grafico(Gerenciadores::Gerenciador_Grafico::getInstancia()),
 personagens(),
 gerenciador_colisoes(&personagens, &obstaculos),
 plataforma(sf::Vector2f(500, 500), sf::Vector2f(1000, 100), "C:/Users/bruno/CLionProjects/Jogo/imagens/Plataforma.png"),
-jogador(sf::Vector2f(20, 20), sf::Vector2f(20, 20), sf::Vector2f(0.1, 0.1))
+jogador(sf::Vector2f(70, 70), sf::Vector2f(20, 20), sf::Vector2f(0.3, 0.3))
 {
     obstaculos.inserirEntidade(static_cast<Entidades::Entidade*>(&plataforma));
     personagens.inserirEntidade(static_cast<Entidades::Entidade*>(&jogador));
