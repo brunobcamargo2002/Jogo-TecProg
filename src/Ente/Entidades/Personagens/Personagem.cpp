@@ -38,12 +38,13 @@ void Personagem::colisao(sf::Vector2f deslocamento, Entidades::Entidade* entidad
     }
     else
     {
-        if(entidade->getPosicao().y>getPosicao().y)
+        if(entidade->getPosicao().y>getPosicao().y) {
             corpo.move(0.f, -deslocamento.y);
+            noChao = true;
+        }
         else
             corpo.move(0.f, +deslocamento.y);
         velocidade.y = 0;
-        noChao = true;
 
     }
 }
@@ -54,7 +55,7 @@ void Personagem::gravidade() {
         noChao = false;
         podeAndar = false;
     }
-    velocidade.y+=0.0001;
+    velocidade.y+=0.00006;
     corpo.move(0.f, velocidade.y);
 }
 

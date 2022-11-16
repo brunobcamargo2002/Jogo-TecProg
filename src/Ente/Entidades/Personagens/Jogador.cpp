@@ -8,13 +8,13 @@ Jogador::Jogador(sf::Vector2f posicao, sf::Vector2f tamanho, sf::Vector2f Veloci
 }
 
 void Jogador::inicializa() {
-    animacao.addAnimacao("C:/Users/bruno/CLionProjects/Jogo/imagens/Jogador/Anda.png", "ANDANDO", 10, 0.12f, sf::Vector2f(6,2));
-    animacao.addAnimacao("C:/Users/bruno/CLionProjects/Jogo/imagens/Jogador/Ataca.png", "ATACANDO", 10, 0.1f, sf::Vector2f(6,2));
-    animacao.addAnimacao("C:/Users/bruno/CLionProjects/Jogo/imagens/Jogador/Parado.png", "PARADO", 10, 0.15f, sf::Vector2f(6,2));
-    animacao.addAnimacao("C:/Users/bruno/CLionProjects/Jogo/imagens/Jogador/Pula.png", "PULANDO", 3, 0.15f, sf::Vector2f(6,2));
-    animacao.addAnimacao("C:/Users/bruno/CLionProjects/Jogo/imagens/Jogador/Cai.png", "CAINDO", 3, 0.15f, sf::Vector2f(6,2));
-    animacao.addAnimacao("C:/Users/bruno/CLionProjects/Jogo/imagens/Jogador/Morre.png", "MORRENDO", 10, 0.15f, sf::Vector2f(6,2));
-    animacao.addAnimacao("C:/Users/bruno/CLionProjects/Jogo/imagens/Jogador/TomaDano.png", "TOMANDO_DANO", 1, 0.15f, sf::Vector2f(6,2));
+    animacao.addAnimacao("C:/Users/bruno/CLionProjects/Jogo/imagens/Jogador/Anda.png", "ANDANDO", 8, 0.12f, sf::Vector2f(6,8));
+    animacao.addAnimacao("C:/Users/bruno/CLionProjects/Jogo/imagens/Jogador/Ataca.png", "ATACANDO", 6, 0.1f, sf::Vector2f(6,8));
+    animacao.addAnimacao("C:/Users/bruno/CLionProjects/Jogo/imagens/Jogador/Parado.png", "PARADO", 8, 0.15f, sf::Vector2f(6,8));
+    animacao.addAnimacao("C:/Users/bruno/CLionProjects/Jogo/imagens/Jogador/Pula.png", "PULANDO", 2, 0.15f, sf::Vector2f(6,8));
+    animacao.addAnimacao("C:/Users/bruno/CLionProjects/Jogo/imagens/Jogador/Cai.png", "CAINDO", 2, 0.15f, sf::Vector2f(6,8));
+    animacao.addAnimacao("C:/Users/bruno/CLionProjects/Jogo/imagens/Jogador/Morre.png", "MORRENDO", 6, 0.15f, sf::Vector2f(6,8));
+    animacao.addAnimacao("C:/Users/bruno/CLionProjects/Jogo/imagens/Jogador/TomaDano.png", "TOMANDO_DANO", 4, 0.15f, sf::Vector2f(6,8));
     corpo.setOrigin(sf::Vector2f(corpo.getSize().x/ 2.f, corpo.getSize().y / 2.f));
 }
 
@@ -38,7 +38,7 @@ void Jogador::mover_se()
 
         }
         else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up)) {
-            velocidade.y=-0.16;
+            velocidade.y=-0.15;
         }
         else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down))
             corpo.move(0, 0);
@@ -48,8 +48,16 @@ void Jogador::mover_se()
         std::cout<<velocidade.x<<std::endl<<velocidade.y<<std::endl;
     }
     else{
-        zeraVelocidadeNoAr();
-        corpo.move(velocidade.x, velocidade.y);
+        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right) ) {
+            paraEsquerda = false;
+            corpo.move(0.1, velocidade.y);
+        }
+        else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left)) {
+            paraEsquerda = true;
+            corpo.move(-0.1, velocidade.y);
+
+        }
+        //corpo.move(velocidade.x, velocidade.y);
     }
 }
 
@@ -115,28 +123,6 @@ void Jogador::diminuiVelocidadeX() {
     }
 }
 
-void Jogador::zeraVelocidadeNoAr() {
-    if(noChao){
-        if(std::abs(velocidade.x)<0.005)
-            velocidade.x = 0.f;
-        else if(velocidade.x>0) {
-            velocidade.x -= 0.0002;
-        }
-        else if(velocidade.x<0){
-            velocidade.x += 0.0002;
-        }
-    }
-    else{
-        if(std::abs(velocidade.x)<0.005)
-            velocidade.x = 0.f;
-        else if(velocidade.x>0) {
-            velocidade.x -= 0.0002;
-        }
-        else if(velocidade.x<0){
-            velocidade.x += 0.0002;
-        }
-    }
-}
 
 
 

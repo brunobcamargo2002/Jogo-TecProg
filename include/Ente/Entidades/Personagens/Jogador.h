@@ -16,7 +16,6 @@ namespace Entidades {
         void aumentaVelocidadeX();
         void diminuiVelocidadeX();
         void zeraVelocidade();
-        void zeraVelocidadeNoAr();
 
 
     };

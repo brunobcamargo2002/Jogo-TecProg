@@ -14,7 +14,10 @@ class Jogo
 {
 private:
     Entidades::Jogador jogador;
+    //Entidades::Inimigo inimigo;
     Entidades::Plataforma plataforma;
+    Entidades::Plataforma plataforma2;
+    Entidades::Plataforma plataforma3;
     Listas::ListaEntidades personagens;
     Listas::ListaEntidades obstaculos;
 

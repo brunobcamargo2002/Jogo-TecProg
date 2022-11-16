@@ -29,7 +29,7 @@ bool Inimigo::persegueJogador()
     if(jogador1!=NULL)
     {
         sf::RectangleShape shapeJogador1 = jogador1->getCorpo();
-        if(std::fabs(shapeJogador1.getPosition().x-corpo.getPosition().x)<=raio.x && std::fabs(shapeJogador1.getPosition().y-corpo.getPosition().y)<=raio.y)
+        if(std::fabs(shapeJogador1.getPosition().x-corpo.getPosition().x)<=raio.x)
             return true;
         else
             return false;
