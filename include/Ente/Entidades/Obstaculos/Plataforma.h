@@ -1,22 +1,17 @@
-#ifndef OBST_TIPOA_H
-#define OBST_TIPOA_H
+#ifndef __PLATAFORMA_H__
+#define __PLATAFORMA_H__
 
 #include "Obstaculo.h"
 
 namespace Entidades {
 
     class Plataforma : public Obstaculo {
-    private:
-
     public:
-        Plataforma(sf::Vector2f posicao, sf::Vector2f tamanho, const char* caminho);
+        Plataforma(){};
+        Plataforma(int Px,int Py);
         virtual ~Plataforma();
-
-    protected:
-
-    private:
     };
 
 }
 
-#endif // OBST_TIPOA_H
+#endif // __PLATAFORMA_H__

@@ -1,13 +1,13 @@
-#include <SFML/Graphics.hpp>
 #include <iostream>
 
-
-#include "include/Gerenciadores/Gerenciador_Grafico.h"
+using namespace std;
+#include <SFML/Graphics.hpp>
 #include "include/Jogo.h"
-
 int main()
 {
-    Jogo game;
+    srand((unsigned)time(NULL));
+    Jogo teste;
+    teste.executar();
 
-    game.executar();
+    return 0;
 }

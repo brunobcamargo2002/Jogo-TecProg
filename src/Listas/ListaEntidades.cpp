@@ -22,9 +22,12 @@ void ListaEntidades::inserirEntidade(Entidades::Entidade *entidade) {
 void ListaEntidades::executarEntidades() {
     Lista<Entidades::Entidade>::Iterador iterador;
     iterador = LEntidades.getPrimeiro();
-    while(!iterador.fim())
-    {
-        iterador.getConteudo()->executar();
+    while(!iterador.fim()) {
+        if(iterador.getConteudo()!=NULL) {
+            if (iterador.getConteudo()->getExecuta()) {
+                iterador.getConteudo()->executar();
+            }
+        }
         ++iterador;
     }
 }

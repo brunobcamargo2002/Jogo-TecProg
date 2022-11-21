@@ -2,14 +2,12 @@
 
 using namespace Entidades;
 
-Plataforma::Plataforma(sf::Vector2f posicao, sf::Vector2f tamanho, const char *caminhoTextura):
-Obstaculo(posicao, tamanho, caminhoTextura) {
-
+Plataforma::Plataforma(int Px,int Py):Obstaculo(100,30,Px,Py)
+{
+    corpo.setFillColor(sf::Color::White);
+    setTextura("C:/Users/bruno/CLionProjects/jogo-joao/imagens/Obstaculos/Plataforma.png");
 }
+
 
 Plataforma::~Plataforma()
-{
-    //dtorf
-}
-
-
+{}

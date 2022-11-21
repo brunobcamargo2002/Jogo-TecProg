@@ -20,8 +20,10 @@ namespace Gerenciadores {
         void verificaColisaoEntrePersonagensEObstaculos();
         const sf::Vector2f calculaColisao(Entidades::Entidade *entidade1, Entidades::Entidade *entidade2);
         void executar();
-
         virtual ~Gerenciador_Colisoes();
+
+        void setListaPersonagens(Listas::ListaEntidades* LPersonagens){this->LPersonagens=LPersonagens;};
+        void setListaObstaculos(Listas::ListaEntidades* LObstaculos){this->LObstaculos=LObstaculos;};
 
     protected:
     };

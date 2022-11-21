@@ -9,9 +9,15 @@ Entidade(tamanho, posicao),
 velocidadeTerminal(velocidadeTerminal),
 velocidade(0.f, 0.f),
 atacando(false),
-podeAndar(true)
+podeAndar(true),
+permiteAtacar(true),
+morrendo(false),
+tempoEsperaAtaque(0),
+relogio(),
+tempoMorte(1.8)
 {
 }
+
 
 Personagem::~Personagem()
 {
@@ -41,10 +47,10 @@ void Personagem::colisao(sf::Vector2f deslocamento, Entidades::Entidade* entidad
         if(entidade->getPosicao().y>getPosicao().y) {
             corpo.move(0.f, -deslocamento.y);
             noChao = true;
+            velocidade.y = 0;
         }
         else
             corpo.move(0.f, +deslocamento.y);
-        velocidade.y = 0;
 
     }
 }
@@ -53,18 +59,63 @@ void Personagem::colisao(sf::Vector2f deslocamento, Entidades::Entidade* entidad
 void Personagem::gravidade() {
     if(velocidade.y!=0.f){
         noChao = false;
-        podeAndar = false;
     }
-    velocidade.y+=0.00006;
+    velocidade.y+=0.0004;
     corpo.move(0.f, velocidade.y);
 }
 
-void Personagem::executar(){
+void Personagem::mecanica() {
     mover_se();
-    atualizarAnimacao();
-    gravidade();
-    imprimir_se();
+    atacar();
 }
+
+void Personagem::executar(){
+    if(morrendo) {
+        falecendo();
+    }
+    else {
+        mecanica();
+        atualizarAnimacao();
+        imprimir_se();
+    }
+    gravidade();
+}
+
+void Personagem::podeAtacar() {
+
+
+}
+
+void Personagem::setPodeAndar(bool valor) {
+    podeAndar = valor;
+
+}
+
+void Personagem::tomaDano(int dano) {
+    num_vidas -=dano;
+    if(num_vidas<=0) {
+        relogio.restart();
+        morrendo = true;
+    }
+}
+
+void Personagem::falecendo() {
+    if(executa) {
+        atualizarAnimacao();
+        imprimir_se();
+        if (relogio.getElapsedTime().asSeconds() > tempoMorte) {
+            executa = false;
+        }
+    }
+
+}
+
+
+
+
+
+
+
 
 
 

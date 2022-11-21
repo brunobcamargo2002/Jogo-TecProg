@@ -36,6 +36,10 @@ void Gerenciador_Grafico::desenhaElemento(sf::RectangleShape conteudo) {
     janela->draw(conteudo);
 }
 
+void Gerenciador_Grafico::desenhaElemento(sf::Text* conteudo,int n) {
+    for(int i=0;i<n;i++){janela->draw(conteudo[i]);}
+}
+
 void Gerenciador_Grafico::limpaJanela() {
     janela->clear();
 }

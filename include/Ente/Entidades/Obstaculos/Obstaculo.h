@@ -7,14 +7,16 @@ namespace Entidades {
 
 class Obstaculo : public Entidade
 {
-protected:
-    sf::Texture* textura;
-public:
-    Obstaculo(sf::Vector2f posicao, sf::Vector2f tamanho, const char *caminho);
-    virtual ~Obstaculo();
-    void executar();
-    void colisao(sf::Vector2f deslocamento, Entidades::Entidade* entidade){};
-    void setTextura(const char* caminho);
+    protected:
+        bool danoso;
+    public:
+        Obstaculo();
+        Obstaculo(int comprimento, int largura,int Px,int Py);
+        virtual ~Obstaculo();
+        void executar();
+        void colisao(sf::Vector2f deslocamento, Entidades::Entidade* entidade){};
+        void SetPosicao(int Px,int Py);
+        void SetDimensoes(int comprimento,int largura);
 
 };
 }

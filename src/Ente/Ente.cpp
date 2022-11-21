@@ -1,9 +1,8 @@
 #include "../../include/Ente/Ente.h"
 
 
-
-Ente::Ente():
-gerenciador_grafico(Gerenciadores::Gerenciador_Grafico::getInstancia())
+Gerenciadores::Gerenciador_Grafico* Ente::gerenciador_grafico=Gerenciadores::Gerenciador_Grafico::getInstancia();
+Ente::Ente()
 {
 }
 

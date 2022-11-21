@@ -18,11 +18,21 @@ namespace Entidades {
         const sf::Vector2f velocidadeTerminal;
         sf::Vector2f velocidade;
         int num_vidas;
+        sf::Clock relogio;
+
+        sf::Vector2f raioAtaque;
+        float tempoMorte;
+        float tempoAtaque;
+        bool permiteAtacar;
+        float coolDown;
+        float tempoEsperaAtaque;
+
         Animacao animacao;
         bool paraEsquerda;
         bool noChao;
         bool atacando;
         bool podeAndar;
+        bool morrendo;
 
 
 
@@ -30,15 +40,24 @@ namespace Entidades {
     public:
         Personagem(sf::Vector2f posicao, sf::Vector2f tamanho,sf::Vector2f velocidadeTerminal = sf::Vector2f(0.1, 0.1));
         virtual ~Personagem();
-        virtual void mover_se() = 0;
-        virtual void atualizarAnimacao()=0;
+
+        void colisao(sf::Vector2f deslocamento, Entidades::Entidade* entidade);
         void gravidade();
+
+        virtual void atualizarAnimacao()=0;
+        void executar();
+        virtual void mover_se() = 0;
+        virtual void atacar()=0;
+        void mecanica();
+        void tomaDano(int dano);
+        void falecendo();
+
         const sf::RectangleShape getCorpo();
         void setVelocidade(sf::Vector2f vel);
-        void colisao(sf::Vector2f deslocamento, Entidades::Entidade* entidade);
-        void executar();
 
 
+        void podeAtacar();
+        void setPodeAndar(bool valor);
 
 
     private:

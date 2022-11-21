@@ -26,6 +26,7 @@ namespace Gerenciadores {
 
         sf::RenderWindow* getWindow();
         void desenhaElemento(sf::RectangleShape conteudo);
+        void desenhaElemento(sf::Text* conteudo,int n);
         void limpaJanela();
         void fecharJanela();
         void mostrarConteudo() const;
