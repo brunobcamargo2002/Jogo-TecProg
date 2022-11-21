@@ -15,7 +15,7 @@ namespace Entidades {
         sf::Vector2f raio;
 
     public:
-        Inimigo(sf::Vector2f speed = sf::Vector2f(0.1, 0), Jogador *player = NULL, sf::Vector2f range = sf::Vector2f(150.f, 150.f), sf::Vector2f body = sf::Vector2f(50, 50));
+        Inimigo(sf::Vector2f posicao, sf::Vector2f tamanho, sf::Vector2f speed = sf::Vector2f(0.1, 0), Jogador *player = NULL, sf::Vector2f range = sf::Vector2f(150.f, 150.f));
         virtual ~Inimigo();
 
         void setJogador(Jogador *player);

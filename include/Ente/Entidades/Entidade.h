@@ -10,7 +10,7 @@ namespace Entidades {
     protected:
         sf::RectangleShape corpo;
     public:
-        Entidade();
+        Entidade(sf::Vector2f posicao, sf::Vector2f tamanho);
         ~Entidade();
         sf::Vector2f getPosicao();
         sf::Vector2f getTamanho();

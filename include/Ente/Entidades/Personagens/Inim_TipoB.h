@@ -3,7 +3,7 @@
 
 #include "Inimigo.h"
 
-
+/*
 namespace Entidades {
 
     class Inim_TipoB : public Inimigo {
@@ -17,6 +17,6 @@ namespace Entidades {
     private:
     };
 
-}
+}*/
 
 #endif // INIM_TIPOB_H

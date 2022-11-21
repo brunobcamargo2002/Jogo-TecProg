@@ -4,16 +4,14 @@
 #include "Inimigo.h"
 
 namespace Entidades {
-
-    class Inim_TipoA : public Inimigo {
+    class Caveira : public Inimigo {
     public:
-        Inim_TipoA();
+        Caveira();
 
-        virtual ~Inim_TipoA();
-
-    protected:
+        virtual ~Caveira();
 
     private:
+        void atualizarAnimacao();
     };
 
 }

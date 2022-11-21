@@ -4,6 +4,8 @@
 #include <iostream>
 
 #include "SFML/Graphics.hpp"
+
+#include "string.h"
 //Foi utilizado o padrão Singleton, ou seja, só haverá 1 instância Gerenciador_grafico e esta terá acesso global.
 
 
@@ -12,6 +14,7 @@ namespace Gerenciadores {
     class Gerenciador_Grafico {
     private:
         sf::RenderWindow *janela;
+        std::map<const char*, sf::Texture*> texturas;
         Gerenciador_Grafico();
 
         //singleton
@@ -27,6 +30,7 @@ namespace Gerenciadores {
         void fecharJanela();
         void mostrarConteudo() const;
         const bool verificaJanelaAberta();
+        sf::Texture* carregarTextura(const char* caminho);
 
 
 

@@ -2,18 +2,22 @@
 
 using namespace Entidades;
 
-Personagem::Personagem(sf::Vector2f speed, sf::Vector2f body)
-{
-    corpo.setSize(body);
-    corpo.setOrigin(body/2.f);
-    velocidade = speed;
 
+Personagem::Personagem(sf::Vector2f posicao, sf::Vector2f tamanho, sf::Vector2f velocidadeTerminal) :
+animacao(&corpo),
+Entidade(tamanho, posicao),
+velocidadeTerminal(velocidadeTerminal),
+velocidade(0.f, 0.f),
+atacando(false),
+podeAndar(true)
+{
 }
 
 Personagem::~Personagem()
 {
     //dtor
 }
+
 
 const sf::RectangleShape Personagem::getCorpo()
 {
@@ -34,29 +38,36 @@ void Personagem::colisao(sf::Vector2f deslocamento, Entidades::Entidade* entidad
     }
     else
     {
-        if(entidade->getPosicao().y>getPosicao().y)
+        if(entidade->getPosicao().y>getPosicao().y) {
             corpo.move(0.f, -deslocamento.y);
+            noChao = true;
+        }
         else
             corpo.move(0.f, +deslocamento.y);
         velocidade.y = 0;
-        if(sf::Keyboard::isKeyPressed(sf::Keyboard::Up)) {
-            velocidade.y=-0.3;
-            corpo.move(0, velocidade.y);
-        }
+
     }
 }
 
 
 void Personagem::gravidade() {
-    velocidade.y+=0.001;
+    if(velocidade.y!=0.f){
+        noChao = false;
+        podeAndar = false;
+    }
+    velocidade.y+=0.00006;
     corpo.move(0.f, velocidade.y);
 }
 
 void Personagem::executar(){
     mover_se();
+    atualizarAnimacao();
     gravidade();
     imprimir_se();
 }
+
+
+
 
 
 

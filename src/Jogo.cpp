@@ -5,14 +5,16 @@
 Jogo::Jogo():
 gerenciador_grafico(Gerenciadores::Gerenciador_Grafico::getInstancia()),
 personagens(),
-gerenciador_colisoes(&personagens, &obstaculos)
+gerenciador_colisoes(&personagens, &obstaculos),
+plataforma(sf::Vector2f(500, 500), sf::Vector2f(1000, 70), "C:/Users/bruno/CLionProjects/Jogo/imagens/Plataforma.png"),
+plataforma2(sf::Vector2f(700, 300), sf::Vector2f(100, 70), "C:/Users/bruno/CLionProjects/Jogo/imagens/Plataforma.png"),
+plataforma3(sf::Vector2f(200, 200), sf::Vector2f(100, 70), "C:/Users/bruno/CLionProjects/Jogo/imagens/Plataforma.png"),
+jogador(sf::Vector2f(80, 60), sf::Vector2f(20, 20), sf::Vector2f(0.3, 0.3))
 {
-    jogador1.setVelocidade(sf::Vector2f(0.2, 0));
-    inimigo1.setJogador(&jogador1);
-    inimigo1.setRaio(sf::Vector2f(200.f, 200.f));
-    obstaculos.inserirEntidade(static_cast <Entidades::Entidade*> (&obstaculo));
-    personagens.inserirEntidade(static_cast <Entidades::Entidade*> (&jogador1));
-    personagens.inserirEntidade(static_cast <Entidades::Entidade*> (&inimigo1));
+    obstaculos.inserirEntidade(static_cast<Entidades::Entidade*>(&plataforma));
+    obstaculos.inserirEntidade(static_cast<Entidades::Entidade*>(&plataforma2));
+    obstaculos.inserirEntidade(static_cast<Entidades::Entidade*>(&plataforma3));
+    personagens.inserirEntidade(static_cast<Entidades::Entidade*>(&jogador));
 }
 
 Jogo::~Jogo()

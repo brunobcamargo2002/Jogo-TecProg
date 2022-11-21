@@ -2,12 +2,9 @@
 
 using namespace Entidades;
 
-Obstaculo::Obstaculo()
-{
-    corpo.setSize(sf::Vector2f(800, 30));
-    corpo.setOrigin(sf::Vector2f(800, 30)/2.f);
-    corpo.setPosition(400, 400);
-    corpo.setFillColor(sf::Color::Green);
+
+Obstaculo::Obstaculo(sf::Vector2f posicao, sf::Vector2f tamanho, const char *caminho):Entidade(posicao, tamanho) {
+   setTextura(caminho);
 }
 
 Obstaculo::~Obstaculo()
@@ -18,3 +15,13 @@ Obstaculo::~Obstaculo()
 void Obstaculo::executar() {
     Entidade::imprimir_se();
 }
+
+void Obstaculo::setTextura(const char* caminho) {
+    textura = Gerenciadores::Gerenciador_Grafico::getInstancia()->carregarTextura(caminho);
+    corpo.setTexture(textura);
+}
+
+
+
+
+

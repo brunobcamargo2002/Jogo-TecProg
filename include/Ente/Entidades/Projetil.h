@@ -3,7 +3,7 @@
 
 #include "Entidade.h"
 
-
+/*
 namespace Entidades {
 
     class Projetil : public Entidade {
@@ -18,5 +18,5 @@ namespace Entidades {
     };
 
 }
-
+*/
 #endif // PROJETIL_H
