@@ -12,9 +12,9 @@ atacando(false),
 podeAndar(true),
 permiteAtacar(true),
 morrendo(false),
+levandoDano(false),
 tempoEsperaAtaque(0),
-relogio(),
-tempoMorte(1.8)
+relogio()
 {
 }
 
@@ -67,18 +67,6 @@ void Personagem::gravidade() {
 void Personagem::mecanica() {
     mover_se();
     atacar();
-}
-
-void Personagem::executar(){
-    if(morrendo) {
-        falecendo();
-    }
-    else {
-        mecanica();
-        atualizarAnimacao();
-        imprimir_se();
-    }
-    gravidade();
 }
 
 void Personagem::podeAtacar() {

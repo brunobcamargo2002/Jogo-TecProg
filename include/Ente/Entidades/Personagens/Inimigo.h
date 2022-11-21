@@ -25,10 +25,14 @@ namespace Entidades {
         void setRaio(sf::Vector2f range);
         bool detectaJogador();
 
+        void inimigoTomaDano(Jogador* jgdor);
+        void daDano(Jogador* jgdor);
+
 
         virtual void mover_se()=0;
         virtual void atacar()=0;
         virtual void atualizarAnimacao()=0;
+        virtual void executar()=0;
 
 
 

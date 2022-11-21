@@ -15,11 +15,19 @@ namespace Entidades {
         virtual void atacar()=0;
 
         void atualizarAnimacao();
+        void executar();
 
         void aumentaVelocidadeX();
         void diminuiVelocidadeX();
         void zeraVelocidade();
         void pulo();
+
+
+        sf::Vector2f getRangeAtaque();
+        bool getAtacando();
+        float getTempoAtaque();
+        float getTempoEsperaAtaque();
+        int getDano();
 
 
 

@@ -8,8 +8,8 @@ jogador1(player),
 jogador2(player2),
 alvo(NULL)
 {
-    raioAtaque= sf::Vector2f(120.f, 120.f);
-    setRaio(range);
+
+
 }
 
 Inimigo::~Inimigo()
@@ -28,12 +28,14 @@ void Inimigo::setJogador(Jogador* player)
 }
 
 bool Inimigo::detectaJogador() {
+    ;
     if(podeAndar) {
 
         if (jogador1 != NULL && jogador1->getExecuta()) {
             sf::RectangleShape shapeJogador1 = jogador1->getCorpo();
             if (std::abs(shapeJogador1.getPosition().x - corpo.getPosition().x) <= raio.x &&
                 std::abs(shapeJogador1.getPosition().y - corpo.getPosition().y) <= raio.y) {
+                //inimigoTomaDano(jogador1);
                 velocidade.x = velocidadeTerminal.x;
                 return true;
             } else {
@@ -46,6 +48,25 @@ bool Inimigo::detectaJogador() {
     else
         velocidade.x = 0.f;
 
+}
+
+void Inimigo::inimigoTomaDano(Jogador* jgdor) {
+    if(jgdor!=NULL){
+        if(jgdor->getAtacando()){
+            sf::Vector2f rangeAtaque = jgdor->getRangeAtaque();
+            sf::Vector2f posicaoJogador = jgdor->getPosicao();
+            if (std::abs(corpo.getPosition().x - posicaoJogador.x) <= rangeAtaque.x &&
+                std::abs(corpo.getPosition().y - posicaoJogador.y) <= rangeAtaque.y){
+                if(jgdor->getTempoEsperaAtaque()>(jgdor->getTempoAtaque()-400))
+                    tomaDano(jgdor->getDano());
+            }
+    }
+    }
+
+}
+
+void Inimigo::daDano(Jogador *jgdor) {
+    jgdor->tomaDano(danoAtaque);
 }
 
 

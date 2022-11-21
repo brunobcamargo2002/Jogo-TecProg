@@ -13,9 +13,8 @@ namespace Entidades {
         void mover_se();
         void atacar();
         void atacaJogador(Jogador* jogador);
-        void daDano(Jogador* jgdor);
-        void tomaDano(Jogador* jgdor);
         void atualizarAnimacao();
+        void executar();
     };
 
 }

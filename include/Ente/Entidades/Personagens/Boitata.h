@@ -16,8 +16,11 @@ namespace Entidades {
         void inicializa();
 
         void mover_se();
+        void atacaJogador(Jogador* jogador);
         void atacar();
+        void lancaProjetil(bool esquerda);
         void atualizarAnimacao();
+        void executar();
 
     };
 

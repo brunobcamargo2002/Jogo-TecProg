@@ -7,7 +7,9 @@ Jogador::Jogador(sf::Vector2f posicao, sf::Vector2f tamanho, sf::Vector2f Veloci
     coolDown=1000;
     tempoAtaque=800;
     num_vidas=10;
-    raioAtaque=sf::Vector2f(100,100);
+    danoAtaque = 2;
+    tempoMorte= 1.8;
+    raioAtaque=sf::Vector2f(180,100);
 }
 
 
@@ -84,6 +86,39 @@ void Jogador::diminuiVelocidadeX() {
 
 void Jogador::pulo() {
     velocidade.y=-0.4;
+}
+
+sf::Vector2f Jogador::getRangeAtaque() {
+    return raioAtaque;
+}
+
+bool Jogador::getAtacando() {
+    return atacando;
+}
+
+float Jogador::getTempoEsperaAtaque() {
+    return tempoEsperaAtaque;
+}
+
+float Jogador::getTempoAtaque(){
+    return tempoAtaque;
+}
+
+int Jogador::getDano() {
+    return danoAtaque;
+}
+
+void Jogador::executar() {
+    if(morrendo) {
+        falecendo();
+    }
+    else {
+        mecanica();
+        atualizarAnimacao();
+        imprimir_se();
+    }
+    gravidade();
+
 }
 
 
