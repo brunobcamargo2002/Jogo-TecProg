@@ -3,7 +3,7 @@
 using namespace Fases;
 
 Fase::Fase(Entidades::Jogador1* jg, Entidades::Jogador2* jg2, Gerenciadores::Gerenciador_Colisoes* gc,int obs1,int obs2,int obs3,int tam):
-        caveira(sf::Vector2f(50,60),sf::Vector2f(500,100),sf::Vector2f(0.1,0), jg, jg2, sf::Vector2f(300,50)),
+        caveira(sf::Vector2f(50,60),sf::Vector2f(500,100),sf::Vector2f(0.1,0), jg, jg2, sf::Vector2f(600,50)),
         boitata(sf::Vector2f(30,30), sf::Vector2f(700,100), sf::Vector2f(0.1,0),jg, jg2, sf::Vector2f(600,50))
 {
     jogador1=jg;

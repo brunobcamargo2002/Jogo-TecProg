@@ -33,11 +33,6 @@ void Boitata::inicializa() {
 void Boitata::mover_se() {
 }
 
-void Boitata::atacar() {
-    inimigoTomaDano(jogador1);
-    if(jogador1!=NULL)
-        atacaJogador(jogador1);
-}
 
 void Boitata::atacaJogador(Jogador* jogador) {
     projetil.executar();
@@ -55,12 +50,16 @@ void Boitata::atacaJogador(Jogador* jogador) {
             sf::Vector2f jgdor = jogador->getCorpo().getPosition();
             float distanciaX = jgdor.x-inimigo.x;
             float distanciaY = jgdor.y-inimigo.y;
-            if (distanciaX < 0)
-                paraEsquerda= true;
-            else
-                paraEsquerda= false;
-            if (std::abs(distanciaX) < raioAtaque.x && std::abs(distanciaY) < raioAtaque.y)
-                atacando = true;
+            if(std::abs(distanciaY) < raioAtaque.y) {
+                if (distanciaX < 0)
+                    paraEsquerda = true;
+                else
+                    paraEsquerda = false;
+                if (std::abs(distanciaX) < raioAtaque.x) {
+                    atacando = true;
+                    alvoAtaque = jogador;
+                }
+            }
 
             if(atacando) {
                 tempoEsperaAtaque += relogio.getElapsedTime().asSeconds();
@@ -77,8 +76,11 @@ void Boitata::atacaJogador(Jogador* jogador) {
                     relogio.restart();
                     }
                 }
-            else
+            else{
+                atacando= false;
                 relogio.restart();
+            }
+
             }
     }
 
@@ -116,9 +118,19 @@ void Boitata::executar() {
     }
     else {
         atacar();
+        inimigoTomaDano(jogador1);
+        if(jogador2!=NULL)
+            inimigoTomaDano(jogador2);
         atualizarAnimacao();
         imprimir_se();
     }
     gravidade();
 
 }
+
+void Boitata::mecanica() {
+    mover_se();
+    atacar();
+
+}
+

@@ -50,7 +50,7 @@ namespace Entidades {
         virtual void executar()=0;
         virtual void mover_se() = 0;
         virtual void atacar()=0;
-        void mecanica();
+        virtual void mecanica()=0;
         void tomaDano(int dano);
         virtual void falecendo();
 

@@ -11,10 +11,11 @@ namespace Entidades {
 
         void inicializa();
         void mover_se();
-        void atacar();
         void atacaJogador(Jogador* jogador);
         void atualizarAnimacao();
         void executar();
+        void mecanica();
+
     };
 
 }

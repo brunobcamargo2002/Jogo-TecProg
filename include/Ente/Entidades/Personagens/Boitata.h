@@ -17,10 +17,10 @@ namespace Entidades {
 
         void mover_se();
         void atacaJogador(Jogador* jogador);
-        void atacar();
         void lancaProjetil(bool esquerda);
         void atualizarAnimacao();
         void executar();
+        void mecanica();
 
     };
 

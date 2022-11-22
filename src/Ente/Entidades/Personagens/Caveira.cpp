@@ -44,34 +44,20 @@ void Caveira::atualizarAnimacao() {
 
 
 void Caveira::mover_se() {
-    inimigoTomaDano(jogador1);
     if(detectaJogador() && !atacando) {
-        sf::RectangleShape shapeJogador1 = jogador1->getCorpo();
-        {
-
-            if (shapeJogador1.getPosition().x - corpo.getPosition().x > 0) {
-                corpo.move(velocidade.x, velocidade.y);
-                paraEsquerda = false;
-            } else {
-                corpo.move(-velocidade.x, velocidade.y);
-                paraEsquerda = true;
-            }
-/*
-        if(shapeJogador1.getPosition().y-corpo.getPosition().y>0)
-            corpo.move(0, velocidade.y);
-        else
-            corpo.move(0, 0);*/
+        if(alvo!=NULL){
+        sf::RectangleShape shapeJogador1 = alvo->getCorpo();
+        if (shapeJogador1.getPosition().x - corpo.getPosition().x > 0) {
+            corpo.move(velocidade.x, velocidade.y);
+            paraEsquerda = false;
+        } else {
+            corpo.move(-velocidade.x, velocidade.y);
+            paraEsquerda = true;
+        }
         }
     }
 }
 
-void Caveira::atacar() {
-    if(jogador1!=NULL)
-        atacaJogador(jogador1);
-    //if(jogador2!=NULL)
-       // atacaJogador(jogador2);
-
-}
 
 void Caveira::atacaJogador(Jogador* jogador) {
         if (!permiteAtacar) {
@@ -85,8 +71,10 @@ void Caveira::atacaJogador(Jogador* jogador) {
         } else {
             sf::Vector2f inimigo = corpo.getPosition();
             sf::Vector2f jgdor = jogador->getCorpo().getPosition();
-            if (std::abs(inimigo.x - jgdor.x) < raioAtaque.x && std::abs(inimigo.y - jgdor.y) < raioAtaque.y)
+            if (std::abs(inimigo.x - jgdor.x) < raioAtaque.x && std::abs(inimigo.y - jgdor.y) < raioAtaque.y) {
                 atacando = true;
+                alvoAtaque = jogador;
+            }
             if(atacando){
                 tempoEsperaAtaque += relogio.getElapsedTime().asSeconds();
                 if (tempoEsperaAtaque > tempoAtaque) {
@@ -111,10 +99,18 @@ void Caveira::executar() {
     }
     else {
         mecanica();
+        inimigoTomaDano(jogador1);
+        if(jogador2!=NULL)
+            inimigoTomaDano(jogador2);
         atualizarAnimacao();
         imprimir_se();
     }
     gravidade();
+}
+
+void Caveira::mecanica() {
+    mover_se();
+    atacar();
 }
 
 

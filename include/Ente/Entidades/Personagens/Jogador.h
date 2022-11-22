@@ -13,6 +13,7 @@ namespace Entidades {
 
         virtual void mover_se()=0;
         virtual void atacar()=0;
+        void mecanica();
 
         void atualizarAnimacao();
         void executar();

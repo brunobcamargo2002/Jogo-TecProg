@@ -121,6 +121,12 @@ void Jogador::executar() {
 
 }
 
+void Jogador::mecanica() {
+    mover_se();
+    atacar();
+
+}
+
 
 
 

@@ -14,6 +14,7 @@ namespace Entidades {
         Jogador *jogador1;
         Jogador *jogador2;
         Jogador *alvo;
+        Jogador *alvoAtaque;
         sf::Vector2f raio;
 
 
@@ -24,15 +25,18 @@ namespace Entidades {
         void setJogador(Jogador *player);
         void setRaio(sf::Vector2f range);
         bool detectaJogador();
+        Jogador* jogadorMaisProximo(Jogador* jgdor1, Jogador* jgdor2);
 
         void inimigoTomaDano(Jogador* jgdor);
         void daDano(Jogador* jgdor);
 
 
         virtual void mover_se()=0;
-        virtual void atacar()=0;
+        void atacar();
+        virtual void atacaJogador(Jogador* jgdor)=0;
         virtual void atualizarAnimacao()=0;
         virtual void executar()=0;
+        virtual void mecanica()=0;
 
 
 

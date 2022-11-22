@@ -64,10 +64,6 @@ void Personagem::gravidade() {
     corpo.move(0.f, velocidade.y);
 }
 
-void Personagem::mecanica() {
-    mover_se();
-    atacar();
-}
 
 void Personagem::podeAtacar() {
 
@@ -93,6 +89,7 @@ void Personagem::falecendo() {
         imprimir_se();
         if (relogio.getElapsedTime().asSeconds() > tempoMorte) {
             executa = false;
+            corpo.setPosition(9999,9999);
         }
     }
 
