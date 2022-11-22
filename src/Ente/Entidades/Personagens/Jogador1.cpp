@@ -20,7 +20,7 @@ void Entidades::Jogador1::inicializa() {
     animacao.addAnimacao("C:/Users/bruno/CLionProjects/jogo-joao/imagens/Jogador/Parado.png", "PARADO", 8, 0.15f, sf::Vector2f(8,7));
     animacao.addAnimacao("C:/Users/bruno/CLionProjects/jogo-joao/imagens/Jogador/Pula.png", "PULANDO", 2, 0.15f, sf::Vector2f(8,7));
     animacao.addAnimacao("C:/Users/bruno/CLionProjects/jogo-joao/imagens/Jogador/Cai.png", "CAINDO", 2, 0.15f, sf::Vector2f(8,7));
-    animacao.addAnimacao("C:/Users/bruno/CLionProjects/jogo-joao/imagens/Jogador/Morre.png", "MORRENDO", 8, 0.3f, sf::Vector2f(8,7));
+    animacao.addAnimacao("C:/Users/bruno/CLionProjects/jogo-joao/imagens/Jogador/Morre.png", "MORRENDO", 8, 0.15f, sf::Vector2f(8,7));
     animacao.addAnimacao("C:/Users/bruno/CLionProjects/jogo-joao/imagens/Jogador/TomaDano.png", "TOMANDO_DANO", 3, 0.15f, sf::Vector2f(8,7));
     corpo.setOrigin(sf::Vector2f(corpo.getSize().x/ 2.f, corpo.getSize().y / 2.f));
 }
@@ -33,7 +33,6 @@ void Entidades::Jogador1::mover_se() {
             } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left)) {
                 paraEsquerda = true;
                 diminuiVelocidadeX();
-                //corpo.move(-velocidade.x, 0);
             } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up)) {
                 pulo();
             } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down))
@@ -50,7 +49,6 @@ void Entidades::Jogador1::mover_se() {
                 corpo.move(-0.1, velocidade.y);
             } else
                 zeraVelocidade();
-            //corpo.move(velocidade.x, velocidade.y);
         }
 }
 

@@ -6,7 +6,8 @@ Inimigo::Inimigo(sf::Vector2f posicao, sf::Vector2f tamanho, sf::Vector2f speed,
 Personagem(posicao, tamanho, speed),
 jogador1(player),
 jogador2(player2),
-alvo(NULL)
+alvo(NULL),
+tomouDano(false)
 {
 
 
@@ -20,11 +21,6 @@ Inimigo::~Inimigo()
 void Inimigo::setRaio(sf::Vector2f range)
 {
     raio = range;
-}
-
-void Inimigo::setJogador(Jogador* player)
-{
-    jogador1 = player;
 }
 
 bool Inimigo::detectaJogador() {
@@ -75,8 +71,15 @@ void Inimigo::inimigoTomaDano(Jogador* jgdor) {
             sf::Vector2f posicaoJogador = jgdor->getPosicao();
             if (std::abs(corpo.getPosition().x - posicaoJogador.x) <= rangeAtaque.x &&
                 std::abs(corpo.getPosition().y - posicaoJogador.y) <= rangeAtaque.y){
-                if(jgdor->getTempoEsperaAtaque()>(jgdor->getTempoAtaque()-400))
-                    tomaDano(jgdor->getDano());
+
+                if(jgdor->getTempoEsperaAtaque()>(jgdor->getTempoAtaque()-400)) {
+                    if(!tomouDano){
+                        tomaDano(jgdor->getDano());
+                        tomouDano=true;
+                    }
+                }
+                else
+                    tomouDano=false;
             }
     }
     }

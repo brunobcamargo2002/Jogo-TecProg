@@ -8,7 +8,7 @@ Jogador::Jogador(sf::Vector2f posicao, sf::Vector2f tamanho, sf::Vector2f Veloci
     tempoAtaque=800;
     num_vidas=10;
     danoAtaque = 2;
-    tempoMorte= 1.8;
+    tempoMorte= 1.2;
     raioAtaque=sf::Vector2f(180,100);
 }
 

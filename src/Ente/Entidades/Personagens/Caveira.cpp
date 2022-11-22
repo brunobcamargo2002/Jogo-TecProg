@@ -2,8 +2,8 @@
 
 using namespace Entidades;
 
-Caveira::Caveira(sf::Vector2f tamanho, sf::Vector2f posicao, sf::Vector2f speed, Jogador *player1, Jogador *player2, sf::Vector2f range):
-Inimigo(tamanho, posicao, speed, player1, player2, range)
+Caveira::Caveira(sf::Vector2f posicao, sf::Vector2f tamanho, sf::Vector2f speed, Jogador *player1, Jogador *player2, sf::Vector2f range):
+Inimigo(posicao, tamanho, speed, player1, player2, range)
 {
     raioAtaque= sf::Vector2f(120.f, 120.f);
     coolDown=10000;

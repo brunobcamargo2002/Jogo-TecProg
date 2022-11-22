@@ -11,18 +11,15 @@ namespace Entidades {
         Jogador(sf::Vector2f posicao, sf::Vector2f tamanho,sf::Vector2f velocidadeTerminal);
         virtual ~Jogador();
 
+        void executar();
+        void atualizarAnimacao();
         virtual void mover_se()=0;
         virtual void atacar()=0;
         void mecanica();
-
-        void atualizarAnimacao();
-        void executar();
-
+        void pulo();
         void aumentaVelocidadeX();
         void diminuiVelocidadeX();
         void zeraVelocidade();
-        void pulo();
-
 
         sf::Vector2f getRangeAtaque();
         bool getAtacando();

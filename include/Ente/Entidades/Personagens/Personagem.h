@@ -46,20 +46,20 @@ namespace Entidades {
         void colisao(sf::Vector2f deslocamento, Entidades::Entidade* entidade);
         void gravidade();
 
-        virtual void atualizarAnimacao()=0;
         virtual void executar()=0;
+        virtual void atualizarAnimacao()=0;
         virtual void mover_se() = 0;
         virtual void atacar()=0;
         virtual void mecanica()=0;
         void tomaDano(int dano);
         virtual void falecendo();
 
-        const sf::RectangleShape getCorpo();
-        void setVelocidade(sf::Vector2f vel);
-
 
         void podeAtacar();
         void setPodeAndar(bool valor);
+
+        const sf::RectangleShape getCorpo();
+        void setVelocidade(sf::Vector2f vel);
 
 
     private:

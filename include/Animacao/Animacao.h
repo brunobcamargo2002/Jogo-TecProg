@@ -21,7 +21,7 @@ private:
     std::string imgAtual;
 
 public:
-    Animacao(sf::RectangleShape* corpo=NULL);
+    Animacao(sf::RectangleShape* corpo);
     ~Animacao();
     void atualizar(const bool paraEsquerda, std::string imgAtual);
     void addAnimacao(const char* caminhoTextura, std::string nomeAnimacao, const unsigned int qtdImg, const float tempoTroca, const sf::Vector2f escala);

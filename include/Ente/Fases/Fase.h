@@ -9,6 +9,7 @@
 #include "../Entidades/Personagens/Inimigo.h"
 #include "../Entidades/Personagens/Caveira.h"
 #include "../Entidades/Personagens/Boitata.h"
+#include "../Entidades/Personagens/Cogumalefico.h"
 #include "../../Listas/ListaEntidades.h"
 #include "../../Gerenciadores/Gerenciador_Grafico.h"
 #include "../../Gerenciadores/Gerenciador_Colisoes.h"
@@ -22,8 +23,7 @@ namespace Fases {
 
     class Fase : public Ente {
     private:
-        Entidades::Boitata boitata;
-        Entidades::Caveira caveira;
+        Entidades::Cogumalefico cogumalefico;
         Entidades::Jogador1* jogador1;
         Entidades::Jogador2* jogador2;
         Listas::ListaEntidades personagens;
