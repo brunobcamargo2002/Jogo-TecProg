@@ -51,12 +51,18 @@ void Gerenciador_Colisoes::verificaColisaoEntrePersonagensEObstaculos() {
                 obstaculo = LObstaculos->operator[](j);
                 if(obstaculo->getExecuta()){
                     deslocamento = calculaColisao(personagem, obstaculo);
-                    if (deslocamento != sf::Vector2f(0.f, 0.f))
+                    if (deslocamento != sf::Vector2f(0.f, 0.f)) {
                         personagem->colisao(deslocamento, obstaculo);
+                        auto* obs = dynamic_cast<Entidades::Obstaculo*>(obstaculo);
+                        auto* perso = dynamic_cast<Entidades::Personagem*>(personagem);
+                        if(obs->getDanoso() && !perso->getMorrendo()){
+                            perso->tomaDanoDeObstaculo(obs->getDano());
+                        }
+                    }
                 }
             }
-            }
         }
+    }
 }
 
 void Gerenciador_Colisoes::verificaColisaoEntrePersonagens() {

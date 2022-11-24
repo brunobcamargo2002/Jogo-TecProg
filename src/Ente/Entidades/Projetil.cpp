@@ -2,6 +2,25 @@
 
 using namespace Entidades;
 
+//projetil(sf::Vector2f(0,50), sf::Vector2f(30,30), sf::Vector2f(0.2,0), 5, jogador1, jogador2)
+
+sf::Vector2f Projetil::tamanho=sf::Vector2f(30, 30);
+sf::Vector2f Projetil::speed=sf::Vector2f(0.2, 0);
+int Projetil::damage= 5;
+
+
+
+Projetil::Projetil( Jogador* jgdor1, Jogador* jgdor2) :
+Entidade(sf::Vector2f(9999, 9999), tamanho),
+animacao(&corpo),
+velocidade(speed),
+paraEsquerda(false),
+dano(damage),
+jogador1(jgdor1),
+jogador2(jgdor2){
+    inicializa();
+}
+
 Projetil::Projetil(sf::Vector2f posicao, sf::Vector2f tamanho, sf::Vector2f velocidade, int dano,Jogador* jgdor1, Jogador* jgdor2):Entidade(posicao, tamanho),
 velocidade(velocidade),
 paraEsquerda(false),
@@ -60,3 +79,6 @@ void Projetil::daDano(Jogador* jgdor) {
     }
 
 }
+
+
+

@@ -6,6 +6,11 @@
 
 using namespace Entidades;
 
+Jogador2::Jogador2(int pX, int pY): Jogador(sf::Vector2f(pX, pY), Jogador::tamanho, Jogador::velocidadeTerminal) {
+    inicializa();
+}
+
+
 Entidades::Jogador2::Jogador2(sf::Vector2f posicao, sf::Vector2f tamanho, sf::Vector2f velocidadeTerminal) : Jogador(posicao, tamanho, velocidadeTerminal) {
     inicializa();
 }
@@ -88,5 +93,6 @@ void Jogador2::atacar() {
     }
 
 }
+
 
 

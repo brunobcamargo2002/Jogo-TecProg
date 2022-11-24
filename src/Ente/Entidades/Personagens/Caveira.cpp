@@ -2,12 +2,30 @@
 
 using namespace Entidades;
 
+sf::Vector2f Caveira::tamanho=sf::Vector2f(50, 60);
+sf::Vector2f Caveira::velocidadeTerminal=sf::Vector2f(0.1, 0);
+sf::Vector2f Caveira::range= sf::Vector2f(800, 200);
+
+int Caveira::pontosAbate=30;
+
+Caveira::Caveira(int pX, int pY, Jogador* jgdor1, Jogador* jgdor2):
+Inimigo(sf::Vector2f(pX, pY), tamanho, velocidadeTerminal, jgdor1, jgdor2){
+    raioAtaque= sf::Vector2f(120.f, 120.f);
+    coolDown=1.5f;
+    tempoAtaque=0.96f;
+    num_vidas = 1;
+    danoAtaque = 2;
+    tempoMorte = 0.8f;
+    setRaio(range);
+    inicializa();
+}
+
 Caveira::Caveira(sf::Vector2f posicao, sf::Vector2f tamanho, sf::Vector2f speed, Jogador *player1, Jogador *player2, sf::Vector2f range):
 Inimigo(posicao, tamanho, speed, player1, player2, range)
 {
     raioAtaque= sf::Vector2f(120.f, 120.f);
-    coolDown=10000;
-    tempoAtaque=1500;
+    coolDown=1.5f;
+    tempoAtaque=0.96f;
     num_vidas = 1;
     danoAtaque = 2;
     tempoMorte = 0.8f;
@@ -61,7 +79,7 @@ void Caveira::mover_se() {
 
 void Caveira::atacaJogador(Jogador* jogador) {
         if (!permiteAtacar) {
-            float dt = relogio.getElapsedTime().asSeconds();
+            float dt = relogio.getElapsedTime().asSeconds()-tempoEsperaAtaque;
             tempoEsperaAtaque += dt;
             if (tempoEsperaAtaque >= coolDown) {
                 permiteAtacar = true;
@@ -76,7 +94,8 @@ void Caveira::atacaJogador(Jogador* jogador) {
                 alvoAtaque = jogador;
             }
             if(atacando){
-                tempoEsperaAtaque += relogio.getElapsedTime().asSeconds();
+                float dt = relogio.getElapsedTime().asSeconds()-tempoEsperaAtaque;
+                tempoEsperaAtaque += dt;
                 if (tempoEsperaAtaque > tempoAtaque) {
                     if (std::abs(inimigo.x - jgdor.x) < raioAtaque.x && std::abs(inimigo.y - jgdor.y) < raioAtaque.y)
                         daDano(jogador);
@@ -95,6 +114,7 @@ void Caveira::atacaJogador(Jogador* jogador) {
 
 void Caveira::executar() {
     if(morrendo) {
+        Entidades::Jogador::alteraPontuacao(pontosAbate);
         falecendo();
     }
     else {
@@ -112,6 +132,8 @@ void Caveira::mecanica() {
     mover_se();
     atacar();
 }
+
+
 
 
 

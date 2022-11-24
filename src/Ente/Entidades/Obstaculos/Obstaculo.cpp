@@ -2,15 +2,10 @@
 
 using namespace Entidades;
 
-Obstaculo::Obstaculo()
-{
-    danoso=0;
-}
-
 Obstaculo::Obstaculo(int comprimento, int largura,int Px,int Py):
 Entidade(sf::Vector2f(Px,Py),sf::Vector2f(comprimento, largura))
 {
-    danoso=0;
+    corpo.setFillColor(sf::Color::Transparent);
 }
 
 Obstaculo::~Obstaculo()
@@ -19,7 +14,8 @@ Obstaculo::~Obstaculo()
 }
 
 void Obstaculo::executar() {
-    Entidade::imprimir_se();
+    if(executa)
+        Entidade::imprimir_se();
 }
 
 void Obstaculo::SetDimensoes(int comprimento,int largura){
@@ -29,4 +25,12 @@ void Obstaculo::SetDimensoes(int comprimento,int largura){
 
 void Obstaculo::SetPosicao(int Px,int Py){
     corpo.setPosition(Px,Py);
+}
+
+const bool Obstaculo::getDanoso() {
+    return danoso;
+}
+
+const int Obstaculo::getDano() {
+    return 0;
 }

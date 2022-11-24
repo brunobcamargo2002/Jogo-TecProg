@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="Jogo"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\SFML\;CMake Files\..\..\..\..\SFML\lib\;CMake Files\..\..\..\..\SFML\lib\cmake\;CMake Files\..\..\..\..\SFML\lib\cmake\SFML\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="C:/Users/bruno/github/Jogo-TecProg/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/bruno/github/Jogo-TecProg/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/bruno/github/Jogo-TecProg/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/bruno/github/Jogo-TecProg/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/bruno/github/Jogo-TecProg/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Jogo">
+				<Option output="C:/Users/bruno/github/Jogo-TecProg/cmake-build-debug/Jogo.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/bruno/github/Jogo-TecProg/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DSFML_STATIC"/>
+					<Add directory="c:/SFML/include"/>
+					<Add directory="C:/SFML/include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/bruno/github/Jogo-TecProg/cmake-build-debug/Makefile&quot;  VERBOSE=1 Jogo"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/bruno/github/Jogo-TecProg/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/bruno/github/Jogo-TecProg/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/bruno/github/Jogo-TecProg/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Jogo/fast">
+				<Option output="C:/Users/bruno/github/Jogo-TecProg/cmake-build-debug/Jogo.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/bruno/github/Jogo-TecProg/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DSFML_STATIC"/>
+					<Add directory="c:/SFML/include"/>
+					<Add directory="C:/SFML/include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/bruno/github/Jogo-TecProg/cmake-build-debug/Makefile&quot;  VERBOSE=1 Jogo/fast"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/bruno/github/Jogo-TecProg/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/bruno/github/Jogo-TecProg/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/bruno/github/Jogo-TecProg/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="C:/Users/bruno/github/Jogo-TecProg/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/bruno/github/Jogo-TecProg/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/bruno/github/Jogo-TecProg/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/bruno/github/Jogo-TecProg/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/bruno/github/Jogo-TecProg/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="C:/Users/bruno/github/Jogo-TecProg/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/bruno/github/Jogo-TecProg/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/bruno/github/Jogo-TecProg/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/bruno/github/Jogo-TecProg/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/bruno/github/Jogo-TecProg/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="C:/Users/bruno/github/Jogo-TecProg/include/Animacao/Animacao.h">
+			<Option target="Jogo"/>
+		</Unit>
+		<Unit filename="C:/Users/bruno/github/Jogo-TecProg/include/Animacao/Imagem.h">
+			<Option target="Jogo"/>
+		</Unit>
+		<Unit filename="C:/Users/bruno/github/Jogo-TecProg/include/Ente/Ente.h">
+			<Option target="Jogo"/>
+		</Unit>
+		<Unit filename="C:/Users/bruno/github/Jogo-TecProg/include/Ente/Entidades/Entidade.h">
+			<Option target="Jogo"/>
+		</Unit>
+		<Unit filename="C:/Users/bruno/github/Jogo-TecProg/include/Ente/Entidades/Obstaculos/Espinhos.h">
+			<Option target="Jogo"/>
+		</Unit>
+		<Unit filename="C:/Users/bruno/github/Jogo-TecProg/include/Ente/Entidades/Obstaculos/Ninho.h">
+			<Option target="Jogo"/>
+		</Unit>
+		<Unit filename="C:/Users/bruno/github/Jogo-TecProg/include/Ente/Entidades/Obstaculos/Obstaculo.h">
+			<Option target="Jogo"/>
+		</Unit>
+		<Unit filename="C:/Users/bruno/github/Jogo-TecProg/include/Ente/Entidades/Obstaculos/Piso.h">
+			<Option target="Jogo"/>
+		</Unit>
+		<Unit filename="C:/Users/bruno/github/Jogo-TecProg/include/Ente/Entidades/Obstaculos/Plataforma.h">
+			<Option target="Jogo"/>
+		</Unit>
+		<Unit filename="C:/Users/bruno/github/Jogo-TecProg/include/Ente/Entidades/Personagens/Boitata.h">
+			<Option target="Jogo"/>
+		</Unit>
+		<Unit filename="C:/Users/bruno/github/Jogo-TecProg/include/Ente/Entidades/Personagens/Caveira.h">
+			<Option target="Jogo"/>
+		</Unit>
+		<Unit filename="C:/Users/bruno/github/Jogo-TecProg/include/Ente/Entidades/Personagens/Cogumalefico.h">
+			<Option target="Jogo"/>
+		</Unit>
+		<Unit filename="C:/Users/bruno/github/Jogo-TecProg/include/Ente/Entidades/Personagens/Inimigo.h">
+			<Option target="Jogo"/>
+		</Unit>
+		<Unit filename="C:/Users/bruno/github/Jogo-TecProg/include/Ente/Entidades/Personagens/Jogador.h">
+			<Option target="Jogo"/>
+		</Unit>
+		<Unit filename="C:/Users/bruno/github/Jogo-TecProg/include/Ente/Entidades/Personagens/Jogador1.h">
+			<Option target="Jogo"/>
+		</Unit>
+		<Unit filename="C:/Users/bruno/github/Jogo-TecProg/include/Ente/Entidades/Personagens/Jogador2.h">
+			<Option target="Jogo"/>
+		</Unit>
+		<Unit filename="C:/Users/bruno/github/Jogo-TecProg/include/Ente/Entidades/Personagens/Personagem.h">
+			<Option target="Jogo"/>
+		</Unit>
+		<Unit filename="C:/Users/bruno/github/Jogo-TecProg/include/Ente/Entidades/Projetil.h">
+			<Option target="Jogo"/>
+		</Unit>
+		<Unit filename="C:/Users/bruno/github/Jogo-TecProg/include/Ente/Fases/Fase.h">
+			<Option target="Jogo"/>
+		</Unit>
+		<Unit filename="C:/Users/bruno/github/Jogo-TecProg/include/Ente/Menus/Menu.h">
+			<Option target="Jogo"/>
+		</Unit>
+		<Unit filename="C:/Users/bruno/github/Jogo-TecProg/include/Gerenciadores/Gerenciador_Colisoes.h">
+			<Option target="Jogo"/>
+		</Unit>
+		<Unit filename="C:/Users/bruno/github/Jogo-TecProg/include/Gerenciadores/Gerenciador_Grafico.h">
+			<Option target="Jogo"/>
+		</Unit>
+		<Unit filename="C:/Users/bruno/github/Jogo-TecProg/include/Jogo.h">
+			<Option target="Jogo"/>
+		</Unit>
+		<Unit filename="C:/Users/bruno/github/Jogo-TecProg/include/Listas/ListaEntidades.h">
+			<Option target="Jogo"/>
+		</Unit>
+		<Unit filename="C:/Users/bruno/github/Jogo-TecProg/main.cpp">
+			<Option target="Jogo"/>
+		</Unit>
+		<Unit filename="C:/Users/bruno/github/Jogo-TecProg/src/Animacao/Animacao.cpp">
+			<Option target="Jogo"/>
+		</Unit>
+		<Unit filename="C:/Users/bruno/github/Jogo-TecProg/src/Animacao/Imagem.cpp">
+			<Option target="Jogo"/>
+		</Unit>
+		<Unit filename="C:/Users/bruno/github/Jogo-TecProg/src/Ente/Ente.cpp">
+			<Option target="Jogo"/>
+		</Unit>
+		<Unit filename="C:/Users/bruno/github/Jogo-TecProg/src/Ente/Entidades/Entidade.cpp">
+			<Option target="Jogo"/>
+		</Unit>
+		<Unit filename="C:/Users/bruno/github/Jogo-TecProg/src/Ente/Entidades/Obstaculos/Espinhos.cpp">
+			<Option target="Jogo"/>
+		</Unit>
+		<Unit filename="C:/Users/bruno/github/Jogo-TecProg/src/Ente/Entidades/Obstaculos/Ninho.cpp">
+			<Option target="Jogo"/>
+		</Unit>
+		<Unit filename="C:/Users/bruno/github/Jogo-TecProg/src/Ente/Entidades/Obstaculos/Obstaculo.cpp">
+			<Option target="Jogo"/>
+		</Unit>
+		<Unit filename="C:/Users/bruno/github/Jogo-TecProg/src/Ente/Entidades/Obstaculos/Piso.cpp">
+			<Option target="Jogo"/>
+		</Unit>
+		<Unit filename="C:/Users/bruno/github/Jogo-TecProg/src/Ente/Entidades/Obstaculos/Plataforma.cpp">
+			<Option target="Jogo"/>
+		</Unit>
+		<Unit filename="C:/Users/bruno/github/Jogo-TecProg/src/Ente/Entidades/Personagens/Boitata.cpp">
+			<Option target="Jogo"/>
+		</Unit>
+		<Unit filename="C:/Users/bruno/github/Jogo-TecProg/src/Ente/Entidades/Personagens/Caveira.cpp">
+			<Option target="Jogo"/>
+		</Unit>
+		<Unit filename="C:/Users/bruno/github/Jogo-TecProg/src/Ente/Entidades/Personagens/Cogumalefico.cpp">
+			<Option target="Jogo"/>
+		</Unit>
+		<Unit filename="C:/Users/bruno/github/Jogo-TecProg/src/Ente/Entidades/Personagens/Inimigo.cpp">
+			<Option target="Jogo"/>
+		</Unit>
+		<Unit filename="C:/Users/bruno/github/Jogo-TecProg/src/Ente/Entidades/Personagens/Jogador.cpp">
+			<Option target="Jogo"/>
+		</Unit>
+		<Unit filename="C:/Users/bruno/github/Jogo-TecProg/src/Ente/Entidades/Personagens/Jogador1.cpp">
+			<Option target="Jogo"/>
+		</Unit>
+		<Unit filename="C:/Users/bruno/github/Jogo-TecProg/src/Ente/Entidades/Personagens/Jogador2.cpp">
+			<Option target="Jogo"/>
+		</Unit>
+		<Unit filename="C:/Users/bruno/github/Jogo-TecProg/src/Ente/Entidades/Personagens/Personagem.cpp">
+			<Option target="Jogo"/>
+		</Unit>
+		<Unit filename="C:/Users/bruno/github/Jogo-TecProg/src/Ente/Entidades/Projetil.cpp">
+			<Option target="Jogo"/>
+		</Unit>
+		<Unit filename="C:/Users/bruno/github/Jogo-TecProg/src/Ente/Fases/Fase.cpp">
+			<Option target="Jogo"/>
+		</Unit>
+		<Unit filename="C:/Users/bruno/github/Jogo-TecProg/src/Ente/Menus/Menu.cpp">
+			<Option target="Jogo"/>
+		</Unit>
+		<Unit filename="C:/Users/bruno/github/Jogo-TecProg/src/Gerenciadores/Gerenciador_Colisoes.cpp">
+			<Option target="Jogo"/>
+		</Unit>
+		<Unit filename="C:/Users/bruno/github/Jogo-TecProg/src/Gerenciadores/Gerenciador_Grafico.cpp">
+			<Option target="Jogo"/>
+		</Unit>
+		<Unit filename="C:/Users/bruno/github/Jogo-TecProg/src/Jogo.cpp">
+			<Option target="Jogo"/>
+		</Unit>
+		<Unit filename="C:/Users/bruno/github/Jogo-TecProg/src/Listas/ListaEntidades.cpp">
+			<Option target="Jogo"/>
+		</Unit>
+		<Unit filename="C:/Users/bruno/github/Jogo-TecProg/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="C:/Users/bruno/github/Jogo-TecProg/../../../../SFML/lib/cmake/SFML/SFMLConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\SFML\lib\cmake\SFML\"/>
+		</Unit>
+		<Unit filename="C:/Users/bruno/github/Jogo-TecProg/../../../../SFML/lib/cmake/SFML/SFMLConfigDependencies.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\SFML\lib\cmake\SFML\"/>
+		</Unit>
+		<Unit filename="C:/Users/bruno/github/Jogo-TecProg/../../../../SFML/lib/cmake/SFML/SFMLConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\SFML\lib\cmake\SFML\"/>
+		</Unit>
+		<Unit filename="C:/Users/bruno/github/Jogo-TecProg/../../../../SFML/lib/cmake/SFML/SFMLStaticTargets-debug.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\SFML\lib\cmake\SFML\"/>
+		</Unit>
+		<Unit filename="C:/Users/bruno/github/Jogo-TecProg/../../../../SFML/lib/cmake/SFML/SFMLStaticTargets-release.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\SFML\lib\cmake\SFML\"/>
+		</Unit>
+		<Unit filename="C:/Users/bruno/github/Jogo-TecProg/../../../../SFML/lib/cmake/SFML/SFMLStaticTargets.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\SFML\lib\cmake\SFML\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

@@ -6,9 +6,10 @@
 namespace Entidades {
 
     class Plataforma : public Obstaculo {
+    private:
+        int nivel;
     public:
-        Plataforma(){};
-        Plataforma(int Px,int Py);
+        Plataforma(int Px,int Py,int nvl);
         virtual ~Plataforma();
     };
 

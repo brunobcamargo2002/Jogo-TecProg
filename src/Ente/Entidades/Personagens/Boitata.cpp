@@ -2,12 +2,34 @@
 
 using namespace Entidades;
 
+
+
+sf::Vector2f Boitata::tamanho=sf::Vector2f(30,30);
+sf::Vector2f Boitata::velocidadeTerminal=sf::Vector2f(0, 0);
+sf::Vector2f Boitata::range=sf::Vector2f(1000, 80);
+
+ int Boitata::pontosAbate=50;
+
+Boitata::Boitata(int pX, int pY, Jogador* jgdor1, Jogador* jgdor2) :
+Inimigo(sf::Vector2f(pX, pY), tamanho, velocidadeTerminal, jgdor1, jgdor2, range),
+projetil(jgdor1, jgdor2){
+    raioAtaque= sf::Vector2f(600.f, 120.f);
+    coolDown=1.f;
+    tempoAtaque=1.5f;
+    num_vidas = 1;
+    danoAtaque = 2;
+    tempoMorte = 1.2f;
+    setRaio(range);
+    inicializa();
+}
+
+
 Boitata::Boitata(sf::Vector2f posicao, sf::Vector2f tamanho, sf::Vector2f speed, Jogador *player, Jogador *player2, sf::Vector2f range):
 Inimigo(posicao, tamanho, speed, player, player2, range),
 projetil(sf::Vector2f(0,50), sf::Vector2f(30,30), sf::Vector2f(0.2,0), 5, jogador1, jogador2){
     raioAtaque= sf::Vector2f(600.f, 120.f);
-    coolDown=10000;
-    tempoAtaque=3000;
+    coolDown=1.f;
+    tempoAtaque=1.5f;
     num_vidas = 1;
     danoAtaque = 2;
     tempoMorte = 1.2f;
@@ -38,7 +60,7 @@ void Boitata::atacaJogador(Jogador* jogador) {
     projetil.executar();
     if(detectaJogador()) {
         if (!permiteAtacar) {
-            float dt = relogio.getElapsedTime().asSeconds();
+            float dt = relogio.getElapsedTime().asSeconds()-tempoEsperaAtaque;
             tempoEsperaAtaque += dt;
             if (tempoEsperaAtaque >= coolDown) {
                 permiteAtacar = true;
@@ -62,8 +84,9 @@ void Boitata::atacaJogador(Jogador* jogador) {
             }
 
             if(atacando) {
-                tempoEsperaAtaque += relogio.getElapsedTime().asSeconds();
-                if (tempoEsperaAtaque > tempoAtaque - 800) {
+                float dt = relogio.getElapsedTime().asSeconds()-tempoEsperaAtaque;
+                tempoEsperaAtaque += dt;
+                if (tempoEsperaAtaque > tempoAtaque-0.3) {
                     if (distanciaX < 0)
                         lancaProjetil(true);
                     else
@@ -114,6 +137,7 @@ void Boitata::lancaProjetil(bool esquerda) {
 
 void Boitata::executar() {
     if(morrendo) {
+        Entidades::Jogador::alteraPontuacao(pontosAbate);
         falecendo();
     }
     else {
@@ -133,4 +157,6 @@ void Boitata::mecanica() {
     atacar();
 
 }
+
+
 

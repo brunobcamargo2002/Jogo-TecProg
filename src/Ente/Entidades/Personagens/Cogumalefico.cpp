@@ -4,7 +4,28 @@
 
 #include "../../../../include/Ente/Entidades/Personagens/Cogumalefico.h"
 
+//cogumalefico(sf::Vector2f(80,80),sf::Vector2f(800,100),sf::Vector2f(0.2,0), jg, jg2, sf::Vector2f(600,200)),
+
 using namespace Entidades;
+
+sf::Vector2f Cogumalefico::tamanho=sf::Vector2f(80, 80);
+sf::Vector2f Cogumalefico::velocidadeTerminal=sf::Vector2f(0.2, 0);
+sf::Vector2f Cogumalefico::range=sf::Vector2f(800, 200);
+
+int Cogumalefico::pontosAbate=200;
+
+
+Cogumalefico::Cogumalefico(int pX, int pY, Jogador* jgdor1, Jogador* jgdor2):
+Inimigo(sf::Vector2f(pX, pY), tamanho, velocidadeTerminal, jgdor1, jgdor2){
+    raioAtaque= sf::Vector2f(120.f, 120.f);
+    coolDown=1000;
+    tempoAtaque=500;
+    num_vidas = 20;
+    danoAtaque = 5;
+    tempoMorte = 0.8f;
+    setRaio(range);
+    inicializa();
+}
 
 Cogumalefico::Cogumalefico(sf::Vector2f posicao, sf::Vector2f tamanho, sf::Vector2f speed,Jogador *player,Jogador *player2, sf::Vector2f range) :
 Inimigo(posicao, tamanho, speed, player, player2, range){
@@ -44,6 +65,7 @@ void Entidades::Cogumalefico::atualizarAnimacao() {
 
 void Entidades::Cogumalefico::executar() {
     if(morrendo) {
+        Entidades::Jogador::alteraPontuacao(pontosAbate);
         falecendo();
     }
     else {
@@ -114,3 +136,5 @@ void Entidades::Cogumalefico::mecanica() {
     mover_se();
     atacar();
 }
+
+

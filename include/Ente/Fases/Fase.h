@@ -23,6 +23,9 @@ namespace Fases {
 
     class Fase : public Ente {
     private:
+        Entidades::Espinhos espinho;
+        Entidades::Boitata boitata;
+        Entidades::Caveira caveira;
         Entidades::Cogumalefico cogumalefico;
         Entidades::Jogador1* jogador1;
         Entidades::Jogador2* jogador2;

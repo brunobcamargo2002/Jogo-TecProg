@@ -3,6 +3,12 @@
 using namespace Entidades;
 
 
+ sf::Vector2f Jogador::tamanho=sf::Vector2f(70.f,70.f);
+ sf::Vector2f Jogador::velocidadeTerminal=sf::Vector2f (0.35f, 0.35f);
+
+int Jogador::pontos=0;
+int Jogador::decrementoDePontosPorDano=-5;
+
 Jogador::Jogador(sf::Vector2f posicao, sf::Vector2f tamanho, sf::Vector2f VelocidadeTerminal) : Personagem(posicao, tamanho, VelocidadeTerminal) {
     coolDown=1000;
     tempoAtaque=800;
@@ -125,6 +131,19 @@ void Jogador::mecanica() {
     mover_se();
     atacar();
 
+}
+
+void Jogador::alteraPontuacao(int alteracao) {
+    pontos+=alteracao;
+}
+
+void Jogador::tomaDano(int dano) {
+    num_vidas -=dano;
+    Jogador::alteraPontuacao(dano*decrementoDePontosPorDano);
+    if(num_vidas<=0) {
+        relogio.restart();
+        morrendo = true;
+    }
 }
 
 

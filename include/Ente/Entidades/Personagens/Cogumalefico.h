@@ -10,7 +10,14 @@ namespace Entidades {
     class Cogumalefico : public Inimigo {
     private:
 
+        static sf::Vector2f tamanho;
+        static sf::Vector2f velocidadeTerminal;
+        static sf::Vector2f range;
+
+        static int pontosAbate;
+
     public:
+        Cogumalefico(int pX, int pY, Jogador* jgdor1, Jogador* jgdor2);
         Cogumalefico(sf::Vector2f posicao, sf::Vector2f tamanho, sf::Vector2f speed = sf::Vector2f(0.1, 0), Jogador *player = NULL,Jogador *player2=NULL, sf::Vector2f range = sf::Vector2f(150.f, 150.f));
         virtual ~Cogumalefico();
 

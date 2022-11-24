@@ -9,7 +9,7 @@ class Menu:protected Ente
 {
     private:
     sf::Text text[3];
-    sf::Text fases[3];
+    sf::Text fases[4];
     sf::Font font;
     Fase* fase;
     class Contador{

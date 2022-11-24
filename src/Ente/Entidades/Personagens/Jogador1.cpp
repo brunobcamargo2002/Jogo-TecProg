@@ -5,6 +5,11 @@
 #include "../../../../include/Ente/Entidades/Personagens/Jogador1.h"
 using namespace Entidades;
 
+
+Jogador1::Jogador1(int pX, int pY) : Jogador(sf::Vector2f(pX, pY), Jogador::tamanho, Jogador::velocidadeTerminal) {
+    inicializa();
+}
+
 Entidades::Jogador1::Jogador1(sf::Vector2f posicao, sf::Vector2f tamanho, sf::Vector2f velocidadeTerminal) : Jogador(posicao, tamanho, velocidadeTerminal) {
     inicializa();
 }
@@ -12,6 +17,7 @@ Entidades::Jogador1::Jogador1(sf::Vector2f posicao, sf::Vector2f tamanho, sf::Ve
 Entidades::Jogador1::~Jogador1() {
 
 }
+
 
 
 void Entidades::Jogador1::inicializa() {
@@ -78,5 +84,7 @@ void Jogador1::atacar() {
         }
     }
 }
+
+
 
 

@@ -5,18 +5,27 @@
 #include "../../Animacao/Animacao.h"
 #include "Personagens/Jogador.h"
 
+
+
 namespace Entidades {
 
     class Projetil : public Entidade {
     private:
+        static sf::Vector2f tamanho;
+        static sf::Vector2f speed;
+        static int damage;
+
+
+
+        Animacao animacao;
+        sf::Vector2f velocidade;
         Jogador* jogador1;
         Jogador* jogador2;
         int dano;
-        Animacao animacao;
-        sf::Vector2f velocidade;
         bool paraEsquerda;
         bool lancar;
     public:
+        Projetil(Jogador* jgdor1, Jogador* jgdor2);
         Projetil(sf::Vector2f posicao, sf::Vector2f tamanho, sf::Vector2f velocidade, int dano, Jogador* jgdor1, Jogador* jgdor2=NULL);
         virtual ~Projetil();
 

@@ -3,12 +3,19 @@
 
 #include "Obstaculo.h"
 
+#include "../Personagens/Jogador.h"
+
 namespace Entidades {
 
     class Ninho : public Obstaculo {
+    private:
+        Jogador* jogador1;
+        Jogador* jogador2;
+        static int pontosAbate;
     public:
-        Ninho(){};
-        Ninho(int Px,int Py);
+        Ninho(int Px,int Py, Jogador* jgdor1, Jogador* jgdor2 = NULL);
+        void executar();
+        void destruirNinho(Jogador* jgdor);
         virtual ~Ninho();
     };
 
