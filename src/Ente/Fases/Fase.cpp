@@ -5,8 +5,8 @@ using namespace Fases;
 Fase::Fase(Entidades::Jogador1* jg, Entidades::Jogador2* jg2, Gerenciadores::Gerenciador_Colisoes* gc,int obs1,int obs2,int obs3,int tam):
         espinho(tam/2, 720-60/2-100),
         cogumalefico(sf::Vector2f(80,80),sf::Vector2f(80,80),sf::Vector2f(0.2,0), jg, jg2, sf::Vector2f(600,200)),
-        caveira(sf::Vector2f(50,60),sf::Vector2f(50,60),sf::Vector2f(0.1,0), jg, jg2, sf::Vector2f(800,200)),
-        boitata(sf::Vector2f(30,30), sf::Vector2f(30,30), sf::Vector2f(0.1,0),jg, jg2, sf::Vector2f(600,50))
+        caveira(sf::Vector2f(50,60),sf::Vector2f(50,60),sf::Vector2f(0.1,0), jg, jg2, sf::Vector2f(100,50)),
+        boitata(30, 30, jg, jg2)
 {
     jogador1=jg;
     jogador2=jg2;

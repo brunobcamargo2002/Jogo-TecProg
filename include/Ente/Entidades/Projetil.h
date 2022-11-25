@@ -39,6 +39,9 @@ namespace Entidades {
 
         void colisao(sf::Vector2f deslocamento, Entidades::Entidade* entidade);
         void executar();
+
+        void gravidade();
+        void setVelYParaLancamento();
     };
 
 }

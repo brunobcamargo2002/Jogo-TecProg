@@ -4,36 +4,34 @@ using namespace Entidades;
 
 
 
-sf::Vector2f Boitata::tamanho=sf::Vector2f(30,30);
-sf::Vector2f Boitata::velocidadeTerminal=sf::Vector2f(0, 0);
-sf::Vector2f Boitata::range=sf::Vector2f(1000, 80);
+sf::Vector2f Boitata::tamanho=sf::Vector2f(30.f,30.f);
+sf::Vector2f Boitata::velocidadeTerminal=sf::Vector2f(0.f, 0.f);
+sf::Vector2f Boitata::range=sf::Vector2f(1000.f, 80.f);
 
  int Boitata::pontosAbate=50;
 
 Boitata::Boitata(int pX, int pY, Jogador* jgdor1, Jogador* jgdor2) :
-Inimigo(sf::Vector2f(pX, pY), tamanho, velocidadeTerminal, jgdor1, jgdor2, range),
+Inimigo(sf::Vector2f((float)pX, (float)pY), tamanho, velocidadeTerminal, jgdor1, jgdor2, range),
 projetil(jgdor1, jgdor2){
-    raioAtaque= sf::Vector2f(600.f, 120.f);
+    raioAtaque= range;
     coolDown=1.f;
     tempoAtaque=1.5f;
     num_vidas = 1;
     danoAtaque = 2;
     tempoMorte = 1.2f;
-    setRaio(range);
     inicializa();
 }
 
 
 Boitata::Boitata(sf::Vector2f posicao, sf::Vector2f tamanho, sf::Vector2f speed, Jogador *player, Jogador *player2, sf::Vector2f range):
 Inimigo(posicao, tamanho, speed, player, player2, range),
-projetil(sf::Vector2f(0,50), sf::Vector2f(30,30), sf::Vector2f(0.2,0), 5, jogador1, jogador2){
-    raioAtaque= sf::Vector2f(600.f, 120.f);
+projetil( jogador1, jogador2){
+    raioAtaque= range;
     coolDown=1.f;
     tempoAtaque=1.5f;
     num_vidas = 1;
     danoAtaque = 2;
     tempoMorte = 1.2f;
-    setRaio(range);
     inicializa();
 
 }
@@ -58,63 +56,59 @@ void Boitata::mover_se() {
 
 void Boitata::atacaJogador(Jogador* jogador) {
     projetil.executar();
-    if(detectaJogador()) {
-        if (!permiteAtacar) {
+    if (!permiteAtacar) {
+        float dt = relogio.getElapsedTime().asSeconds()-tempoEsperaAtaque;
+        tempoEsperaAtaque += dt;
+        if (tempoEsperaAtaque >= coolDown) {
+            permiteAtacar = true;
+            tempoEsperaAtaque = 0;
+            relogio.restart();
+        }
+    } else {
+        sf::Vector2f inimigo = corpo.getPosition();
+        sf::Vector2f jgdor = jogador->getCorpo().getPosition();
+        float distanciaX = jgdor.x-inimigo.x;
+        float distanciaY = jgdor.y-inimigo.y;
+        if(std::abs(distanciaY) < raioAtaque.y) {
+            if (distanciaX < 0)
+                paraEsquerda = true;
+            else
+                paraEsquerda = false;
+            if (std::abs(distanciaX) < raioAtaque.x) {
+                atacando = true;
+                alvoAtaque = jogador;
+            }
+        }
+        if(atacando) {
             float dt = relogio.getElapsedTime().asSeconds()-tempoEsperaAtaque;
             tempoEsperaAtaque += dt;
-            if (tempoEsperaAtaque >= coolDown) {
-                permiteAtacar = true;
+            if (tempoEsperaAtaque > tempoAtaque-0.3) {
+                if (distanciaX < 0)
+                    lancaProjetil(true);
+                else
+                    lancaProjetil(false);
+            }
+            if (tempoEsperaAtaque > tempoAtaque) {
+                atacando = false;
+                permiteAtacar = false;
                 tempoEsperaAtaque = 0;
                 relogio.restart();
             }
-        } else {
-            sf::Vector2f inimigo = corpo.getPosition();
-            sf::Vector2f jgdor = jogador->getCorpo().getPosition();
-            float distanciaX = jgdor.x-inimigo.x;
-            float distanciaY = jgdor.y-inimigo.y;
-            if(std::abs(distanciaY) < raioAtaque.y) {
-                if (distanciaX < 0)
-                    paraEsquerda = true;
-                else
-                    paraEsquerda = false;
-                if (std::abs(distanciaX) < raioAtaque.x) {
-                    atacando = true;
-                    alvoAtaque = jogador;
-                }
-            }
-
-            if(atacando) {
-                float dt = relogio.getElapsedTime().asSeconds()-tempoEsperaAtaque;
-                tempoEsperaAtaque += dt;
-                if (tempoEsperaAtaque > tempoAtaque-0.3) {
-                    if (distanciaX < 0)
-                        lancaProjetil(true);
-                    else
-                        lancaProjetil(false);
-                }
-                if (tempoEsperaAtaque > tempoAtaque) {
-                    atacando = false;
-                    permiteAtacar = false;
-                    tempoEsperaAtaque = 0;
-                    relogio.restart();
-                    }
-                }
-            else{
-                atacando= false;
-                relogio.restart();
-            }
-
-            }
+        }
+        else{
+            atacando= false;
+            relogio.restart();
+        }
     }
-
 }
 
 void Boitata::atualizarAnimacao() {
     if(morrendo) {
         animacao.atualizar(paraEsquerda, "MORRENDO");
     }
-    else if(atacando)
+    else if(atacando) {
         animacao.atualizar(paraEsquerda, "ATACANDO");
+    }
     else if(noChao && velocidade.x!=0.f){
         animacao.atualizar(paraEsquerda, "ANDANDO");
     }
@@ -128,6 +122,7 @@ void Boitata::lancaProjetil(bool esquerda) {
     sf::Vector2f posicao = corpo.getPosition();
     posicao.y -=15;
     projetil.setDirecao(esquerda);
+    projetil.setVelYParaLancamento();
     if(esquerda)
         posicao.x-=corpo.getSize().x/2;
     else

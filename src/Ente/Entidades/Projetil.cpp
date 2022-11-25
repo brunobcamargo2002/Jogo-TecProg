@@ -5,7 +5,7 @@ using namespace Entidades;
 //projetil(sf::Vector2f(0,50), sf::Vector2f(30,30), sf::Vector2f(0.2,0), 5, jogador1, jogador2)
 
 sf::Vector2f Projetil::tamanho=sf::Vector2f(30, 30);
-sf::Vector2f Projetil::speed=sf::Vector2f(0.2, 0);
+sf::Vector2f Projetil::speed=sf::Vector2f(0.5, -0.1);
 int Projetil::damage= 5;
 
 
@@ -45,6 +45,7 @@ void Projetil::colisao(sf::Vector2f deslocamento, Entidades::Entidade *entidade)
 }
 
 void Projetil::executar() {
+    gravidade();
     mover_se();
     atualizarAnimacao();
     imprimir_se();
@@ -59,9 +60,9 @@ void Projetil::atualizarAnimacao() {
 
 void Projetil::mover_se() {
         if (paraEsquerda)
-            corpo.move(-velocidade.x, 0.f);
+            corpo.move(-velocidade.x, velocidade.y);
         else
-            corpo.move(velocidade.x, 0.f);
+            corpo.move(velocidade.x, velocidade.y);
 }
 
 void Projetil::setDirecao(bool esquerda) {
@@ -79,6 +80,15 @@ void Projetil::daDano(Jogador* jgdor) {
     }
 
 }
+
+void Projetil::gravidade() {
+    velocidade.y+=0.0001;
+}
+
+void Projetil::setVelYParaLancamento() {
+    velocidade.y= speed.y;
+}
+
 
 
 
