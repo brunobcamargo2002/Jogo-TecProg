@@ -49,10 +49,10 @@ void Entidades::Jogador1::mover_se() {
         } else {
             if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right)) {
                 paraEsquerda = false;
-                corpo.move(0.1, velocidade.y);
+                corpo.move(velocidadeTerminal.x*0.5, velocidade.y);
             } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left)) {
                 paraEsquerda = true;
-                corpo.move(-0.1, velocidade.y);
+                corpo.move(-velocidadeTerminal.x*0.5, velocidade.y);
             } else
                 zeraVelocidade();
         }
@@ -68,7 +68,7 @@ void Jogador1::atacar() {
         }
     }
     else {
-        if(sf::Keyboard::isKeyPressed(sf::Keyboard::Numpad0))
+        if(sf::Keyboard::isKeyPressed(sf::Keyboard::O))
             atacando= true;
         if(atacando==true){
             tempoEsperaAtaque+= relogio.getElapsedTime().asSeconds();

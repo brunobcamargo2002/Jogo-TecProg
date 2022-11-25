@@ -12,9 +12,13 @@ Gerenciador_Grafico* Gerenciador_Grafico::getInstancia()
 }
 
 
+#define TelaX 1280
+#define TelaY 720
+
 
 Gerenciador_Grafico::Gerenciador_Grafico():
-janela(new sf::RenderWindow(sf::VideoMode(1280.f, 720.f), "Jogo"))
+janela(new sf::RenderWindow(sf::VideoMode(TelaX, TelaY), "Jogo")),
+view(new sf::View(sf::FloatRect(TelaX/2, TelaY/2, TelaX, TelaY)))
 {
     if(janela == NULL)
     {
@@ -75,4 +79,10 @@ sf::Texture *Gerenciador_Grafico::carregarTextura(const char* caminho) {
     texturas.insert(std::pair<const char*, sf::Texture*>(caminho, tex));
 
     return tex;
+}
+
+void Gerenciador_Grafico::AttView(float Px,float Py,sf::RectangleShape* fundo){
+    view->setCenter(Px, Py);
+    janela->setView(*view);
+    fundo->setPosition(Px,Py);
 }

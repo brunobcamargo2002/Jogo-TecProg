@@ -25,6 +25,7 @@ void Inimigo::setRaio(sf::Vector2f range)
 
 bool Inimigo::detectaJogador() {
     if (podeAndar) {
+        //std::cout<<"TESTE"<<std::endl;
         alvo = NULL;
         sf::RectangleShape shapeJogador1 = jogador1->getCorpo();
         if (std::abs(shapeJogador1.getPosition().x - corpo.getPosition().x) <= raio.x &&

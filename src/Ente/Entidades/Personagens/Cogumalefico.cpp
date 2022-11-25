@@ -8,9 +8,9 @@
 
 using namespace Entidades;
 
-sf::Vector2f Cogumalefico::tamanho=sf::Vector2f(80, 80);
+sf::Vector2f Cogumalefico::tamanho=sf::Vector2f(120, 120);
 sf::Vector2f Cogumalefico::velocidadeTerminal=sf::Vector2f(0.2, 0);
-sf::Vector2f Cogumalefico::range=sf::Vector2f(800, 200);
+sf::Vector2f Cogumalefico::range=sf::Vector2f(400, 100);
 
 int Cogumalefico::pontosAbate=200;
 

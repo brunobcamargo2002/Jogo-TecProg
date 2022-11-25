@@ -4,7 +4,7 @@ using namespace Entidades;
 
 
  sf::Vector2f Jogador::tamanho=sf::Vector2f(70.f,70.f);
- sf::Vector2f Jogador::velocidadeTerminal=sf::Vector2f (0.35f, 0.35f);
+ sf::Vector2f Jogador::velocidadeTerminal=sf::Vector2f (0.5f, 0.6f);
 
 int Jogador::pontos=0;
 int Jogador::decrementoDePontosPorDano=-5;
