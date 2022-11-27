@@ -17,4 +17,12 @@ const int Espinhos::getDano() {
     return dano;
 }
 
+void Espinhos::salvarPosicao() {
+    std::ofstream arquivo("C:\\Users\\bruno\\github\\Jogo-TecProg\\save\\Espinhos.txt", std::ios::app);
+    sf::Vector2f posicao = getPosicao();
+
+    arquivo<<posicao.x<<" "<<posicao.y<<std::endl;
+    arquivo.close();
+}
+
 

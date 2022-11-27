@@ -242,7 +242,10 @@ CMakeFiles/Jogo.dir/src/Ente/Fases/Fase.cpp.obj: \
  C:/SFML/include/SFML/Graphics/VertexBuffer.hpp \
  C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/x86_64-w64-mingw32/include/string.h \
  C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/x86_64-w64-mingw32/include/sec_api/string_s.h \
- C:/Users/bruno/github/Jogo-TecProg/include/Ente/Entidades/Personagens/Jogador1.h \
+ C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/fstream \
+ C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32/bits/basic_file.h \
+ C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32/bits/c++io.h \
+ C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/fstream.tcc \
  C:/Users/bruno/github/Jogo-TecProg/include/Ente/Entidades/Personagens/Jogador.h \
  C:/Users/bruno/github/Jogo-TecProg/include/Ente/Entidades/Personagens/Personagem.h \
  C:/Users/bruno/github/Jogo-TecProg/include/Ente/Entidades/Entidade.h \
@@ -250,18 +253,12 @@ CMakeFiles/Jogo.dir/src/Ente/Fases/Fase.cpp.obj: \
  C:/Users/bruno/github/Jogo-TecProg/include/Animacao/Animacao.h \
  C:/Users/bruno/github/Jogo-TecProg/include/Animacao/Imagem.h \
  C:/Users/bruno/github/Jogo-TecProg/include/Gerenciadores/Gerenciador_Grafico.h \
+ C:/Users/bruno/github/Jogo-TecProg/include/Ente/Entidades/Personagens/Jogador1.h \
+ C:/Users/bruno/github/Jogo-TecProg/include/Ente/Entidades/Personagens/Jogador.h \
  C:/Users/bruno/github/Jogo-TecProg/include/Ente/Entidades/Personagens/Jogador2.h \
  C:/Users/bruno/github/Jogo-TecProg/include/Ente/Entidades/Personagens/Inimigo.h \
  C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/cmath \
  C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/x86_64-w64-mingw32/include/math.h \
- C:/Users/bruno/github/Jogo-TecProg/include/Ente/Entidades/Personagens/Caveira.h \
- C:/Users/bruno/github/Jogo-TecProg/include/Ente/Entidades/Personagens/Inimigo.h \
- C:/Users/bruno/github/Jogo-TecProg/include/Ente/Entidades/Personagens/Boitata.h \
- C:/Users/bruno/github/Jogo-TecProg/include/Ente/Entidades/Projetil.h \
- C:/Users/bruno/github/Jogo-TecProg/include/Ente/Entidades/Entidade.h \
- C:/Users/bruno/github/Jogo-TecProg/include/Animacao/Animacao.h \
- C:/Users/bruno/github/Jogo-TecProg/include/Ente/Entidades/Personagens/Jogador.h \
- C:/Users/bruno/github/Jogo-TecProg/include/Ente/Entidades/Personagens/Cogumalefico.h \
  C:/Users/bruno/github/Jogo-TecProg/include/Listas/ListaEntidades.h \
  C:/Users/bruno/github/Jogo-TecProg/include/Ente/Entidades/Entidade.h \
  C:/Users/bruno/github/Jogo-TecProg/include/Listas/Lista.h \
@@ -278,4 +275,11 @@ CMakeFiles/Jogo.dir/src/Ente/Fases/Fase.cpp.obj: \
  C:/Users/bruno/github/Jogo-TecProg/include/Ente/Entidades/Personagens/Jogador.h \
  C:/Users/bruno/github/Jogo-TecProg/include/Ente/Entidades/Obstaculos/Ninho.h \
  C:/Users/bruno/github/Jogo-TecProg/include/Ente/Entidades/Obstaculos/Piso.h \
- C:/Users/bruno/github/Jogo-TecProg/include/Ente/Entidades/Projetil.h
+ C:/Users/bruno/github/Jogo-TecProg/include/Ente/Entidades/Personagens/Caveira.h \
+ C:/Users/bruno/github/Jogo-TecProg/include/Ente/Entidades/Personagens/Inimigo.h \
+ C:/Users/bruno/github/Jogo-TecProg/include/Ente/Entidades/Personagens/Boitata.h \
+ C:/Users/bruno/github/Jogo-TecProg/include/Ente/Entidades/Projetil.h \
+ C:/Users/bruno/github/Jogo-TecProg/include/Ente/Entidades/Entidade.h \
+ C:/Users/bruno/github/Jogo-TecProg/include/Animacao/Animacao.h \
+ C:/Users/bruno/github/Jogo-TecProg/include/Ente/Entidades/Personagens/Jogador.h \
+ C:/Users/bruno/github/Jogo-TecProg/include/Ente/Entidades/Personagens/Cogumalefico.h

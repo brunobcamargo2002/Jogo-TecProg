@@ -11,6 +11,8 @@ namespace Entidades {
     public:
         Plataforma(int Px,int Py,int nvl);
         virtual ~Plataforma();
+
+        void salvarPosicao();
     };
 
 }

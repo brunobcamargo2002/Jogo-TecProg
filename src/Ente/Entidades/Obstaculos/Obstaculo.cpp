@@ -34,3 +34,7 @@ const bool Obstaculo::getDanoso() {
 const int Obstaculo::getDano() {
     return 0;
 }
+
+void Obstaculo::salvarPosicao() {
+
+}

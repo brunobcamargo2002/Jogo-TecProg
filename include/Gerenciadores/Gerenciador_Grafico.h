@@ -34,6 +34,7 @@ namespace Gerenciadores {
         const bool verificaJanelaAberta();
         sf::Texture* carregarTextura(const char* caminho);
         void AttView(float Px,float Py,sf::RectangleShape* fundo);
+        void viewMenu();
 
     };
 

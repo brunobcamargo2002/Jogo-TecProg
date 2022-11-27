@@ -28,6 +28,8 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/Users/bruno/github/Jogo-TecProg/src/Ente/Entidades/Personagens/Personagem.cpp" "CMakeFiles/Jogo.dir/src/Ente/Entidades/Personagens/Personagem.cpp.obj" "gcc" "CMakeFiles/Jogo.dir/src/Ente/Entidades/Personagens/Personagem.cpp.obj.d"
   "C:/Users/bruno/github/Jogo-TecProg/src/Ente/Entidades/Projetil.cpp" "CMakeFiles/Jogo.dir/src/Ente/Entidades/Projetil.cpp.obj" "gcc" "CMakeFiles/Jogo.dir/src/Ente/Entidades/Projetil.cpp.obj.d"
   "C:/Users/bruno/github/Jogo-TecProg/src/Ente/Fases/Fase.cpp" "CMakeFiles/Jogo.dir/src/Ente/Fases/Fase.cpp.obj" "gcc" "CMakeFiles/Jogo.dir/src/Ente/Fases/Fase.cpp.obj.d"
+  "C:/Users/bruno/github/Jogo-TecProg/src/Ente/Fases/Floresta.cpp" "CMakeFiles/Jogo.dir/src/Ente/Fases/Floresta.cpp.obj" "gcc" "CMakeFiles/Jogo.dir/src/Ente/Fases/Floresta.cpp.obj.d"
+  "C:/Users/bruno/github/Jogo-TecProg/src/Ente/Fases/Pantano.cpp" "CMakeFiles/Jogo.dir/src/Ente/Fases/Pantano.cpp.obj" "gcc" "CMakeFiles/Jogo.dir/src/Ente/Fases/Pantano.cpp.obj.d"
   "C:/Users/bruno/github/Jogo-TecProg/src/Ente/Menus/Menu.cpp" "CMakeFiles/Jogo.dir/src/Ente/Menus/Menu.cpp.obj" "gcc" "CMakeFiles/Jogo.dir/src/Ente/Menus/Menu.cpp.obj.d"
   "C:/Users/bruno/github/Jogo-TecProg/src/Gerenciadores/Gerenciador_Colisoes.cpp" "CMakeFiles/Jogo.dir/src/Gerenciadores/Gerenciador_Colisoes.cpp.obj" "gcc" "CMakeFiles/Jogo.dir/src/Gerenciadores/Gerenciador_Colisoes.cpp.obj.d"
   "C:/Users/bruno/github/Jogo-TecProg/src/Gerenciadores/Gerenciador_Grafico.cpp" "CMakeFiles/Jogo.dir/src/Gerenciadores/Gerenciador_Grafico.cpp.obj" "gcc" "CMakeFiles/Jogo.dir/src/Gerenciadores/Gerenciador_Grafico.cpp.obj.d"

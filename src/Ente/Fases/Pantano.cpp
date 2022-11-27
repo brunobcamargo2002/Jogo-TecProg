@@ -1,57 +1,86 @@
 #include "../../../include/Ente/Fases/Pantano.h"
 
+#define MAX 8
+#define MIN 4
+#define RANDOM (rand()%(MAX-MIN))+MIN
+
 using namespace Fases;
 
-Pantano::Pantano(){}
 
-Pantano::Pantano(Entidades::Jogador* jg,Entidades::Jogador* jg2,Gerenciadores::Gerenciador_Colisoes* gc):
-Fase(jg,jg2,gc)
-{fase=1;
-visao=100;
-passou=false;}
+
+Pantano::Pantano(unsigned int numJogadores):
+Fase( numJogadores)
+{
+    fase=2;
+    setTextura("C:\\ODIABO\\Jogo-TecProg-main\\imagens/Fases/Pantano.png");
+    visao=50;
+    ninhos=0;
+}
 
 Pantano::~Pantano(){}
 
 void Pantano::inserirPisos(){
-    setTextura("C:\\ODIABO\\Jogo-TecProg-main\\imagens/Fases/Floresta.png");
-    inserirPlataformas(0);
+    inserirPi(tam,1500,TelaY-30);
+    inserirPi(tam,3000,TelaY-30);
+    obstaculos.inserirEntidade(static_cast<Entidades::Entidade*>(new Entidades::Obstaculo(60,1000,-30,500)));
+    obstaculos.inserirEntidade(static_cast<Entidades::Entidade*>(new Entidades::Obstaculo(60,1000,4530,500)));
+    inserirPlataformas(RANDOM);
+    inserirEspinhos(RANDOM);
+    inserirNinhos(RANDOM);
 }
 
 void Pantano::inserirPlataformas(int n){
-    int x,y,nvl,nvlpassado=0;
-    for(int i=0;i<80;i+=4){
-        nvl= (rand()%3)-1;
-        inserirPla(0+150*i,690,nvlpassado+nvl);
-        inserirPla(150+150*i,690,nvlpassado+nvl);
-        inserirPla(300+150*i,690,nvlpassado+nvl);
-        x=150+150*i + rand()%175;
-        y=-200*(nvlpassado+nvl)+690;
-        switch (rand()%3){
-        case 0:
-            inserirE(x - 50,y-40);
-            inserirE(x - 100,y-40);
-            break;
-        case 1:
-            inserirI1(x-30,y-35);
-            break;
-        case 2:
-            inserirI2(x-30,y-75);
-            break;
+    int y=TelaY-280;
+    int const espaco = tam/n;
+    int x,largura_plataforma=200,x_ant=-300;
+    for(int i=0;i<tam+500;i+=espaco){
+        x = (rand()%(espaco-2*largura_plataforma)+largura_plataforma);
+        if((x+espaco)-x_ant<=500){
+            inserirPla(x+i,y,1);
+            inserirN(x+i+55,y-259);
+            ninhos++;
         }
-        nvlpassado+=nvl;
+        else
+            inserirPla(x+i,y,0);
+        x_ant=x;
     }
 }
 
 void Pantano::inserirEspinhos(int n){
-
+    int y=TelaY-85;
+    int espaco = tam/n;
+    int x,largura_Espinho=200,x_ant=-30000;;
+    for(int i=0;i<tam+300;i+=espaco){
+        x = (rand()%(espaco-2*largura_Espinho)+largura_Espinho);
+        if((x+espaco)-x_ant>=600){
+            inserirN(x_ant+i-espaco+450,TelaY-99);
+            ninhos++;
+        }
+        inserirE(x+i,y);
+        inserirE(x+i+80,y);
+        x_ant=x;
+    }
 }
 
-void Pantano::inserirNinhos(int n){
-}
 
 void Pantano::inserirInimigos(){
-    jogador1->setPosicao(sf::Vector2f(600,50));
-    jogador2->setPosicao(sf::Vector2f(650,50));
+    inserirC(4000,300);
+    inserirInimigos1(RANDOM);
+    inserirInimigos2(RANDOM);
 }
 
+void Pantano::inserirInimigos1(int n){
+    int y=30,x;
+    int espaco = tam/n,largura_Inimigo=40;
+    for(int i=espaco;i<tam;i+=espaco){
+        x = (rand()%(espaco-2*largura_Inimigo)+largura_Inimigo);
+        inserirI1(x+i,y);}
+}
 
+void Pantano::inserirInimigos2(int n){
+    int y=30,x;
+    int espaco = tam/n,largura_Inimigo=40;
+    for(int i=espaco;i<tam;i+=espaco){
+        x = (rand()%(espaco-2*largura_Inimigo)+largura_Inimigo);
+        inserirI2(x+i,y);}
+}

@@ -20,6 +20,8 @@ namespace Entidades {
         void mover_se();
         void atacar();
 
+        void salvarPosicao();
+
     };
 }
 

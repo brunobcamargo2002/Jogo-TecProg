@@ -243,6 +243,10 @@ CMakeFiles/Jogo.dir/src/Listas/ListaEntidades.cpp.obj: \
  C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/istream.tcc \
  C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/x86_64-w64-mingw32/include/string.h \
  C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/x86_64-w64-mingw32/include/sec_api/string_s.h \
+ C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/fstream \
+ C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32/bits/basic_file.h \
+ C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32/bits/c++io.h \
+ C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/fstream.tcc \
  C:/Users/bruno/github/Jogo-TecProg/include/Listas/Lista.h \
  C:/Users/bruno/github/Jogo-TecProg/include/Ente/Entidades/Personagens/Personagem.h \
  C:/Users/bruno/github/Jogo-TecProg/include/Ente/Entidades/Entidade.h \

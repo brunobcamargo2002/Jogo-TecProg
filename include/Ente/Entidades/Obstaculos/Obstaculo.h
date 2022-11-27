@@ -19,6 +19,8 @@ class Obstaculo : public Entidade
         const bool getDanoso();
         virtual const int getDano();
 
+        virtual void salvarPosicao();
+
 };
 }
 

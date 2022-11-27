@@ -38,6 +38,11 @@ namespace Entidades {
         int getDano();
         void tomaDano(int dano);
 
+        int getPontos();
+        void setPontos(int pontos);
+
+        virtual void salvarPosicao()=0;
+
 
 
     };

@@ -12,6 +12,8 @@ namespace Entidades {
         Piso(int pX, int pY);
         Piso(int comprimento,int largura,int Px,int Py);
         virtual ~Piso(){};
+
+        void salvarPosicao();
     };
 }
 

@@ -145,6 +145,12 @@
 		<Unit filename="C:/Users/bruno/github/Jogo-TecProg/include/Ente/Fases/Fase.h">
 			<Option target="Jogo"/>
 		</Unit>
+		<Unit filename="C:/Users/bruno/github/Jogo-TecProg/include/Ente/Fases/Floresta.h">
+			<Option target="Jogo"/>
+		</Unit>
+		<Unit filename="C:/Users/bruno/github/Jogo-TecProg/include/Ente/Fases/Pantano.h">
+			<Option target="Jogo"/>
+		</Unit>
 		<Unit filename="C:/Users/bruno/github/Jogo-TecProg/include/Ente/Menus/Menu.h">
 			<Option target="Jogo"/>
 		</Unit>
@@ -218,6 +224,12 @@
 			<Option target="Jogo"/>
 		</Unit>
 		<Unit filename="C:/Users/bruno/github/Jogo-TecProg/src/Ente/Fases/Fase.cpp">
+			<Option target="Jogo"/>
+		</Unit>
+		<Unit filename="C:/Users/bruno/github/Jogo-TecProg/src/Ente/Fases/Floresta.cpp">
+			<Option target="Jogo"/>
+		</Unit>
+		<Unit filename="C:/Users/bruno/github/Jogo-TecProg/src/Ente/Fases/Pantano.cpp">
 			<Option target="Jogo"/>
 		</Unit>
 		<Unit filename="C:/Users/bruno/github/Jogo-TecProg/src/Ente/Menus/Menu.cpp">

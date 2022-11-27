@@ -4,7 +4,11 @@
 #include "../Ente.h"
 #include "SFML/Graphics.hpp"
 
+#include <fstream>
+
 #include "../Entidades/Personagens/Jogador.h"
+#include "../Entidades/Personagens/Jogador1.h"
+#include "../Entidades/Personagens/Jogador2.h"
 #include "../Entidades/Personagens/Inimigo.h"
 #include "../../Listas/ListaEntidades.h"
 #include "../../Gerenciadores/Gerenciador_Grafico.h"
@@ -22,18 +26,47 @@ namespace Fases {
     class Fase : public Ente {
     protected:
         int fase;
+        unsigned int numJogadores;
         sf::RectangleShape fundo;
         sf::Texture* tfundo;
         Entidades::Jogador* jogador1;
         Entidades::Jogador* jogador2;
         Listas::ListaEntidades personagens;
         Listas::ListaEntidades obstaculos;
-        Gerenciadores::Gerenciador_Colisoes* gerenciador_colisoes;
+        Gerenciadores::Gerenciador_Colisoes gerenciador_colisoes;
         int visao;
+        bool carregar;
     public:
-        Fase();
 
-        Fase(Entidades::Jogador* jg,Entidades::Jogador* jg2,Gerenciadores::Gerenciador_Colisoes* gc);
+        Fase(unsigned int numJogadores=1);
+
+
+        void gerarMundo();
+
+        void limpaArquivos();
+
+        void salvarJogo();
+        void salvarFase();
+        void salvarPersonagens();
+        void salvarObstaculos();
+        void carregarFase();
+
+        void carregarJogadores();
+        void carregarPersonagens();
+        void carregarCaveiras();
+        void carregarBoitatas();
+        void carregarCogumalefico();
+
+        void carregarObstaculos();
+        void carregarPisos();
+        void carregarPlataformas();
+        void carregarEspinhos();
+        void carregarNinhos();
+
+
+
+
+
 
         virtual ~Fase();
 
@@ -55,7 +88,9 @@ namespace Fases {
 
         void inserirN(int x,int y);
 
-        virtual void inserirInimigos();
+        void inserirJogadores();
+
+        virtual void inserirInimigos()=0;
 
         virtual void inserirInimigos1(int n);
 

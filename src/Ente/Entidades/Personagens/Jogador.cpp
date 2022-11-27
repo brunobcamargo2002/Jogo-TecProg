@@ -146,6 +146,14 @@ void Jogador::tomaDano(int dano) {
     }
 }
 
+int Jogador::getPontos() {
+    return pontos;
+}
+
+void Jogador::setPontos(int pontos) {
+    this->pontos = pontos;
+}
+
 
 
 

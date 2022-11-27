@@ -42,8 +42,19 @@ unsigned int ListaEntidades::getTamanho() {
 
 void ListaEntidades::removerEntidade(Entidades::Entidade *entidade) {
     LEntidades.remover(entidade);
-
 }
+
+void ListaEntidades::limparLista() {
+    if(!LEntidades.empty()){
+        LEntidades.pop_front();
+    }
+}
+
+Entidades::Entidade *ListaEntidades::removerPrimeiro() {
+    return LEntidades.pop_front();
+}
+
+
 
 
 

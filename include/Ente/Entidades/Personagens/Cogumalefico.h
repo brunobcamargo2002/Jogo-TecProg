@@ -28,6 +28,8 @@ namespace Entidades {
         void atacaJogador(Jogador* jogador);
         void mecanica();
 
+        void salvarPosicao();
+
 
     };
 }

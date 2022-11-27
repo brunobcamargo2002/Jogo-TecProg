@@ -1,14 +1,14 @@
-#ifndef __PANTANO_H__
-#define __PANTANO_H__
+#ifndef __FLORESTA_H__
+#define __FLORESTA_H__
 #include "Fase.h"
 
 namespace Fases{
     class Pantano: public Fase{
     private:
-        bool passou;
+        const int tam=3000;
+        int ninhos;
     public:
-        Pantano();
-        Pantano(Entidades::Jogador* jg,Entidades::Jogador* jg2,Gerenciadores::Gerenciador_Colisoes* gc);
+        Pantano(unsigned int numJogadores=1);
         ~Pantano();
 
         void inserirPisos();
@@ -17,12 +17,13 @@ namespace Fases{
 
         void inserirEspinhos(int n);
 
-        void inserirNinhos(int n);
-
         void inserirInimigos();
 
+        void inserirInimigos1(int n);
+
+        void inserirInimigos2(int n);
     };
 }
 
 
-#endif // __PANTANO_H__
+#endif // __FLORESTA_H__

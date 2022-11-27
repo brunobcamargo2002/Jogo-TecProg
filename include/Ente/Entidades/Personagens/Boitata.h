@@ -27,6 +27,8 @@ namespace Entidades {
         void inicializa();
         void mecanica();
 
+        void salvarPosicao();
+
     };
 
 }

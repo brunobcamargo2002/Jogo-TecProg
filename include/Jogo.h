@@ -14,8 +14,8 @@
 #include "Gerenciadores/Gerenciador_Grafico.h"
 #include "Gerenciadores/Gerenciador_Colisoes.h"
 #include "Ente/Menus/Menu.h"
-#include "Ente/Fases/Floresta.h"
 #include "Ente/Fases/Pantano.h"
+#include "Ente/Fases/Floresta.h"
 
 
 class Jogo
@@ -28,8 +28,6 @@ private:
     //Listas::ListaEntidades obstaculos;
     Gerenciadores::Gerenciador_Grafico* gerenciador_grafico;
     Gerenciadores::Gerenciador_Colisoes gerenciador_colisoes;
-    Fases::Pantano fase2;
-    Fases::Floresta fase1;
     Menu menu;
 public:
     Jogo();

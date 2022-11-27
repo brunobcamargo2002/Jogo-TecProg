@@ -85,6 +85,15 @@ void Jogador1::atacar() {
     }
 }
 
+void Jogador1::salvarPosicao() {
+    std::ofstream arquivo("C:\\Users\\bruno\\github\\Jogo-TecProg\\save\\Jogadores.txt", std::ios::app);
+    sf::Vector2f posicao = getPosicao();
+
+    arquivo<<getPontos()<<std::endl<<executa<<" "<<posicao.x<<" "<<posicao.y<<std::endl;
+    arquivo.close();
+
+}
+
 
 
 

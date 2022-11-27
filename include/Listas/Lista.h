@@ -142,12 +142,12 @@ namespace Listas {
     template<class TL>
     TL *Lista<TL>::pop_front() {
         if (pPrimeiro != NULL) {
+            std::cout<<"teste"<<std::endl;
             TL *info = pPrimeiro->getInfo();
             Elemento<TL> *proximo = pPrimeiro->getProx();
             delete pPrimeiro;
             pPrimeiro = proximo;
             return info;
-            tam--;
         } else
             return NULL;
     }
@@ -173,7 +173,7 @@ namespace Listas {
             delete pUltimo;
             pUltimo = ant;
             return conteudo;
-            tam--;
+            tam --;
         }
         return NULL;
     }

@@ -3,6 +3,8 @@
 #include <SFML/Graphics.hpp>
 #include "../Ente.h"
 
+#include <fstream>
+
 
 namespace Entidades {
 
@@ -24,6 +26,9 @@ namespace Entidades {
         virtual void executar()=0;
         bool getExecuta();
         void setTextura(const char* caminho);
+        void setExecutar(const bool exec);
+
+        virtual void salvarPosicao()=0;
 
     };
 

@@ -9,10 +9,11 @@ class Menu:protected Ente
 {
     private:
     sf::Text text[3];
+    sf::Text opcoes[4];
     sf::Text fases[4];
+    sf::Text opcoesInGame[3];
     sf::Font font;
-    Fase* fase1;
-    Fase* fase2;
+    Fase* fase;
     class Contador{
         private:
             int numero;
@@ -34,12 +35,16 @@ class Menu:protected Ente
     };
     Contador n;
     public:
-    Menu(Fase* f1=NULL,Fase* f2=NULL);
+    Menu();
     ~Menu();
     void executar();
-    void MostraFases();
+    void mostraOpcoes();
+    void MostraFases(unsigned int jogadores);
+    void menuFase();
     void imprimir_se(int tela);
     void setNome();
+
+    Fase* carregarJogo();
 };
 
 #endif // MENU_H

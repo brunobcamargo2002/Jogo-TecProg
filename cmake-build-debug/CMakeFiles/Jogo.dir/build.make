@@ -98,11 +98,41 @@ CMakeFiles/Jogo.dir/src/Jogo.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Jogo.dir/src/Jogo.cpp.s"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\bruno\github\Jogo-TecProg\src\Jogo.cpp -o CMakeFiles\Jogo.dir\src\Jogo.cpp.s
 
+CMakeFiles/Jogo.dir/src/Ente/Fases/Floresta.cpp.obj: CMakeFiles/Jogo.dir/flags.make
+CMakeFiles/Jogo.dir/src/Ente/Fases/Floresta.cpp.obj: CMakeFiles/Jogo.dir/includes_CXX.rsp
+CMakeFiles/Jogo.dir/src/Ente/Fases/Floresta.cpp.obj: ../src/Ente/Fases/Floresta.cpp
+CMakeFiles/Jogo.dir/src/Ente/Fases/Floresta.cpp.obj: CMakeFiles/Jogo.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\bruno\github\Jogo-TecProg\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Jogo.dir/src/Ente/Fases/Floresta.cpp.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Jogo.dir/src/Ente/Fases/Floresta.cpp.obj -MF CMakeFiles\Jogo.dir\src\Ente\Fases\Floresta.cpp.obj.d -o CMakeFiles\Jogo.dir\src\Ente\Fases\Floresta.cpp.obj -c C:\Users\bruno\github\Jogo-TecProg\src\Ente\Fases\Floresta.cpp
+
+CMakeFiles/Jogo.dir/src/Ente/Fases/Floresta.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Jogo.dir/src/Ente/Fases/Floresta.cpp.i"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\bruno\github\Jogo-TecProg\src\Ente\Fases\Floresta.cpp > CMakeFiles\Jogo.dir\src\Ente\Fases\Floresta.cpp.i
+
+CMakeFiles/Jogo.dir/src/Ente/Fases/Floresta.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Jogo.dir/src/Ente/Fases/Floresta.cpp.s"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\bruno\github\Jogo-TecProg\src\Ente\Fases\Floresta.cpp -o CMakeFiles\Jogo.dir\src\Ente\Fases\Floresta.cpp.s
+
+CMakeFiles/Jogo.dir/src/Ente/Fases/Pantano.cpp.obj: CMakeFiles/Jogo.dir/flags.make
+CMakeFiles/Jogo.dir/src/Ente/Fases/Pantano.cpp.obj: CMakeFiles/Jogo.dir/includes_CXX.rsp
+CMakeFiles/Jogo.dir/src/Ente/Fases/Pantano.cpp.obj: ../src/Ente/Fases/Pantano.cpp
+CMakeFiles/Jogo.dir/src/Ente/Fases/Pantano.cpp.obj: CMakeFiles/Jogo.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\bruno\github\Jogo-TecProg\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Jogo.dir/src/Ente/Fases/Pantano.cpp.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Jogo.dir/src/Ente/Fases/Pantano.cpp.obj -MF CMakeFiles\Jogo.dir\src\Ente\Fases\Pantano.cpp.obj.d -o CMakeFiles\Jogo.dir\src\Ente\Fases\Pantano.cpp.obj -c C:\Users\bruno\github\Jogo-TecProg\src\Ente\Fases\Pantano.cpp
+
+CMakeFiles/Jogo.dir/src/Ente/Fases/Pantano.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Jogo.dir/src/Ente/Fases/Pantano.cpp.i"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\bruno\github\Jogo-TecProg\src\Ente\Fases\Pantano.cpp > CMakeFiles\Jogo.dir\src\Ente\Fases\Pantano.cpp.i
+
+CMakeFiles/Jogo.dir/src/Ente/Fases/Pantano.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Jogo.dir/src/Ente/Fases/Pantano.cpp.s"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\bruno\github\Jogo-TecProg\src\Ente\Fases\Pantano.cpp -o CMakeFiles\Jogo.dir\src\Ente\Fases\Pantano.cpp.s
+
 CMakeFiles/Jogo.dir/src/Ente/Menus/Menu.cpp.obj: CMakeFiles/Jogo.dir/flags.make
 CMakeFiles/Jogo.dir/src/Ente/Menus/Menu.cpp.obj: CMakeFiles/Jogo.dir/includes_CXX.rsp
 CMakeFiles/Jogo.dir/src/Ente/Menus/Menu.cpp.obj: ../src/Ente/Menus/Menu.cpp
 CMakeFiles/Jogo.dir/src/Ente/Menus/Menu.cpp.obj: CMakeFiles/Jogo.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\bruno\github\Jogo-TecProg\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Jogo.dir/src/Ente/Menus/Menu.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\bruno\github\Jogo-TecProg\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Jogo.dir/src/Ente/Menus/Menu.cpp.obj"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Jogo.dir/src/Ente/Menus/Menu.cpp.obj -MF CMakeFiles\Jogo.dir\src\Ente\Menus\Menu.cpp.obj.d -o CMakeFiles\Jogo.dir\src\Ente\Menus\Menu.cpp.obj -c C:\Users\bruno\github\Jogo-TecProg\src\Ente\Menus\Menu.cpp
 
 CMakeFiles/Jogo.dir/src/Ente/Menus/Menu.cpp.i: cmake_force
@@ -117,7 +147,7 @@ CMakeFiles/Jogo.dir/src/Listas/ListaEntidades.cpp.obj: CMakeFiles/Jogo.dir/flags
 CMakeFiles/Jogo.dir/src/Listas/ListaEntidades.cpp.obj: CMakeFiles/Jogo.dir/includes_CXX.rsp
 CMakeFiles/Jogo.dir/src/Listas/ListaEntidades.cpp.obj: ../src/Listas/ListaEntidades.cpp
 CMakeFiles/Jogo.dir/src/Listas/ListaEntidades.cpp.obj: CMakeFiles/Jogo.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\bruno\github\Jogo-TecProg\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Jogo.dir/src/Listas/ListaEntidades.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\bruno\github\Jogo-TecProg\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Jogo.dir/src/Listas/ListaEntidades.cpp.obj"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Jogo.dir/src/Listas/ListaEntidades.cpp.obj -MF CMakeFiles\Jogo.dir\src\Listas\ListaEntidades.cpp.obj.d -o CMakeFiles\Jogo.dir\src\Listas\ListaEntidades.cpp.obj -c C:\Users\bruno\github\Jogo-TecProg\src\Listas\ListaEntidades.cpp
 
 CMakeFiles/Jogo.dir/src/Listas/ListaEntidades.cpp.i: cmake_force
@@ -132,7 +162,7 @@ CMakeFiles/Jogo.dir/src/Gerenciadores/Gerenciador_Grafico.cpp.obj: CMakeFiles/Jo
 CMakeFiles/Jogo.dir/src/Gerenciadores/Gerenciador_Grafico.cpp.obj: CMakeFiles/Jogo.dir/includes_CXX.rsp
 CMakeFiles/Jogo.dir/src/Gerenciadores/Gerenciador_Grafico.cpp.obj: ../src/Gerenciadores/Gerenciador_Grafico.cpp
 CMakeFiles/Jogo.dir/src/Gerenciadores/Gerenciador_Grafico.cpp.obj: CMakeFiles/Jogo.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\bruno\github\Jogo-TecProg\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Jogo.dir/src/Gerenciadores/Gerenciador_Grafico.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\bruno\github\Jogo-TecProg\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Jogo.dir/src/Gerenciadores/Gerenciador_Grafico.cpp.obj"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Jogo.dir/src/Gerenciadores/Gerenciador_Grafico.cpp.obj -MF CMakeFiles\Jogo.dir\src\Gerenciadores\Gerenciador_Grafico.cpp.obj.d -o CMakeFiles\Jogo.dir\src\Gerenciadores\Gerenciador_Grafico.cpp.obj -c C:\Users\bruno\github\Jogo-TecProg\src\Gerenciadores\Gerenciador_Grafico.cpp
 
 CMakeFiles/Jogo.dir/src/Gerenciadores/Gerenciador_Grafico.cpp.i: cmake_force
@@ -147,7 +177,7 @@ CMakeFiles/Jogo.dir/src/Gerenciadores/Gerenciador_Colisoes.cpp.obj: CMakeFiles/J
 CMakeFiles/Jogo.dir/src/Gerenciadores/Gerenciador_Colisoes.cpp.obj: CMakeFiles/Jogo.dir/includes_CXX.rsp
 CMakeFiles/Jogo.dir/src/Gerenciadores/Gerenciador_Colisoes.cpp.obj: ../src/Gerenciadores/Gerenciador_Colisoes.cpp
 CMakeFiles/Jogo.dir/src/Gerenciadores/Gerenciador_Colisoes.cpp.obj: CMakeFiles/Jogo.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\bruno\github\Jogo-TecProg\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Jogo.dir/src/Gerenciadores/Gerenciador_Colisoes.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\bruno\github\Jogo-TecProg\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/Jogo.dir/src/Gerenciadores/Gerenciador_Colisoes.cpp.obj"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Jogo.dir/src/Gerenciadores/Gerenciador_Colisoes.cpp.obj -MF CMakeFiles\Jogo.dir\src\Gerenciadores\Gerenciador_Colisoes.cpp.obj.d -o CMakeFiles\Jogo.dir\src\Gerenciadores\Gerenciador_Colisoes.cpp.obj -c C:\Users\bruno\github\Jogo-TecProg\src\Gerenciadores\Gerenciador_Colisoes.cpp
 
 CMakeFiles/Jogo.dir/src/Gerenciadores/Gerenciador_Colisoes.cpp.i: cmake_force
@@ -162,7 +192,7 @@ CMakeFiles/Jogo.dir/src/Ente/Ente.cpp.obj: CMakeFiles/Jogo.dir/flags.make
 CMakeFiles/Jogo.dir/src/Ente/Ente.cpp.obj: CMakeFiles/Jogo.dir/includes_CXX.rsp
 CMakeFiles/Jogo.dir/src/Ente/Ente.cpp.obj: ../src/Ente/Ente.cpp
 CMakeFiles/Jogo.dir/src/Ente/Ente.cpp.obj: CMakeFiles/Jogo.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\bruno\github\Jogo-TecProg\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Jogo.dir/src/Ente/Ente.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\bruno\github\Jogo-TecProg\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/Jogo.dir/src/Ente/Ente.cpp.obj"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Jogo.dir/src/Ente/Ente.cpp.obj -MF CMakeFiles\Jogo.dir\src\Ente\Ente.cpp.obj.d -o CMakeFiles\Jogo.dir\src\Ente\Ente.cpp.obj -c C:\Users\bruno\github\Jogo-TecProg\src\Ente\Ente.cpp
 
 CMakeFiles/Jogo.dir/src/Ente/Ente.cpp.i: cmake_force
@@ -177,7 +207,7 @@ CMakeFiles/Jogo.dir/src/Ente/Fases/Fase.cpp.obj: CMakeFiles/Jogo.dir/flags.make
 CMakeFiles/Jogo.dir/src/Ente/Fases/Fase.cpp.obj: CMakeFiles/Jogo.dir/includes_CXX.rsp
 CMakeFiles/Jogo.dir/src/Ente/Fases/Fase.cpp.obj: ../src/Ente/Fases/Fase.cpp
 CMakeFiles/Jogo.dir/src/Ente/Fases/Fase.cpp.obj: CMakeFiles/Jogo.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\bruno\github\Jogo-TecProg\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/Jogo.dir/src/Ente/Fases/Fase.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\bruno\github\Jogo-TecProg\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/Jogo.dir/src/Ente/Fases/Fase.cpp.obj"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Jogo.dir/src/Ente/Fases/Fase.cpp.obj -MF CMakeFiles\Jogo.dir\src\Ente\Fases\Fase.cpp.obj.d -o CMakeFiles\Jogo.dir\src\Ente\Fases\Fase.cpp.obj -c C:\Users\bruno\github\Jogo-TecProg\src\Ente\Fases\Fase.cpp
 
 CMakeFiles/Jogo.dir/src/Ente/Fases/Fase.cpp.i: cmake_force
@@ -192,7 +222,7 @@ CMakeFiles/Jogo.dir/src/Ente/Entidades/Projetil.cpp.obj: CMakeFiles/Jogo.dir/fla
 CMakeFiles/Jogo.dir/src/Ente/Entidades/Projetil.cpp.obj: CMakeFiles/Jogo.dir/includes_CXX.rsp
 CMakeFiles/Jogo.dir/src/Ente/Entidades/Projetil.cpp.obj: ../src/Ente/Entidades/Projetil.cpp
 CMakeFiles/Jogo.dir/src/Ente/Entidades/Projetil.cpp.obj: CMakeFiles/Jogo.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\bruno\github\Jogo-TecProg\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/Jogo.dir/src/Ente/Entidades/Projetil.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\bruno\github\Jogo-TecProg\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/Jogo.dir/src/Ente/Entidades/Projetil.cpp.obj"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Jogo.dir/src/Ente/Entidades/Projetil.cpp.obj -MF CMakeFiles\Jogo.dir\src\Ente\Entidades\Projetil.cpp.obj.d -o CMakeFiles\Jogo.dir\src\Ente\Entidades\Projetil.cpp.obj -c C:\Users\bruno\github\Jogo-TecProg\src\Ente\Entidades\Projetil.cpp
 
 CMakeFiles/Jogo.dir/src/Ente/Entidades/Projetil.cpp.i: cmake_force
@@ -207,7 +237,7 @@ CMakeFiles/Jogo.dir/src/Ente/Entidades/Entidade.cpp.obj: CMakeFiles/Jogo.dir/fla
 CMakeFiles/Jogo.dir/src/Ente/Entidades/Entidade.cpp.obj: CMakeFiles/Jogo.dir/includes_CXX.rsp
 CMakeFiles/Jogo.dir/src/Ente/Entidades/Entidade.cpp.obj: ../src/Ente/Entidades/Entidade.cpp
 CMakeFiles/Jogo.dir/src/Ente/Entidades/Entidade.cpp.obj: CMakeFiles/Jogo.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\bruno\github\Jogo-TecProg\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/Jogo.dir/src/Ente/Entidades/Entidade.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\bruno\github\Jogo-TecProg\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/Jogo.dir/src/Ente/Entidades/Entidade.cpp.obj"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Jogo.dir/src/Ente/Entidades/Entidade.cpp.obj -MF CMakeFiles\Jogo.dir\src\Ente\Entidades\Entidade.cpp.obj.d -o CMakeFiles\Jogo.dir\src\Ente\Entidades\Entidade.cpp.obj -c C:\Users\bruno\github\Jogo-TecProg\src\Ente\Entidades\Entidade.cpp
 
 CMakeFiles/Jogo.dir/src/Ente/Entidades/Entidade.cpp.i: cmake_force
@@ -222,7 +252,7 @@ CMakeFiles/Jogo.dir/src/Ente/Entidades/Personagens/Personagem.cpp.obj: CMakeFile
 CMakeFiles/Jogo.dir/src/Ente/Entidades/Personagens/Personagem.cpp.obj: CMakeFiles/Jogo.dir/includes_CXX.rsp
 CMakeFiles/Jogo.dir/src/Ente/Entidades/Personagens/Personagem.cpp.obj: ../src/Ente/Entidades/Personagens/Personagem.cpp
 CMakeFiles/Jogo.dir/src/Ente/Entidades/Personagens/Personagem.cpp.obj: CMakeFiles/Jogo.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\bruno\github\Jogo-TecProg\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/Jogo.dir/src/Ente/Entidades/Personagens/Personagem.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\bruno\github\Jogo-TecProg\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/Jogo.dir/src/Ente/Entidades/Personagens/Personagem.cpp.obj"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Jogo.dir/src/Ente/Entidades/Personagens/Personagem.cpp.obj -MF CMakeFiles\Jogo.dir\src\Ente\Entidades\Personagens\Personagem.cpp.obj.d -o CMakeFiles\Jogo.dir\src\Ente\Entidades\Personagens\Personagem.cpp.obj -c C:\Users\bruno\github\Jogo-TecProg\src\Ente\Entidades\Personagens\Personagem.cpp
 
 CMakeFiles/Jogo.dir/src/Ente/Entidades/Personagens/Personagem.cpp.i: cmake_force
@@ -237,7 +267,7 @@ CMakeFiles/Jogo.dir/src/Ente/Entidades/Personagens/Jogador.cpp.obj: CMakeFiles/J
 CMakeFiles/Jogo.dir/src/Ente/Entidades/Personagens/Jogador.cpp.obj: CMakeFiles/Jogo.dir/includes_CXX.rsp
 CMakeFiles/Jogo.dir/src/Ente/Entidades/Personagens/Jogador.cpp.obj: ../src/Ente/Entidades/Personagens/Jogador.cpp
 CMakeFiles/Jogo.dir/src/Ente/Entidades/Personagens/Jogador.cpp.obj: CMakeFiles/Jogo.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\bruno\github\Jogo-TecProg\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/Jogo.dir/src/Ente/Entidades/Personagens/Jogador.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\bruno\github\Jogo-TecProg\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/Jogo.dir/src/Ente/Entidades/Personagens/Jogador.cpp.obj"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Jogo.dir/src/Ente/Entidades/Personagens/Jogador.cpp.obj -MF CMakeFiles\Jogo.dir\src\Ente\Entidades\Personagens\Jogador.cpp.obj.d -o CMakeFiles\Jogo.dir\src\Ente\Entidades\Personagens\Jogador.cpp.obj -c C:\Users\bruno\github\Jogo-TecProg\src\Ente\Entidades\Personagens\Jogador.cpp
 
 CMakeFiles/Jogo.dir/src/Ente/Entidades/Personagens/Jogador.cpp.i: cmake_force
@@ -252,7 +282,7 @@ CMakeFiles/Jogo.dir/src/Ente/Entidades/Personagens/Inimigo.cpp.obj: CMakeFiles/J
 CMakeFiles/Jogo.dir/src/Ente/Entidades/Personagens/Inimigo.cpp.obj: CMakeFiles/Jogo.dir/includes_CXX.rsp
 CMakeFiles/Jogo.dir/src/Ente/Entidades/Personagens/Inimigo.cpp.obj: ../src/Ente/Entidades/Personagens/Inimigo.cpp
 CMakeFiles/Jogo.dir/src/Ente/Entidades/Personagens/Inimigo.cpp.obj: CMakeFiles/Jogo.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\bruno\github\Jogo-TecProg\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/Jogo.dir/src/Ente/Entidades/Personagens/Inimigo.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\bruno\github\Jogo-TecProg\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/Jogo.dir/src/Ente/Entidades/Personagens/Inimigo.cpp.obj"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Jogo.dir/src/Ente/Entidades/Personagens/Inimigo.cpp.obj -MF CMakeFiles\Jogo.dir\src\Ente\Entidades\Personagens\Inimigo.cpp.obj.d -o CMakeFiles\Jogo.dir\src\Ente\Entidades\Personagens\Inimigo.cpp.obj -c C:\Users\bruno\github\Jogo-TecProg\src\Ente\Entidades\Personagens\Inimigo.cpp
 
 CMakeFiles/Jogo.dir/src/Ente/Entidades/Personagens/Inimigo.cpp.i: cmake_force
@@ -267,7 +297,7 @@ CMakeFiles/Jogo.dir/src/Ente/Entidades/Personagens/Caveira.cpp.obj: CMakeFiles/J
 CMakeFiles/Jogo.dir/src/Ente/Entidades/Personagens/Caveira.cpp.obj: CMakeFiles/Jogo.dir/includes_CXX.rsp
 CMakeFiles/Jogo.dir/src/Ente/Entidades/Personagens/Caveira.cpp.obj: ../src/Ente/Entidades/Personagens/Caveira.cpp
 CMakeFiles/Jogo.dir/src/Ente/Entidades/Personagens/Caveira.cpp.obj: CMakeFiles/Jogo.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\bruno\github\Jogo-TecProg\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/Jogo.dir/src/Ente/Entidades/Personagens/Caveira.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\bruno\github\Jogo-TecProg\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/Jogo.dir/src/Ente/Entidades/Personagens/Caveira.cpp.obj"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Jogo.dir/src/Ente/Entidades/Personagens/Caveira.cpp.obj -MF CMakeFiles\Jogo.dir\src\Ente\Entidades\Personagens\Caveira.cpp.obj.d -o CMakeFiles\Jogo.dir\src\Ente\Entidades\Personagens\Caveira.cpp.obj -c C:\Users\bruno\github\Jogo-TecProg\src\Ente\Entidades\Personagens\Caveira.cpp
 
 CMakeFiles/Jogo.dir/src/Ente/Entidades/Personagens/Caveira.cpp.i: cmake_force
@@ -282,7 +312,7 @@ CMakeFiles/Jogo.dir/src/Ente/Entidades/Personagens/Boitata.cpp.obj: CMakeFiles/J
 CMakeFiles/Jogo.dir/src/Ente/Entidades/Personagens/Boitata.cpp.obj: CMakeFiles/Jogo.dir/includes_CXX.rsp
 CMakeFiles/Jogo.dir/src/Ente/Entidades/Personagens/Boitata.cpp.obj: ../src/Ente/Entidades/Personagens/Boitata.cpp
 CMakeFiles/Jogo.dir/src/Ente/Entidades/Personagens/Boitata.cpp.obj: CMakeFiles/Jogo.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\bruno\github\Jogo-TecProg\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/Jogo.dir/src/Ente/Entidades/Personagens/Boitata.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\bruno\github\Jogo-TecProg\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/Jogo.dir/src/Ente/Entidades/Personagens/Boitata.cpp.obj"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Jogo.dir/src/Ente/Entidades/Personagens/Boitata.cpp.obj -MF CMakeFiles\Jogo.dir\src\Ente\Entidades\Personagens\Boitata.cpp.obj.d -o CMakeFiles\Jogo.dir\src\Ente\Entidades\Personagens\Boitata.cpp.obj -c C:\Users\bruno\github\Jogo-TecProg\src\Ente\Entidades\Personagens\Boitata.cpp
 
 CMakeFiles/Jogo.dir/src/Ente/Entidades/Personagens/Boitata.cpp.i: cmake_force
@@ -297,7 +327,7 @@ CMakeFiles/Jogo.dir/src/Ente/Entidades/Obstaculos/Obstaculo.cpp.obj: CMakeFiles/
 CMakeFiles/Jogo.dir/src/Ente/Entidades/Obstaculos/Obstaculo.cpp.obj: CMakeFiles/Jogo.dir/includes_CXX.rsp
 CMakeFiles/Jogo.dir/src/Ente/Entidades/Obstaculos/Obstaculo.cpp.obj: ../src/Ente/Entidades/Obstaculos/Obstaculo.cpp
 CMakeFiles/Jogo.dir/src/Ente/Entidades/Obstaculos/Obstaculo.cpp.obj: CMakeFiles/Jogo.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\bruno\github\Jogo-TecProg\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/Jogo.dir/src/Ente/Entidades/Obstaculos/Obstaculo.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\bruno\github\Jogo-TecProg\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/Jogo.dir/src/Ente/Entidades/Obstaculos/Obstaculo.cpp.obj"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Jogo.dir/src/Ente/Entidades/Obstaculos/Obstaculo.cpp.obj -MF CMakeFiles\Jogo.dir\src\Ente\Entidades\Obstaculos\Obstaculo.cpp.obj.d -o CMakeFiles\Jogo.dir\src\Ente\Entidades\Obstaculos\Obstaculo.cpp.obj -c C:\Users\bruno\github\Jogo-TecProg\src\Ente\Entidades\Obstaculos\Obstaculo.cpp
 
 CMakeFiles/Jogo.dir/src/Ente/Entidades/Obstaculos/Obstaculo.cpp.i: cmake_force
@@ -312,7 +342,7 @@ CMakeFiles/Jogo.dir/src/Ente/Entidades/Obstaculos/Plataforma.cpp.obj: CMakeFiles
 CMakeFiles/Jogo.dir/src/Ente/Entidades/Obstaculos/Plataforma.cpp.obj: CMakeFiles/Jogo.dir/includes_CXX.rsp
 CMakeFiles/Jogo.dir/src/Ente/Entidades/Obstaculos/Plataforma.cpp.obj: ../src/Ente/Entidades/Obstaculos/Plataforma.cpp
 CMakeFiles/Jogo.dir/src/Ente/Entidades/Obstaculos/Plataforma.cpp.obj: CMakeFiles/Jogo.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\bruno\github\Jogo-TecProg\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/Jogo.dir/src/Ente/Entidades/Obstaculos/Plataforma.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\bruno\github\Jogo-TecProg\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/Jogo.dir/src/Ente/Entidades/Obstaculos/Plataforma.cpp.obj"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Jogo.dir/src/Ente/Entidades/Obstaculos/Plataforma.cpp.obj -MF CMakeFiles\Jogo.dir\src\Ente\Entidades\Obstaculos\Plataforma.cpp.obj.d -o CMakeFiles\Jogo.dir\src\Ente\Entidades\Obstaculos\Plataforma.cpp.obj -c C:\Users\bruno\github\Jogo-TecProg\src\Ente\Entidades\Obstaculos\Plataforma.cpp
 
 CMakeFiles/Jogo.dir/src/Ente/Entidades/Obstaculos/Plataforma.cpp.i: cmake_force
@@ -327,7 +357,7 @@ CMakeFiles/Jogo.dir/src/Ente/Entidades/Obstaculos/Espinhos.cpp.obj: CMakeFiles/J
 CMakeFiles/Jogo.dir/src/Ente/Entidades/Obstaculos/Espinhos.cpp.obj: CMakeFiles/Jogo.dir/includes_CXX.rsp
 CMakeFiles/Jogo.dir/src/Ente/Entidades/Obstaculos/Espinhos.cpp.obj: ../src/Ente/Entidades/Obstaculos/Espinhos.cpp
 CMakeFiles/Jogo.dir/src/Ente/Entidades/Obstaculos/Espinhos.cpp.obj: CMakeFiles/Jogo.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\bruno\github\Jogo-TecProg\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/Jogo.dir/src/Ente/Entidades/Obstaculos/Espinhos.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\bruno\github\Jogo-TecProg\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/Jogo.dir/src/Ente/Entidades/Obstaculos/Espinhos.cpp.obj"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Jogo.dir/src/Ente/Entidades/Obstaculos/Espinhos.cpp.obj -MF CMakeFiles\Jogo.dir\src\Ente\Entidades\Obstaculos\Espinhos.cpp.obj.d -o CMakeFiles\Jogo.dir\src\Ente\Entidades\Obstaculos\Espinhos.cpp.obj -c C:\Users\bruno\github\Jogo-TecProg\src\Ente\Entidades\Obstaculos\Espinhos.cpp
 
 CMakeFiles/Jogo.dir/src/Ente/Entidades/Obstaculos/Espinhos.cpp.i: cmake_force
@@ -342,7 +372,7 @@ CMakeFiles/Jogo.dir/src/Ente/Entidades/Obstaculos/Ninho.cpp.obj: CMakeFiles/Jogo
 CMakeFiles/Jogo.dir/src/Ente/Entidades/Obstaculos/Ninho.cpp.obj: CMakeFiles/Jogo.dir/includes_CXX.rsp
 CMakeFiles/Jogo.dir/src/Ente/Entidades/Obstaculos/Ninho.cpp.obj: ../src/Ente/Entidades/Obstaculos/Ninho.cpp
 CMakeFiles/Jogo.dir/src/Ente/Entidades/Obstaculos/Ninho.cpp.obj: CMakeFiles/Jogo.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\bruno\github\Jogo-TecProg\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/Jogo.dir/src/Ente/Entidades/Obstaculos/Ninho.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\bruno\github\Jogo-TecProg\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/Jogo.dir/src/Ente/Entidades/Obstaculos/Ninho.cpp.obj"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Jogo.dir/src/Ente/Entidades/Obstaculos/Ninho.cpp.obj -MF CMakeFiles\Jogo.dir\src\Ente\Entidades\Obstaculos\Ninho.cpp.obj.d -o CMakeFiles\Jogo.dir\src\Ente\Entidades\Obstaculos\Ninho.cpp.obj -c C:\Users\bruno\github\Jogo-TecProg\src\Ente\Entidades\Obstaculos\Ninho.cpp
 
 CMakeFiles/Jogo.dir/src/Ente/Entidades/Obstaculos/Ninho.cpp.i: cmake_force
@@ -357,7 +387,7 @@ CMakeFiles/Jogo.dir/src/Ente/Entidades/Obstaculos/Piso.cpp.obj: CMakeFiles/Jogo.
 CMakeFiles/Jogo.dir/src/Ente/Entidades/Obstaculos/Piso.cpp.obj: CMakeFiles/Jogo.dir/includes_CXX.rsp
 CMakeFiles/Jogo.dir/src/Ente/Entidades/Obstaculos/Piso.cpp.obj: ../src/Ente/Entidades/Obstaculos/Piso.cpp
 CMakeFiles/Jogo.dir/src/Ente/Entidades/Obstaculos/Piso.cpp.obj: CMakeFiles/Jogo.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\bruno\github\Jogo-TecProg\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/Jogo.dir/src/Ente/Entidades/Obstaculos/Piso.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\bruno\github\Jogo-TecProg\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/Jogo.dir/src/Ente/Entidades/Obstaculos/Piso.cpp.obj"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Jogo.dir/src/Ente/Entidades/Obstaculos/Piso.cpp.obj -MF CMakeFiles\Jogo.dir\src\Ente\Entidades\Obstaculos\Piso.cpp.obj.d -o CMakeFiles\Jogo.dir\src\Ente\Entidades\Obstaculos\Piso.cpp.obj -c C:\Users\bruno\github\Jogo-TecProg\src\Ente\Entidades\Obstaculos\Piso.cpp
 
 CMakeFiles/Jogo.dir/src/Ente/Entidades/Obstaculos/Piso.cpp.i: cmake_force
@@ -372,7 +402,7 @@ CMakeFiles/Jogo.dir/src/Animacao/Animacao.cpp.obj: CMakeFiles/Jogo.dir/flags.mak
 CMakeFiles/Jogo.dir/src/Animacao/Animacao.cpp.obj: CMakeFiles/Jogo.dir/includes_CXX.rsp
 CMakeFiles/Jogo.dir/src/Animacao/Animacao.cpp.obj: ../src/Animacao/Animacao.cpp
 CMakeFiles/Jogo.dir/src/Animacao/Animacao.cpp.obj: CMakeFiles/Jogo.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\bruno\github\Jogo-TecProg\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/Jogo.dir/src/Animacao/Animacao.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\bruno\github\Jogo-TecProg\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/Jogo.dir/src/Animacao/Animacao.cpp.obj"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Jogo.dir/src/Animacao/Animacao.cpp.obj -MF CMakeFiles\Jogo.dir\src\Animacao\Animacao.cpp.obj.d -o CMakeFiles\Jogo.dir\src\Animacao\Animacao.cpp.obj -c C:\Users\bruno\github\Jogo-TecProg\src\Animacao\Animacao.cpp
 
 CMakeFiles/Jogo.dir/src/Animacao/Animacao.cpp.i: cmake_force
@@ -387,7 +417,7 @@ CMakeFiles/Jogo.dir/src/Animacao/Imagem.cpp.obj: CMakeFiles/Jogo.dir/flags.make
 CMakeFiles/Jogo.dir/src/Animacao/Imagem.cpp.obj: CMakeFiles/Jogo.dir/includes_CXX.rsp
 CMakeFiles/Jogo.dir/src/Animacao/Imagem.cpp.obj: ../src/Animacao/Imagem.cpp
 CMakeFiles/Jogo.dir/src/Animacao/Imagem.cpp.obj: CMakeFiles/Jogo.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\bruno\github\Jogo-TecProg\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/Jogo.dir/src/Animacao/Imagem.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\bruno\github\Jogo-TecProg\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/Jogo.dir/src/Animacao/Imagem.cpp.obj"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Jogo.dir/src/Animacao/Imagem.cpp.obj -MF CMakeFiles\Jogo.dir\src\Animacao\Imagem.cpp.obj.d -o CMakeFiles\Jogo.dir\src\Animacao\Imagem.cpp.obj -c C:\Users\bruno\github\Jogo-TecProg\src\Animacao\Imagem.cpp
 
 CMakeFiles/Jogo.dir/src/Animacao/Imagem.cpp.i: cmake_force
@@ -402,7 +432,7 @@ CMakeFiles/Jogo.dir/src/Ente/Entidades/Personagens/Jogador1.cpp.obj: CMakeFiles/
 CMakeFiles/Jogo.dir/src/Ente/Entidades/Personagens/Jogador1.cpp.obj: CMakeFiles/Jogo.dir/includes_CXX.rsp
 CMakeFiles/Jogo.dir/src/Ente/Entidades/Personagens/Jogador1.cpp.obj: ../src/Ente/Entidades/Personagens/Jogador1.cpp
 CMakeFiles/Jogo.dir/src/Ente/Entidades/Personagens/Jogador1.cpp.obj: CMakeFiles/Jogo.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\bruno\github\Jogo-TecProg\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/Jogo.dir/src/Ente/Entidades/Personagens/Jogador1.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\bruno\github\Jogo-TecProg\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/Jogo.dir/src/Ente/Entidades/Personagens/Jogador1.cpp.obj"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Jogo.dir/src/Ente/Entidades/Personagens/Jogador1.cpp.obj -MF CMakeFiles\Jogo.dir\src\Ente\Entidades\Personagens\Jogador1.cpp.obj.d -o CMakeFiles\Jogo.dir\src\Ente\Entidades\Personagens\Jogador1.cpp.obj -c C:\Users\bruno\github\Jogo-TecProg\src\Ente\Entidades\Personagens\Jogador1.cpp
 
 CMakeFiles/Jogo.dir/src/Ente/Entidades/Personagens/Jogador1.cpp.i: cmake_force
@@ -417,7 +447,7 @@ CMakeFiles/Jogo.dir/src/Ente/Entidades/Personagens/Jogador2.cpp.obj: CMakeFiles/
 CMakeFiles/Jogo.dir/src/Ente/Entidades/Personagens/Jogador2.cpp.obj: CMakeFiles/Jogo.dir/includes_CXX.rsp
 CMakeFiles/Jogo.dir/src/Ente/Entidades/Personagens/Jogador2.cpp.obj: ../src/Ente/Entidades/Personagens/Jogador2.cpp
 CMakeFiles/Jogo.dir/src/Ente/Entidades/Personagens/Jogador2.cpp.obj: CMakeFiles/Jogo.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\bruno\github\Jogo-TecProg\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/Jogo.dir/src/Ente/Entidades/Personagens/Jogador2.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\bruno\github\Jogo-TecProg\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/Jogo.dir/src/Ente/Entidades/Personagens/Jogador2.cpp.obj"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Jogo.dir/src/Ente/Entidades/Personagens/Jogador2.cpp.obj -MF CMakeFiles\Jogo.dir\src\Ente\Entidades\Personagens\Jogador2.cpp.obj.d -o CMakeFiles\Jogo.dir\src\Ente\Entidades\Personagens\Jogador2.cpp.obj -c C:\Users\bruno\github\Jogo-TecProg\src\Ente\Entidades\Personagens\Jogador2.cpp
 
 CMakeFiles/Jogo.dir/src/Ente/Entidades/Personagens/Jogador2.cpp.i: cmake_force
@@ -432,7 +462,7 @@ CMakeFiles/Jogo.dir/src/Ente/Entidades/Personagens/Cogumalefico.cpp.obj: CMakeFi
 CMakeFiles/Jogo.dir/src/Ente/Entidades/Personagens/Cogumalefico.cpp.obj: CMakeFiles/Jogo.dir/includes_CXX.rsp
 CMakeFiles/Jogo.dir/src/Ente/Entidades/Personagens/Cogumalefico.cpp.obj: ../src/Ente/Entidades/Personagens/Cogumalefico.cpp
 CMakeFiles/Jogo.dir/src/Ente/Entidades/Personagens/Cogumalefico.cpp.obj: CMakeFiles/Jogo.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\bruno\github\Jogo-TecProg\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/Jogo.dir/src/Ente/Entidades/Personagens/Cogumalefico.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\bruno\github\Jogo-TecProg\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object CMakeFiles/Jogo.dir/src/Ente/Entidades/Personagens/Cogumalefico.cpp.obj"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Jogo.dir/src/Ente/Entidades/Personagens/Cogumalefico.cpp.obj -MF CMakeFiles\Jogo.dir\src\Ente\Entidades\Personagens\Cogumalefico.cpp.obj.d -o CMakeFiles\Jogo.dir\src\Ente\Entidades\Personagens\Cogumalefico.cpp.obj -c C:\Users\bruno\github\Jogo-TecProg\src\Ente\Entidades\Personagens\Cogumalefico.cpp
 
 CMakeFiles/Jogo.dir/src/Ente/Entidades/Personagens/Cogumalefico.cpp.i: cmake_force
@@ -447,6 +477,8 @@ CMakeFiles/Jogo.dir/src/Ente/Entidades/Personagens/Cogumalefico.cpp.s: cmake_for
 Jogo_OBJECTS = \
 "CMakeFiles/Jogo.dir/main.cpp.obj" \
 "CMakeFiles/Jogo.dir/src/Jogo.cpp.obj" \
+"CMakeFiles/Jogo.dir/src/Ente/Fases/Floresta.cpp.obj" \
+"CMakeFiles/Jogo.dir/src/Ente/Fases/Pantano.cpp.obj" \
 "CMakeFiles/Jogo.dir/src/Ente/Menus/Menu.cpp.obj" \
 "CMakeFiles/Jogo.dir/src/Listas/ListaEntidades.cpp.obj" \
 "CMakeFiles/Jogo.dir/src/Gerenciadores/Gerenciador_Grafico.cpp.obj" \
@@ -476,6 +508,8 @@ Jogo_EXTERNAL_OBJECTS =
 
 Jogo.exe: CMakeFiles/Jogo.dir/main.cpp.obj
 Jogo.exe: CMakeFiles/Jogo.dir/src/Jogo.cpp.obj
+Jogo.exe: CMakeFiles/Jogo.dir/src/Ente/Fases/Floresta.cpp.obj
+Jogo.exe: CMakeFiles/Jogo.dir/src/Ente/Fases/Pantano.cpp.obj
 Jogo.exe: CMakeFiles/Jogo.dir/src/Ente/Menus/Menu.cpp.obj
 Jogo.exe: CMakeFiles/Jogo.dir/src/Listas/ListaEntidades.cpp.obj
 Jogo.exe: CMakeFiles/Jogo.dir/src/Gerenciadores/Gerenciador_Grafico.cpp.obj
@@ -516,7 +550,7 @@ Jogo.exe: C:/SFML/lib/libFLAC.a
 Jogo.exe: CMakeFiles/Jogo.dir/linklibs.rsp
 Jogo.exe: CMakeFiles/Jogo.dir/objects1.rsp
 Jogo.exe: CMakeFiles/Jogo.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\bruno\github\Jogo-TecProg\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Linking CXX executable Jogo.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\bruno\github\Jogo-TecProg\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Linking CXX executable Jogo.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\Jogo.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

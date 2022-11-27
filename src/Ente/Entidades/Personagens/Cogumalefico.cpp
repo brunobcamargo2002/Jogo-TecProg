@@ -8,9 +8,9 @@
 
 using namespace Entidades;
 
-sf::Vector2f Cogumalefico::tamanho=sf::Vector2f(120, 120);
+sf::Vector2f Cogumalefico::tamanho=sf::Vector2f(100, 100);
 sf::Vector2f Cogumalefico::velocidadeTerminal=sf::Vector2f(0.2, 0);
-sf::Vector2f Cogumalefico::range=sf::Vector2f(400, 100);
+sf::Vector2f Cogumalefico::range=sf::Vector2f(600, 100);
 
 int Cogumalefico::pontosAbate=200;
 
@@ -135,6 +135,15 @@ void Entidades::Cogumalefico::atacaJogador(Entidades::Jogador *jogador) {
 void Entidades::Cogumalefico::mecanica() {
     mover_se();
     atacar();
+}
+
+void Cogumalefico::salvarPosicao() {
+    std::ofstream arquivo("C:\\Users\\bruno\\github\\Jogo-TecProg\\save\\Cogumalefico.txt", std::ios::app);
+    sf::Vector2f posicao = getPosicao();
+
+    arquivo<<executa<<" "<<posicao.x<<" "<<posicao.y<<std::endl;
+    arquivo.close();
+
 }
 
 

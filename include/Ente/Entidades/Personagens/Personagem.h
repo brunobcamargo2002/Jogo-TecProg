@@ -61,6 +61,8 @@ namespace Entidades {
         void setPodeAndar(bool valor);
         const sf::RectangleShape getCorpo();
 
+        virtual void salvarPosicao()=0;
+
 
     private:
     };

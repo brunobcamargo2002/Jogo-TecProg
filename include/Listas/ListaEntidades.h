@@ -17,6 +17,8 @@ namespace Listas {
 
         void inserirEntidade(Entidades::Entidade* entidade);
         void removerEntidade(Entidades::Entidade* entidade);
+        Entidades::Entidade* removerPrimeiro();
+        void limparLista();
         void executarEntidades();
         unsigned int getTamanho();
         Entidades::Entidade * operator[] (int pos);

@@ -15,6 +15,8 @@ class Espinhos:public Obstaculo{
         ~Espinhos();
 
        const int getDano();
+
+     void salvarPosicao();
 };
 }
 

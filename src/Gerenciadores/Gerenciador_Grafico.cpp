@@ -86,3 +86,9 @@ void Gerenciador_Grafico::AttView(float Px,float Py,sf::RectangleShape* fundo){
     janela->setView(*view);
     fundo->setPosition(Px,Py);
 }
+
+void Gerenciador_Grafico::viewMenu() {
+    view->setCenter(TelaX/2, TelaY/2);
+    janela->setView(*view);
+
+}

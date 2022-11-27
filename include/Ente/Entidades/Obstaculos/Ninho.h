@@ -17,6 +17,8 @@ namespace Entidades {
         void executar();
         void destruirNinho(Jogador* jgdor);
         virtual ~Ninho();
+
+        void salvarPosicao();
     };
 
 }

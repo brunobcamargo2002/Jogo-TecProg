@@ -37,6 +37,7 @@ namespace Entidades {
         void inimigoTomaDano(Jogador* jgdor);
         void daDano(Jogador* jgdor);
 
+        virtual void salvarPosicao()=0;
 
 
 

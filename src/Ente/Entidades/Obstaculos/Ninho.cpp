@@ -43,3 +43,12 @@ void Ninho::destruirNinho(Jogador *jgdor) {
     }
 
 }
+
+void Ninho::salvarPosicao() {
+    std::ofstream arquivo("C:\\Users\\bruno\\github\\Jogo-TecProg\\save\\Ninhos.txt", std::ios::app);
+    sf::Vector2f posicao = getPosicao();
+
+    arquivo<<executa<<" "<<posicao.x<<" "<<posicao.y<<std::endl;
+    arquivo.close();
+
+}

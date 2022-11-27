@@ -45,4 +45,9 @@ bool Entidade::getExecuta() {
     return executa;
 }
 
+void Entidade::setExecutar(const bool exec) {
+    executa = exec;
+}
+
+
 

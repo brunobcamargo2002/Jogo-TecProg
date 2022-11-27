@@ -5,7 +5,7 @@ using namespace Entidades;
 //projetil(sf::Vector2f(0,50), sf::Vector2f(30,30), sf::Vector2f(0.2,0), 5, jogador1, jogador2)
 
 sf::Vector2f Projetil::tamanho=sf::Vector2f(30, 30);
-sf::Vector2f Projetil::speed=sf::Vector2f(0.5, -0.1);
+sf::Vector2f Projetil::speed=sf::Vector2f(0.5, -0.2);
 int Projetil::damage= 5;
 
 
@@ -82,11 +82,20 @@ void Projetil::daDano(Jogador* jgdor) {
 }
 
 void Projetil::gravidade() {
-    velocidade.y+=0.0001;
+    velocidade.y+=0.0004;
 }
 
 void Projetil::setVelYParaLancamento() {
     velocidade.y= speed.y;
+}
+
+void Projetil::salvarPosicao() {
+    std::ofstream arquivo("C:\\Users\\bruno\\github\\Jogo-TecProg\\save\\Projeteis.txt", std::ios::app);
+    sf::Vector2f posicao = getPosicao();
+
+    arquivo<<posicao.x<<" "<<posicao.y<<std::endl;
+    arquivo.close();
+
 }
 
 

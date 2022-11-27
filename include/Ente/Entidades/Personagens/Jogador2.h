@@ -18,6 +18,8 @@ namespace Entidades {
         void mover_se();
         void atacar();
 
+        void salvarPosicao();
+
     };
 }
 #endif //JOGO_JOGADOR2_H

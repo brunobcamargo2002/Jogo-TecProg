@@ -6,7 +6,7 @@ using namespace Entidades;
 
 sf::Vector2f Boitata::tamanho=sf::Vector2f(30.f,30.f);
 sf::Vector2f Boitata::velocidadeTerminal=sf::Vector2f(0.f, 0.f);
-sf::Vector2f Boitata::range=sf::Vector2f(1000.f, 80.f);
+sf::Vector2f Boitata::range=sf::Vector2f(600.f, 80.f);
 
  int Boitata::pontosAbate=50;
 
@@ -151,6 +151,14 @@ void Boitata::mecanica() {
     mover_se();
     atacar();
 
+}
+
+void Boitata::salvarPosicao() {
+    std::ofstream arquivo("C:\\Users\\bruno\\github\\Jogo-TecProg\\save\\Boitatas.txt", std::ios::app);
+    sf::Vector2f posicao = getPosicao();
+
+    arquivo<<executa<<" "<<posicao.x<<" "<<posicao.y<<std::endl;
+    arquivo.close();
 }
 
 

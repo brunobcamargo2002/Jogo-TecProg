@@ -42,6 +42,8 @@ namespace Entidades {
 
         void gravidade();
         void setVelYParaLancamento();
+
+        void salvarPosicao();
     };
 
 }

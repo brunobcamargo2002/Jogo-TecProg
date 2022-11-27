@@ -608,6 +608,54 @@ src/Ente/Fases/Fase.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Jogo.dir\build.make CMakeFiles/Jogo.dir/src/Ente/Fases/Fase.cpp.s
 .PHONY : src/Ente/Fases/Fase.cpp.s
 
+src/Ente/Fases/Floresta.obj: src/Ente/Fases/Floresta.cpp.obj
+.PHONY : src/Ente/Fases/Floresta.obj
+
+# target to build an object file
+src/Ente/Fases/Floresta.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Jogo.dir\build.make CMakeFiles/Jogo.dir/src/Ente/Fases/Floresta.cpp.obj
+.PHONY : src/Ente/Fases/Floresta.cpp.obj
+
+src/Ente/Fases/Floresta.i: src/Ente/Fases/Floresta.cpp.i
+.PHONY : src/Ente/Fases/Floresta.i
+
+# target to preprocess a source file
+src/Ente/Fases/Floresta.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Jogo.dir\build.make CMakeFiles/Jogo.dir/src/Ente/Fases/Floresta.cpp.i
+.PHONY : src/Ente/Fases/Floresta.cpp.i
+
+src/Ente/Fases/Floresta.s: src/Ente/Fases/Floresta.cpp.s
+.PHONY : src/Ente/Fases/Floresta.s
+
+# target to generate assembly for a file
+src/Ente/Fases/Floresta.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Jogo.dir\build.make CMakeFiles/Jogo.dir/src/Ente/Fases/Floresta.cpp.s
+.PHONY : src/Ente/Fases/Floresta.cpp.s
+
+src/Ente/Fases/Pantano.obj: src/Ente/Fases/Pantano.cpp.obj
+.PHONY : src/Ente/Fases/Pantano.obj
+
+# target to build an object file
+src/Ente/Fases/Pantano.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Jogo.dir\build.make CMakeFiles/Jogo.dir/src/Ente/Fases/Pantano.cpp.obj
+.PHONY : src/Ente/Fases/Pantano.cpp.obj
+
+src/Ente/Fases/Pantano.i: src/Ente/Fases/Pantano.cpp.i
+.PHONY : src/Ente/Fases/Pantano.i
+
+# target to preprocess a source file
+src/Ente/Fases/Pantano.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Jogo.dir\build.make CMakeFiles/Jogo.dir/src/Ente/Fases/Pantano.cpp.i
+.PHONY : src/Ente/Fases/Pantano.cpp.i
+
+src/Ente/Fases/Pantano.s: src/Ente/Fases/Pantano.cpp.s
+.PHONY : src/Ente/Fases/Pantano.s
+
+# target to generate assembly for a file
+src/Ente/Fases/Pantano.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Jogo.dir\build.make CMakeFiles/Jogo.dir/src/Ente/Fases/Pantano.cpp.s
+.PHONY : src/Ente/Fases/Pantano.cpp.s
+
 src/Ente/Menus/Menu.obj: src/Ente/Menus/Menu.cpp.obj
 .PHONY : src/Ente/Menus/Menu.obj
 
@@ -797,6 +845,12 @@ help:
 	@echo ... src/Ente/Fases/Fase.obj
 	@echo ... src/Ente/Fases/Fase.i
 	@echo ... src/Ente/Fases/Fase.s
+	@echo ... src/Ente/Fases/Floresta.obj
+	@echo ... src/Ente/Fases/Floresta.i
+	@echo ... src/Ente/Fases/Floresta.s
+	@echo ... src/Ente/Fases/Pantano.obj
+	@echo ... src/Ente/Fases/Pantano.i
+	@echo ... src/Ente/Fases/Pantano.s
 	@echo ... src/Ente/Menus/Menu.obj
 	@echo ... src/Ente/Menus/Menu.i
 	@echo ... src/Ente/Menus/Menu.s

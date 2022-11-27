@@ -4,7 +4,7 @@ using namespace Entidades;
 
 sf::Vector2f Caveira::tamanho=sf::Vector2f(50, 60);
 sf::Vector2f Caveira::velocidadeTerminal=sf::Vector2f(0.1, 0);
-sf::Vector2f Caveira::range= sf::Vector2f(800, 200);
+sf::Vector2f Caveira::range= sf::Vector2f(600, 50);
 
 int Caveira::pontosAbate=30;
 
@@ -131,6 +131,15 @@ void Caveira::executar() {
 void Caveira::mecanica() {
     mover_se();
     atacar();
+}
+
+void Caveira::salvarPosicao() {
+    std::ofstream arquivo("C:\\Users\\bruno\\github\\Jogo-TecProg\\save\\Caveiras.txt", std::ios::app);
+    sf::Vector2f posicao = getPosicao();
+
+    arquivo<<executa<<" "<<posicao.x<<" "<<posicao.y<<std::endl;
+    arquivo.close();
+
 }
 
 
