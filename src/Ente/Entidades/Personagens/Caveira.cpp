@@ -39,11 +39,11 @@ Caveira::~Caveira() {
 }
 
 void Caveira::inicializa() {
-    animacao.addAnimacao("C:/Users/bruno/CLionProjects/jogo-joao/imagens/Esqueleto/Anda.png", "ANDANDO", 4, 0.12f, sf::Vector2f(8,6));
-    animacao.addAnimacao("C:/Users/bruno/CLionProjects/jogo-joao/imagens/Esqueleto/Ataca.png", "ATACANDO", 8, 0.12f, sf::Vector2f(8,6));
-    animacao.addAnimacao("C:/Users/bruno/CLionProjects/jogo-joao/imagens/Esqueleto/Parado.png", "PARADO", 4, 0.15f, sf::Vector2f(8,6));
-    animacao.addAnimacao("C:/Users/bruno/CLionProjects/jogo-joao/imagens/Esqueleto/Morre.png", "MORRENDO", 4, 0.2f, sf::Vector2f(8,6));
-    animacao.addAnimacao("C:/Users/bruno/CLionProjects/jogo-joao/imagens/Esqueleto/TomaDano.png", "TOMANDO_DANO", 4, 0.15f, sf::Vector2f(8,6));
+    animacao.addAnimacao("imagens/Esqueleto/Anda.png", "ANDANDO", 4, 0.12f, sf::Vector2f(8,6));
+    animacao.addAnimacao("imagens/Esqueleto/Ataca.png", "ATACANDO", 8, 0.12f, sf::Vector2f(8,6));
+    animacao.addAnimacao("imagens/Esqueleto/Parado.png", "PARADO", 4, 0.15f, sf::Vector2f(8,6));
+    animacao.addAnimacao("imagens/Esqueleto/Morre.png", "MORRENDO", 4, 0.2f, sf::Vector2f(8,6));
+    animacao.addAnimacao("imagens/Esqueleto/TomaDano.png", "TOMANDO_DANO", 4, 0.15f, sf::Vector2f(8,6));
     corpo.setOrigin(sf::Vector2f(corpo.getSize().x/ 2.f, corpo.getSize().y / 2.f));
 
 }
@@ -114,7 +114,10 @@ void Caveira::atacaJogador(Jogador* jogador) {
 
 void Caveira::executar() {
     if(morrendo) {
-        Entidades::Jogador::alteraPontuacao(pontosAbate);
+        if(!deuPontos){
+            Entidades::Jogador::alteraPontuacao(pontosAbate);
+            deuPontos = true;
+        }
         falecendo();
     }
     else {
@@ -134,7 +137,7 @@ void Caveira::mecanica() {
 }
 
 void Caveira::salvarPosicao() {
-    std::ofstream arquivo("C:\\Users\\bruno\\github\\Jogo-TecProg\\save\\Caveiras.txt", std::ios::app);
+    std::ofstream arquivo("save/Caveiras.txt", std::ios::app);
     sf::Vector2f posicao = getPosicao();
 
     arquivo<<executa<<" "<<posicao.x<<" "<<posicao.y<<std::endl;

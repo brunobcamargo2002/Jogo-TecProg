@@ -1,3 +1,0 @@
-C:/Users/bruno/github/Jogo-TecProg/cmake-build-debug/CMakeFiles/Jogo.dir
-C:/Users/bruno/github/Jogo-TecProg/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/bruno/github/Jogo-TecProg/cmake-build-debug/CMakeFiles/rebuild_cache.dir

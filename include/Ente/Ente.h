@@ -5,7 +5,6 @@
 class Ente
 {
     protected:
-            unsigned int id;
             static Gerenciadores::Gerenciador_Grafico* gerenciador_grafico;
 
     public:

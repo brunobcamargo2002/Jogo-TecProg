@@ -8,7 +8,8 @@ Fase( numJogadores)
 {fase=1;
 visao=100;
 passou=false;
-    setTextura("C:\\ODIABO\\Jogo-TecProg-main\\imagens/Fases/Floresta.png");}
+Entidades::Jogador::setPontos(0);
+    setTextura("imagens/Fases/Floresta.png");}
 
 Floresta::~Floresta(){}
 
@@ -51,6 +52,21 @@ void Floresta::inserirNinhos(int n){
 
 void Floresta::inserirInimigos() {
 
+}
+
+bool Floresta::fimDaFase() {
+    if(jogador2!=NULL){
+        if(jogador1->getPosicao().x>11500 || jogador2->getPosicao().x>11500) {
+            return true;
+        }
+    }
+    else{
+        if(jogador1->getPosicao().x>11500) {
+            gerenciador_grafico->viewMenu();
+            return true;
+        }
+    }
+    return false;
 }
 
 

@@ -2,14 +2,19 @@
 #define __FLORESTA_H__
 #include "Fase.h"
 
+#include "../Entidades/Personagens/Cogumalefico.h"
+
 namespace Fases{
     class Pantano: public Fase{
     private:
         const int tam=3000;
         int ninhos;
+
     public:
         Pantano(unsigned int numJogadores=1);
         ~Pantano();
+
+        bool fimDaFase();
 
         void inserirPisos();
 

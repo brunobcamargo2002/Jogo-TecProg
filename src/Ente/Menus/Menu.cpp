@@ -5,7 +5,7 @@
 Menu::Menu():n(3){
     fase = NULL;
     gerenciador_grafico->limpaJanela();
-    if (!font.loadFromFile("C:\\ODIABO\\Jogo-TecProg-main\\arial.TTF")){
+    if (!font.loadFromFile("04B_30__.TTF")){
         printf("error abrindo fonte");}
 
     for(int i=0;i<3;i++){text[i].setFont(font);}
@@ -15,6 +15,8 @@ Menu::Menu():n(3){
     for(int i=0;i<3;i++){fases[i].setFont(font);}
 
     for(int i=0;i<3;i++){opcoesInGame[i].setFont(font);}
+
+    Ranking[0].setFont(font);
 
     text[0].setString("Jogar");
     text[1].setString("Rank");
@@ -32,6 +34,8 @@ Menu::Menu():n(3){
     opcoesInGame[0].setString("Voltar");
     opcoesInGame[1].setString("Salvar");
     opcoesInGame[2].setString("Menu");
+
+    Ranking[0].setString("Voltar");
 
     for(int i=0;i<3;i++){
         text[i].setCharacterSize(32);
@@ -60,6 +64,10 @@ Menu::Menu():n(3){
         opcoesInGame[i].setOutlineColor(sf::Color::Green);
         opcoesInGame[i].setPosition(200.f,50+(1+i)*100.f);
     }
+    Ranking[0].setCharacterSize(28);
+    Ranking[0].setFillColor(sf::Color::White);
+    Ranking[0].setOutlineColor(sf::Color::Red);
+    Ranking[0].setPosition(600.f,650.f);
 }
 
 Menu::~Menu(){
@@ -108,7 +116,7 @@ void Menu::executar(){
                     mostraOpcoes();
                     break;
                 case 1:
-                    printf("ranking");
+                    mostraRanking();
                     break;
                 case 2:
                     exit(0);
@@ -155,6 +163,7 @@ void Menu::mostraOpcoes() {
             }
             relogio.restart();
         }
+        int acao;
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space)){
             if(relogio.getElapsedTime().asSeconds()>INTERVALO){
                 switch(n.getContador()){
@@ -171,8 +180,8 @@ void Menu::mostraOpcoes() {
                         fase = carregarJogo();
                         if(fase!=NULL) {
                             fase->carregarFase();
-                            fase->executar();
-                            menuFase();
+                            acao = fase->executarFase();
+                            acoesFase(acao);
                         }
 
                         break;
@@ -221,6 +230,7 @@ void Menu::MostraFases(unsigned int jogadores){
             }
             relogio.restart();
         }
+        int acao;
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space)){
             if(relogio.getElapsedTime().asSeconds()>INTERVALO){
                 switch(n.getContador()){
@@ -230,14 +240,14 @@ void Menu::MostraFases(unsigned int jogadores){
                 case 1:
                     fase = new Floresta(jogadores);
                     fase->gerarMundo();
-                    fase->executar();
-                    menuFase();
+                    acao = fase->executarFase();
+                    acoesFase(acao);
                     break;
                 case 2:
                     fase = new Pantano(jogadores);
                     fase->gerarMundo();
-                    fase->executar();
-                    menuFase();
+                    acao = fase->executarFase();
+                    acoesFase(acao);
                     break;
 
                 }
@@ -282,11 +292,13 @@ void Menu::menuFase() {
             }
             relogio.restart();
         }
+        int acao;
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space)){
             if(relogio.getElapsedTime().asSeconds()>INTERVALO){
                 switch(n.getContador()){
                     case 0:
-                        fase->executar();
+                        acao = fase->executarFase();
+                        acoesFase(acao);
                         break;
                     case 1:
                         fase->salvarJogo();
@@ -320,12 +332,14 @@ void Menu::imprimir_se(int tela){
            break;
         case 3:
             gerenciador_grafico->desenhaElemento(opcoesInGame, 3);
+        case 4:
+            gerenciador_grafico->desenhaElemento(Ranking, 1);
     }
     return;
 }
 
 Fase* Menu::carregarJogo() {
-    std::ifstream arquivo("C:\\Users\\bruno\\github\\Jogo-TecProg\\save\\Fase.txt", std::ios::in);
+    std::ifstream arquivo("save/Fase.txt", std::ios::in);
     unsigned int fase=-1;
     unsigned int numJogadores=-1;
     arquivo>>fase>>numJogadores;
@@ -336,6 +350,199 @@ Fase* Menu::carregarJogo() {
         return static_cast<Fase*> (new Floresta(numJogadores));
     else if(fase==2)
         return static_cast<Fase*> (new Pantano(numJogadores));
+}
+
+std::string Menu::setNome() {
+    sf::RenderWindow* window = gerenciador_grafico->getWindow();
+    std::string input_text;
+    sf::Font font;
+    font.loadFromFile("04B_30__.TTF");
+    sf::Text text("", font);
+
+    sf::Clock clock;
+
+    while (window->isOpen())
+    {
+        sf::Event event;
+        while (window->pollEvent(event))
+        {
+            if (event.type == sf::Event::Closed)
+                window->close();
+            else if (event.type == sf::Event::TextEntered) {
+                if (std::isprint(event.text.unicode))
+                    input_text += event.text.unicode;
+            }
+            else if (event.type == sf::Event::KeyPressed) {
+                if (event.key.code == sf::Keyboard::BackSpace) {
+                    if (!input_text.empty())
+                        input_text.pop_back();
+                }
+            }
+        }
+        if(sf::Keyboard::isKeyPressed(sf::Keyboard::Space)) {
+            return input_text;
+        }
+
+        static sf::Time text_effect_time;
+        static bool show_cursor;
+
+        text_effect_time += clock.restart();
+
+        if (text_effect_time >= sf::seconds(0.5f))
+        {
+            show_cursor = !show_cursor;
+            text_effect_time = sf::Time::Zero;
+        }
+
+        text.setString(input_text + (show_cursor ? '_' : ' '));
+
+        window->clear();
+        window->draw(text);
+        window->display();
+    }
+
+}
+
+/**Todos os creditos ao ex-monitor Mateus Burda**/
+void Menu::salvarRanking() {
+    std::string nome= setNome();
+    int pontos = Entidades::Jogador::getPontos();
+    std::ifstream arquivo("Ranking.txt", std::ios::in);
+
+    std::multimap<int, std::string> pontosENomes;
+
+    if (arquivo) {
+        unsigned int pontos2;
+        std::string nome2;
+        std::string stringPontos;
+
+        for (int i = 0; i < 10; i++) {
+            std::getline(arquivo, stringPontos);
+            std::getline(arquivo, nome2);
+            if (stringPontos.length() > 0)
+                pontosENomes.insert(std::pair<int, std::string>(std::stoi(stringPontos), nome2));
+        }
+        arquivo.close();
+    }
+
+    if (pontos != 0 && nome.length() > 1)
+        pontosENomes.insert(std::pair<int, std::string>(pontos, nome));
+
+    std::ofstream arquivoSaida("Ranking.txt", std::ios::trunc);
+
+    if (!arquivoSaida) {
+        std::cout << "Erro ao escrever o arquivo ranking" << std::endl;
+        exit(1);
+    }
+
+    while (pontosENomes.size() > 10)
+        pontosENomes.erase(pontosENomes.begin());
+
+    for (auto itr = pontosENomes.rbegin(); itr != pontosENomes.rend(); ++itr) {
+        arquivoSaida << (*itr).first << std::endl;
+        arquivoSaida << (*itr).second << std::endl;
+    }
+
+    arquivoSaida.close();
+}
+
+void Menu::acoesFase(int action) {
+    if(action==1)
+        menuFase();
+    else if(action==2)
+        salvarRanking();
+    else if(action==3){
+        if(fase->getFase()==1){
+            int numJogadores=fase->getNumJogadores();
+            delete fase;
+            fase = new Pantano(numJogadores);
+            fase->gerarMundo();
+            action = fase->executarFase();
+            if(action==1)
+                menuFase();
+            else if(action==2 || action==3)
+                salvarRanking();
+        }
+        else{
+            salvarRanking();
+            delete fase;
+        }
+
+    }
+
+}
+
+void Menu::mostraRanking() {
+    std::string aux;
+    sf::Text posicoes[10];
+    sf::Text nomes[10];
+    sf::Text pontuacao[10];
+    for(int i=0; i<10; i++) {
+        posicoes[i].setFont(font);
+        nomes[i].setFont(font);
+        pontuacao[i].setFont(font);
+        aux=i+48;
+        posicoes[i].setString(aux);
+    }
+    std::ifstream arquivo("C:\\Users\\bruno\\github\\Jogo-TecProg\\Ranking.txt", std::ios::in);
+
+    std::string pontos;
+    std::string nome;
+    int i=0;
+    while(arquivo>>pontos){
+        arquivo>>nome;
+        aux= pontos;
+        pontuacao[i].setString(aux);
+        nomes[i].setString(nome);
+        i++;
+    }
+    for(i ; i<10 ; i++){
+        pontuacao[i].setString("---");
+        nomes[i].setString("-----");
+    }
+    for(i=0 ; i<10; i++) {
+        posicoes[i].setCharacterSize(28);
+        posicoes[i].setFillColor(sf::Color::Yellow);
+        posicoes[i].setOutlineColor(sf::Color::White);
+        posicoes[i].setPosition(50.f, 200.f+i*50);
+    }
+
+    for(i=0 ; i<10; i++) {
+        nomes[i].setCharacterSize(28);
+        nomes[i].setFillColor(sf::Color::Yellow);
+        nomes[i].setOutlineColor(sf::Color::White);
+        nomes[i].setPosition(200.f, 200.f+i*50);
+    }
+
+    for(i=0 ; i<10; i++) {
+        pontuacao[i].setCharacterSize(28);
+        pontuacao[i].setFillColor(sf::Color::Yellow);
+        pontuacao[i].setOutlineColor(sf::Color::White);
+        pontuacao[i].setPosition(500.f, 200.f+i*50);
+    }
+
+    sf::Clock relogio;
+    Ranking[0].setOutlineThickness(GROSSURA);
+    while(gerenciador_grafico->verificaJanelaAberta()) {
+        gerenciador_grafico->limpaJanela();
+        sf::Event evento;
+        if (gerenciador_grafico->getWindow()->pollEvent(evento)) {
+            if (evento.type == sf::Event::Closed)
+                gerenciador_grafico->fecharJanela();
+
+        }
+        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space)) {
+            if (relogio.getElapsedTime().asSeconds() > INTERVALO)
+                executar();
+            relogio.restart();
+        }
+        imprimir_se(4);
+        gerenciador_grafico->desenhaElemento(posicoes, 10);
+        gerenciador_grafico->desenhaElemento(nomes, 10);
+        gerenciador_grafico->desenhaElemento(pontuacao, 10);
+        gerenciador_grafico->mostrarConteudo();
+
+    }
 }
 
 

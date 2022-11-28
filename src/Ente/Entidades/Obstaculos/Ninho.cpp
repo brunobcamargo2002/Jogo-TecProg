@@ -10,7 +10,7 @@ jogador2(jgdor2)
 {
     danoso=false;
     corpo.setFillColor(sf::Color::White);
-    setTextura("C:\\Users\\bruno\\CLionProjects\\jogo-joao\\imagens\\Obstaculos\\Ninho.png");
+    setTextura("imagens/Obstaculos/Ninho.png");
 }
 
 
@@ -45,7 +45,7 @@ void Ninho::destruirNinho(Jogador *jgdor) {
 }
 
 void Ninho::salvarPosicao() {
-    std::ofstream arquivo("C:\\Users\\bruno\\github\\Jogo-TecProg\\save\\Ninhos.txt", std::ios::app);
+    std::ofstream arquivo("save/Ninhos.txt", std::ios::app);
     sf::Vector2f posicao = getPosicao();
 
     arquivo<<executa<<" "<<posicao.x<<" "<<posicao.y<<std::endl;

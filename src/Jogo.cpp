@@ -8,8 +8,6 @@
 
 Jogo::Jogo():
 gerenciador_grafico(Gerenciadores::Gerenciador_Grafico::getInstancia()),
-jogador(70, 70),
-jogador2(80, 70),
 menu()
 {
 }

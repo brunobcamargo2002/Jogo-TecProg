@@ -45,7 +45,6 @@ namespace Entidades {
 
         void salvarPosicao();
     };
-
 }
 
 #endif // PROJETIL_H

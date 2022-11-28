@@ -21,13 +21,7 @@
 class Jogo
 {
 private:
-    Entidades::Jogador1 jogador;
-    Entidades::Jogador2 jogador2;
-
-    //Listas::ListaEntidades personagens;
-    //Listas::ListaEntidades obstaculos;
     Gerenciadores::Gerenciador_Grafico* gerenciador_grafico;
-    Gerenciadores::Gerenciador_Colisoes gerenciador_colisoes;
     Menu menu;
 public:
     Jogo();
@@ -35,7 +29,6 @@ public:
 
     void executar();
 
-    void executaFase();
 };
 
 #endif // JOGO_H

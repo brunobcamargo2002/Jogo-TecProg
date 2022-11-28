@@ -7,7 +7,8 @@ Personagem(posicao, tamanho, speed),
 jogador1(player),
 jogador2(player2),
 alvo(NULL),
-tomouDano(false)
+tomouDano(false),
+deuPontos(false)
 {
 
 

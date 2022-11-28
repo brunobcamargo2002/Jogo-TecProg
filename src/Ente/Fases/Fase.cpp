@@ -10,6 +10,7 @@ Fase::Fase(unsigned int numJogadores){
     this->carregar = carregar;
     jogador1= NULL;
     jogador2= NULL;
+    chefao = NULL;
 }
 
 
@@ -23,7 +24,7 @@ Fase::~Fase()
     jogador2=NULL;
 }
 
-void Fase::executar()
+int Fase::executarFase()
 {
         gerenciador_grafico->limpaJanela();
         while (gerenciador_grafico->verificaJanelaAberta()) {
@@ -35,14 +36,39 @@ void Fase::executar()
             }
             if(sf::Keyboard::isKeyPressed(sf::Keyboard::Escape)) {
                 gerenciador_grafico->viewMenu();
-                return;
+                return 1;
             }
+            if(jogador2!=NULL){
+                if(!jogador1->getExecuta() && !jogador2->getExecuta()) {
+                    gerenciador_grafico->viewMenu();
+                    return 2;
+                }
+            }
+            else {
+                if (!jogador1->getExecuta()) {
+                    gerenciador_grafico->viewMenu();
+                    return 2;
+                }
+            }
+            if(fimDaFase()){
+                gerenciador_grafico->viewMenu();
+                return 3;
+            }
+
+
+
             gerenciador_grafico->limpaJanela();
             gerenciador_grafico->desenhaElemento(fundo);
             personagens.executarEntidades();
             obstaculos.executarEntidades();
             gerenciador_colisoes.executar();
-            gerenciador_grafico->AttView(jogador1->getPosicao().x + 150, jogador1->getPosicao().y + visao, &fundo);
+            if(jogador1->getExecuta())
+                gerenciador_grafico->AttView(jogador1->getPosicao().x + 150, jogador1->getPosicao().y + visao, &fundo);
+            else{
+                if(jogador2!=NULL)
+                    if(jogador2->getExecuta())
+                        gerenciador_grafico->AttView(jogador2->getPosicao().x + 150, jogador2->getPosicao().y + visao, &fundo);
+            }
             gerenciador_grafico->mostrarConteudo();
 
         }
@@ -67,17 +93,17 @@ void Fase::salvarJogo() {
 }
 
 void Fase::limpaArquivos() {
-    std::ofstream arquivoFase("C:\\Users\\bruno\\github\\Jogo-TecProg\\save\\Fase.txt");
+    std::ofstream arquivoFase("save/Fase.txt");
     arquivoFase.clear();
     arquivoFase.close();
 
-    std::ofstream arquivoJogadores("C:\\Users\\bruno\\github\\Jogo-TecProg\\save\\Jogadores.txt");
+    std::ofstream arquivoJogadores("save/Jogadores.txt");
     arquivoJogadores.clear();
     arquivoJogadores.close();
 
-    std::ofstream arquivoBoitatas("C:\\Users\\bruno\\github\\Jogo-TecProg\\save\\Boitatas.txt");
-    std::ofstream arquivoCaveiras("C:\\Users\\bruno\\github\\Jogo-TecProg\\save\\Caveiras.txt");
-    std::ofstream arquivoCogumalefico("C:\\Users\\bruno\\github\\Jogo-TecProg\\save\\Cogumalefico.txt");
+    std::ofstream arquivoBoitatas("save/Boitatas.txt");
+    std::ofstream arquivoCaveiras("save/Caveiras.txt");
+    std::ofstream arquivoCogumalefico("save/Cogumalefico.txt");
     arquivoBoitatas.clear();
     arquivoCaveiras.clear();
     arquivoCogumalefico.clear();
@@ -85,10 +111,10 @@ void Fase::limpaArquivos() {
     arquivoCaveiras.clear();
     arquivoCogumalefico.clear();
 
-    std::ofstream arquivoEspinhos("C:\\Users\\bruno\\github\\Jogo-TecProg\\save\\Espinhos.txt");
-    std::ofstream arquivoNinhos("C:\\Users\\bruno\\github\\Jogo-TecProg\\save\\Ninhos.txt");
-    std::ofstream arquivoPisos("C:\\Users\\bruno\\github\\Jogo-TecProg\\save\\Pisos.txt");
-    std::ofstream arquivoPlataformas("C:\\Users\\bruno\\github\\Jogo-TecProg\\save\\Plataformas.txt");
+    std::ofstream arquivoEspinhos("save/Espinhos.txt");
+    std::ofstream arquivoNinhos("save/Ninhos.txt");
+    std::ofstream arquivoPisos("save/Pisos.txt");
+    std::ofstream arquivoPlataformas("save/Plataformas.txt");
     arquivoEspinhos.clear();
     arquivoNinhos.clear();
     arquivoPisos.clear();
@@ -98,14 +124,14 @@ void Fase::limpaArquivos() {
     arquivoPisos.close();
     arquivoPlataformas.close();
 
-    std::ofstream arquivoProjeteis("C:\\Users\\bruno\\github\\Jogo-TecProg\\save\\Projeteis.txt");
+    std::ofstream arquivoProjeteis("save/Projeteis.txt");
     arquivoProjeteis.clear();
     arquivoProjeteis.close();
 }
 
 
 void Fase::salvarFase() {
-    std::ofstream arquivo("C:\\Users\\bruno\\github\\Jogo-TecProg\\save\\Fase.txt", std::ios::out);
+    std::ofstream arquivo("save/Fase.txt", std::ios::out);
 
     arquivo<<fase<<" "<<numJogadores;
     arquivo.close();
@@ -149,7 +175,7 @@ void Fase::carregarPersonagens() {
 }
 
 void Fase::carregarJogadores() {
-    std::ifstream arquivo("C:\\Users\\bruno\\github\\Jogo-TecProg\\save\\Jogadores.txt", std::ios::in);
+    std::ifstream arquivo("save/Jogadores.txt", std::ios::in);
     bool executa;
     int pontuacao;
     float pX, pY;
@@ -167,7 +193,7 @@ void Fase::carregarJogadores() {
 }
 
 void Fase::carregarCaveiras(){
-    std::ifstream arquivo("C:\\Users\\bruno\\github\\Jogo-TecProg\\save\\Caveiras.txt", std::ios::in);
+    std::ifstream arquivo("save/Caveiras.txt", std::ios::in);
     bool executa;
     int pX, pY;
 
@@ -179,7 +205,7 @@ void Fase::carregarCaveiras(){
 
 }
 void Fase::carregarBoitatas(){
-    std::ifstream arquivo("C:\\Users\\bruno\\github\\Jogo-TecProg\\save\\Boitatas.txt", std::ios::in);
+    std::ifstream arquivo("save/Boitatas.txt", std::ios::in);
     bool executa;
     int pX, pY;
 
@@ -191,12 +217,13 @@ void Fase::carregarBoitatas(){
 
 }
 void Fase::carregarCogumalefico(){
-    std::ifstream arquivo("C:\\Users\\bruno\\github\\Jogo-TecProg\\save\\Cogumalefico.txt", std::ios::in);
+    std::ifstream arquivo("save/Cogumalefico.txt", std::ios::in);
     bool executa;
     int pX, pY;
 
     if(arquivo>>executa>>pX>>pY){
-        Entidades::Entidade* entidade = static_cast<Entidades::Entidade*>(new Entidades::Cogumalefico(pX,pY,jogador1,jogador2));
+        chefao = new Entidades::Cogumalefico(pX,pY,jogador1,jogador2);
+        Entidades::Entidade* entidade = static_cast<Entidades::Entidade*>(chefao);
         entidade->setExecutar(executa);
         personagens.inserirEntidade(entidade);
     }
@@ -211,7 +238,7 @@ void Fase::carregarObstaculos() {
 }
 
 void Fase::carregarPisos() {
-    std::ifstream arquivo("C:\\Users\\bruno\\github\\Jogo-TecProg\\save\\Pisos.txt", std::ios::in);
+    std::ifstream arquivo("save/Pisos.txt", std::ios::in);
     int tamanho;
     int pX, pY;
 
@@ -222,7 +249,7 @@ void Fase::carregarPisos() {
 }
 
 void Fase::carregarPlataformas() {
-    std::ifstream arquivo("C:\\Users\\bruno\\github\\Jogo-TecProg\\save\\Plataformas.txt", std::ios::in);
+    std::ifstream arquivo("save/Plataformas.txt", std::ios::in);
     int nivel;
     int pX, pY;
 
@@ -233,7 +260,7 @@ void Fase::carregarPlataformas() {
 }
 
 void Fase::carregarEspinhos() {
-    std::ifstream arquivo("C:\\Users\\bruno\\github\\Jogo-TecProg\\save\\Espinhos.txt", std::ios::in);
+    std::ifstream arquivo("save/Espinhos.txt", std::ios::in);
     int pX, pY;
 
     while(arquivo>>pX>>pY){
@@ -242,7 +269,7 @@ void Fase::carregarEspinhos() {
 }
 
 void Fase::carregarNinhos() {
-    std::ifstream arquivo("C:\\Users\\bruno\\github\\Jogo-TecProg\\save\\Ninhos.txt", std::ios::in);
+    std::ifstream arquivo("save/Ninhos.txt", std::ios::in);
     bool executa;
     int pX, pY;
 
@@ -292,14 +319,15 @@ void Fase::inserirI2(int x,int y){
 }
 
 void Fase::inserirC(int x,int y){
-    personagens.inserirEntidade(static_cast<Entidades::Entidade*>(new Entidades::Cogumalefico(x,y,jogador1,jogador2)));
+    chefao = new Entidades::Cogumalefico(x,y,jogador1,jogador2);
+    personagens.inserirEntidade(static_cast<Entidades::Entidade*>(chefao));
 }
 
 
 void Fase::inserirJogadores(){
     jogador1=  new Entidades::Jogador1(50, 120);
     if(numJogadores==2) {
-        jogador2 = new Entidades::Jogador2(60, 120);
+        jogador2 = new Entidades::Jogador2(50, 120);
     }
 }
 
@@ -318,6 +346,22 @@ void Fase::setTextura(const char* caminho){
     tfundo = Gerenciadores::Gerenciador_Grafico::getInstancia()->carregarTextura(caminho);
     fundo.setTexture(tfundo);
 }
+
+void Fase::executar() {
+}
+
+int Fase::getFase() {
+    return fase;
+}
+
+int Fase::getNumJogadores() {
+    if(jogador1!=NULL && jogador2!=NULL)
+        return 2;
+    else
+        return 1;
+}
+
+
 
 
 

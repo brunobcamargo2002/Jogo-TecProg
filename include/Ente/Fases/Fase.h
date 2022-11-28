@@ -36,6 +36,8 @@ namespace Fases {
         Gerenciadores::Gerenciador_Colisoes gerenciador_colisoes;
         int visao;
         bool carregar;
+
+        Entidades::Cogumalefico* chefao;
     public:
 
         Fase(unsigned int numJogadores=1);
@@ -63,6 +65,11 @@ namespace Fases {
         void carregarEspinhos();
         void carregarNinhos();
 
+        virtual bool fimDaFase()=0;
+
+        int getFase();
+        int getNumJogadores();
+
 
 
 
@@ -71,6 +78,8 @@ namespace Fases {
         virtual ~Fase();
 
         void executar();
+
+        int executarFase();
 
         virtual void inserirPisos();
 

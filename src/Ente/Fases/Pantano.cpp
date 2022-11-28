@@ -12,7 +12,7 @@ Pantano::Pantano(unsigned int numJogadores):
 Fase( numJogadores)
 {
     fase=2;
-    setTextura("C:\\ODIABO\\Jogo-TecProg-main\\imagens/Fases/Pantano.png");
+    setTextura("imagens/Fases/Pantano.png");
     visao=50;
     ninhos=0;
 }
@@ -83,4 +83,12 @@ void Pantano::inserirInimigos2(int n){
     for(int i=espaco;i<tam;i+=espaco){
         x = (rand()%(espaco-2*largura_Inimigo)+largura_Inimigo);
         inserirI2(x+i,y);}
+}
+
+bool Pantano::fimDaFase() {
+    if(!chefao->getExecuta())
+        return true;
+    else
+        return false;
+
 }

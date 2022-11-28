@@ -85,7 +85,7 @@ void Personagem::falecendo() {
         imprimir_se();
         if (relogio.getElapsedTime().asSeconds() > tempoMorte) {
             executa = false;
-            corpo.setPosition(9999,9999);
+            corpo.setPosition(0,9999);
         }
     }
 

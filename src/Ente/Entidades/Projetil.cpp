@@ -36,7 +36,7 @@ Projetil::~Projetil() {
 }
 
 void Projetil::inicializa() {
-    animacao.addAnimacao("C:/Users/bruno/CLionProjects/jogo-joao/imagens/Projetil/Projetil.png", "PROJETIL", 6, 0.12f, sf::Vector2f(5,5));
+    animacao.addAnimacao("imagens/Projetil/Projetil.png", "PROJETIL", 6, 0.12f, sf::Vector2f(5,5));
 }
 
 void Projetil::colisao(sf::Vector2f deslocamento, Entidades::Entidade *entidade) {

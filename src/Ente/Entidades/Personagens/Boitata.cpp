@@ -41,11 +41,11 @@ Boitata::~Boitata() {
 }
 
 void Boitata::inicializa() {
-    animacao.addAnimacao("C:/Users/bruno/CLionProjects/jogo-joao/imagens/Boitata/Anda.png", "ANDANDO", 9, 0.12f, sf::Vector2f(5,7));
-    animacao.addAnimacao("C:/Users/bruno/CLionProjects/jogo-joao/imagens/Boitata/Ataca.png", "ATACANDO", 16, 0.12f, sf::Vector2f(5,7));
-    animacao.addAnimacao("C:/Users/bruno/CLionProjects/jogo-joao/imagens/Boitata/Parado.png", "PARADO", 9, 0.15f, sf::Vector2f(5,7));
-    animacao.addAnimacao("C:/Users/bruno/CLionProjects/jogo-joao/imagens/Boitata/Morre.png", "MORRENDO", 8, 0.15f, sf::Vector2f(5,7));
-    animacao.addAnimacao("C:/Users/bruno/CLionProjects/jogo-joao/imagens/Boitata/TomaDano.png", "TOMANDO_DANO", 3, 0.15f, sf::Vector2f(5,7));
+    animacao.addAnimacao("imagens/Boitata/Anda.png", "ANDANDO", 9, 0.12f, sf::Vector2f(5,7));
+    animacao.addAnimacao("imagens/Boitata/Ataca.png", "ATACANDO", 16, 0.12f, sf::Vector2f(5,7));
+    animacao.addAnimacao("imagens/Boitata/Parado.png", "PARADO", 9, 0.15f, sf::Vector2f(5,7));
+    animacao.addAnimacao("imagens/Boitata/Morre.png", "MORRENDO", 8, 0.15f, sf::Vector2f(5,7));
+    animacao.addAnimacao("imagens/Boitata/TomaDano.png", "TOMANDO_DANO", 3, 0.15f, sf::Vector2f(5,7));
     corpo.setOrigin(sf::Vector2f(corpo.getSize().x/ 2.f, corpo.getSize().y / 2.f));
 
 }
@@ -132,7 +132,10 @@ void Boitata::lancaProjetil(bool esquerda) {
 
 void Boitata::executar() {
     if(morrendo) {
-        Entidades::Jogador::alteraPontuacao(pontosAbate);
+        if(!deuPontos){
+            Entidades::Jogador::alteraPontuacao(pontosAbate);
+            deuPontos = true;
+        }
         falecendo();
     }
     else {
@@ -154,7 +157,7 @@ void Boitata::mecanica() {
 }
 
 void Boitata::salvarPosicao() {
-    std::ofstream arquivo("C:\\Users\\bruno\\github\\Jogo-TecProg\\save\\Boitatas.txt", std::ios::app);
+    std::ofstream arquivo("save/Boitatas.txt", std::ios::app);
     sf::Vector2f posicao = getPosicao();
 
     arquivo<<executa<<" "<<posicao.x<<" "<<posicao.y<<std::endl;

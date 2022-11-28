@@ -10,6 +10,8 @@ namespace Fases{
         Floresta(unsigned int numJogadores=1);
         ~Floresta();
 
+        bool fimDaFase();
+
         void inserirPisos();
 
         void inserirPlataformas(int n);

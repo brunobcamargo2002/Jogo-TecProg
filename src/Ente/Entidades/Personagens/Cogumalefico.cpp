@@ -17,7 +17,7 @@ int Cogumalefico::pontosAbate=200;
 
 Cogumalefico::Cogumalefico(int pX, int pY, Jogador* jgdor1, Jogador* jgdor2):
 Inimigo(sf::Vector2f(pX, pY), tamanho, velocidadeTerminal, jgdor1, jgdor2){
-    raioAtaque= sf::Vector2f(120.f, 120.f);
+    raioAtaque= sf::Vector2f(120.f, 150.f);
     coolDown=1000;
     tempoAtaque=500;
     num_vidas = 20;
@@ -44,11 +44,11 @@ Entidades::Cogumalefico::~Cogumalefico() {
 }
 
 void Entidades::Cogumalefico::inicializa() {
-    animacao.addAnimacao("C:/Users/bruno/CLionProjects/jogo-joao/imagens/Cogumalefico/Anda.png", "ANDANDO", 8, 0.12f, sf::Vector2f(8,6));
-    animacao.addAnimacao("C:/Users/bruno/CLionProjects/jogo-joao/imagens/Cogumalefico/Ataca.png", "ATACANDO", 8, 0.0625f, sf::Vector2f(8,6));
-    animacao.addAnimacao("C:/Users/bruno/CLionProjects/jogo-joao/imagens/Cogumalefico/Parado.png", "PARADO", 4, 0.15f, sf::Vector2f(8,6));
-    animacao.addAnimacao("C:/Users/bruno/CLionProjects/jogo-joao/imagens/Cogumalefico/Morre.png", "MORRENDO", 4, 0.2f, sf::Vector2f(8,6));
-    animacao.addAnimacao("C:/Users/bruno/CLionProjects/jogo-joao/imagens/Cogumalefico/TomaDano.png", "TOMANDO_DANO", 4, 0.15f, sf::Vector2f(8,6));
+    animacao.addAnimacao("imagens/Cogumalefico/Anda.png", "ANDANDO", 8, 0.12f, sf::Vector2f(8,6));
+    animacao.addAnimacao("imagens/Cogumalefico/Ataca.png", "ATACANDO", 8, 0.0625f, sf::Vector2f(8,6));
+    animacao.addAnimacao("imagens/Cogumalefico/Parado.png", "PARADO", 4, 0.15f, sf::Vector2f(8,6));
+    animacao.addAnimacao("Cogumalefico/Morre.png", "MORRENDO", 4, 0.2f, sf::Vector2f(8,6));
+    animacao.addAnimacao("imagens/Cogumalefico/TomaDano.png", "TOMANDO_DANO", 4, 0.15f, sf::Vector2f(8,6));
 
 }
 
@@ -65,7 +65,10 @@ void Entidades::Cogumalefico::atualizarAnimacao() {
 
 void Entidades::Cogumalefico::executar() {
     if(morrendo) {
-        Entidades::Jogador::alteraPontuacao(pontosAbate);
+        if(!deuPontos){
+            Entidades::Jogador::alteraPontuacao(pontosAbate);
+            deuPontos = true;
+        }
         falecendo();
     }
     else {
@@ -138,7 +141,7 @@ void Entidades::Cogumalefico::mecanica() {
 }
 
 void Cogumalefico::salvarPosicao() {
-    std::ofstream arquivo("C:\\Users\\bruno\\github\\Jogo-TecProg\\save\\Cogumalefico.txt", std::ios::app);
+    std::ofstream arquivo("save/Cogumalefico.txt", std::ios::app);
     sf::Vector2f posicao = getPosicao();
 
     arquivo<<executa<<" "<<posicao.x<<" "<<posicao.y<<std::endl;

@@ -16,6 +16,8 @@ namespace Entidades {
 
         static sf::Vector2f tamanho;
         static sf::Vector2f velocidadeTerminal;
+        static void setPontos(int points);
+        static int getPontos();
 
         static void alteraPontuacao(int alteracao);
         Jogador(sf::Vector2f posicao, sf::Vector2f tamanho,sf::Vector2f velocidadeTerminal);
@@ -38,8 +40,8 @@ namespace Entidades {
         int getDano();
         void tomaDano(int dano);
 
-        int getPontos();
-        void setPontos(int pontos);
+
+
 
         virtual void salvarPosicao()=0;
 

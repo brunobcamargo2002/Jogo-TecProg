@@ -12,6 +12,7 @@ class Menu:protected Ente
     sf::Text opcoes[4];
     sf::Text fases[4];
     sf::Text opcoesInGame[3];
+    sf::Text Ranking[1];
     sf::Font font;
     Fase* fase;
     class Contador{
@@ -41,8 +42,13 @@ class Menu:protected Ente
     void mostraOpcoes();
     void MostraFases(unsigned int jogadores);
     void menuFase();
+    void acoesFase(int action);
     void imprimir_se(int tela);
-    void setNome();
+    std::string setNome();
+    void salvarRanking();
+    void mostraRanking();
+
+
 
     Fase* carregarJogo();
 };

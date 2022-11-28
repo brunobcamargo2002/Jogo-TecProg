@@ -12,7 +12,7 @@ int Jogador::decrementoDePontosPorDano=-5;
 Jogador::Jogador(sf::Vector2f posicao, sf::Vector2f tamanho, sf::Vector2f VelocidadeTerminal) : Personagem(posicao, tamanho, VelocidadeTerminal) {
     coolDown=1000;
     tempoAtaque=800;
-    num_vidas=10;
+    num_vidas=1000;
     danoAtaque = 2;
     tempoMorte= 1.2;
     raioAtaque=sf::Vector2f(180,100);
@@ -122,7 +122,11 @@ void Jogador::executar() {
         mecanica();
         atualizarAnimacao();
         imprimir_se();
+        if(getPosicao().y>1500) {
+            morrendo = true;
+        }
     }
+
     gravidade();
 
 }
@@ -150,8 +154,8 @@ int Jogador::getPontos() {
     return pontos;
 }
 
-void Jogador::setPontos(int pontos) {
-    this->pontos = pontos;
+void Jogador::setPontos(int points) {
+    pontos = points;
 }
 
 
